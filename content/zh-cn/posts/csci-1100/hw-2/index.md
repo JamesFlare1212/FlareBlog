@@ -23,6 +23,8 @@ tags:
 categories:
   - CSCI
   - 编程语言
+collections:
+  - CSCI 1100
 hiddenFromHomePage: false
 hiddenFromSearch: false
 hiddenFromRss: false

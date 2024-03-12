@@ -23,6 +23,8 @@ tags:
 categories:
   - CSCI
   - Programming
+collections:
+  - CSCI 1100
 hiddenFromHomePage: false
 hiddenFromSearch: false
 hiddenFromRss: false

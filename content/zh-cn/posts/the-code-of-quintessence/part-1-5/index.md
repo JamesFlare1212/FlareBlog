@@ -20,6 +20,8 @@ tags:
 categories:
 - Stable Diffusion
 - 资源分享
+collections:
+  - 元素法典
 hiddenFromHomePage: false
 hiddenFromSearch: false
 hiddenFromRss: false
