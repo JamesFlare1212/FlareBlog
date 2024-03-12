@@ -187,7 +187,7 @@ defaultContentLanguageInSubdir = true
 # -------------------------------------------------------------------------------------
 
 [sitemap]
-  changefreq = "weekly"
+  changefreq = "always"
   filename = "sitemap.xml"
   priority = 0.5
 
@@ -805,19 +805,19 @@ defaultContentLanguageInSubdir = true
       Mix = false
     # FixIt 0.2.15 | CHANGED Comment config
     [params.page.comment]
-      enable = false
+      enable = true
       # FixIt 0.2.13 | NEW Artalk comment config (https://artalk.js.org/)
       [params.page.comment.artalk]
-        enable = false
-        server = "https://yourdomain"
-        site = "默认站点"
+        enable = true
+        server = "https://artalk.jamesflare.com/api/"
+        site = "FlareBlog"
         placeholder = ""
         noComment = ""
         sendBtn = ""
         editorTravel = true
         flatMode = "auto"
         # FixIt 0.2.17 | CHANGED enable lightgallery support
-        lightgallery = false
+        lightgallery = true
         locale = "" # FixIt 0.2.15 | NEW
         # FixIt 0.2.18 | NEW
         emoticons = ""
