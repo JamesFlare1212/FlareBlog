@@ -809,7 +809,7 @@ defaultContentLanguageInSubdir = true
       # FixIt 0.2.13 | NEW Artalk comment config (https://artalk.js.org/)
       [params.page.comment.artalk]
         enable = true
-        server = "https://artalk.jamesflare.com/api/"
+        server = "https://artalk.jamesflare.com"
         site = "FlareBlog"
         placeholder = ""
         noComment = ""
@@ -817,14 +817,14 @@ defaultContentLanguageInSubdir = true
         editorTravel = true
         flatMode = "auto"
         # FixIt 0.2.17 | CHANGED enable lightgallery support
-        lightgallery = true
+        lightgallery = false
         locale = "" # FixIt 0.2.15 | NEW
         # FixIt 0.2.18 | NEW
         emoticons = ""
         nestMax = 2
         nestSort = "DATE_ASC" # ["DATE_ASC", "DATE_DESC", "VOTE_UP_DESC"]
         vote = true
-        voteDown = false
+        voteDown = true
         uaBadge = true
         listSort = true
         imgUpload = true
