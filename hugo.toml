@@ -817,7 +817,7 @@ defaultContentLanguageInSubdir = true
         editorTravel = true
         flatMode = "auto"
         # FixIt 0.2.17 | CHANGED enable lightgallery support
-        lightgallery = false
+        lightgallery = true
         locale = "" # FixIt 0.2.15 | NEW
         # FixIt 0.2.18 | NEW
         emoticons = ""
@@ -1080,7 +1080,7 @@ defaultContentLanguageInSubdir = true
     # FixIt 0.2.18 | NEW Depends on the author's email, if the author's email is not set, the local avatar will be used
     enable = false
     # Gravatar host, default: "www.gravatar.com"
-    host = "www.gravatar.com" # ["cn.gravatar.com", "gravatar.loli.net", ...]
+    host = "gravatar.jamesflare.com" # ["cn.gravatar.com", "gravatar.loli.net", ...]
     style = "" # ["", "mp", "identicon", "monsterid", "wavatar", "retro", "blank", "robohash"]
 
   # FixIt 0.2.16 | NEW Back to top
