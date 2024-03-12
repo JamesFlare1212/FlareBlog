@@ -1,16 +1,16 @@
 ---
 slug: "gravatar-cloudflare-workers"
-title: "使用 CloudFlare Workers 反向代理"
+title: "Using CloudFlare Workers for Reverse Proxy"
 subtitle: ""
 date: 2023-01-15T21:31:42+08:00
 draft: false
 author:
-  name: James
+  name: James 
   link: https://www.jamesflare.com
   email:
   avatar: /site-logo.avif
-description: "Gravatar 的头像服务在中国大陆不稳定。除了使用一些公开镜像，我们还能自行建立反代。不过如果要自己建立反代，就需要服务器，这可能需要额外的成本，更重要的一个问题是，一般人的服务器只能在一个机房，所以地区之间的速度差异会很大，而不像 Gravatar 在全球都有 CDN。"
-keywords: ["Gravatar","CloudFlare Workers"]
+description: "Gravatar's avatar service is unstable in mainland China. While we can use some public mirrors, we also have the option to set up our own reverse proxy. However, setting up a self-hosted reverse proxy requires a server, which may incur additional costs. More importantly, an individual's server is typically limited to a single data center, resulting in significant speed variations across different regions, unlike Gravatar's global CDN coverage."
+keywords: ["Gravatar", "CloudFlare Workers"]
 license: ""
 comment: true
 weight: 0
@@ -19,22 +19,22 @@ tags:
 - CloudFlare
 - JavaScript
 categories:
-- 教程
+- Tutorials
 
 hiddenFromHomePage: false
 hiddenFromSearch: false
 
-summary: "Gravatar 的头像服务在中国大陆不稳定。除了使用一些公开镜像，我们还能自行建立反代。不过如果要自己建立反代，就需要服务器，这可能需要额外的成本，更重要的一个问题是，一般人的服务器只能在一个机房，所以地区之间的速度差异会很大，而不像 Gravatar 在全球都有 CDN。"
+summary: "Gravatar's avatar service is unstable in mainland China. While we can use some public mirrors, we also have the option to set up our own reverse proxy. However, setting up a self-hosted reverse proxy requires a server, which may incur additional costs. More importantly, an individual's server is typically limited to a single data center, resulting in significant speed variations across different regions, unlike Gravatar's global CDN coverage."
 resources:
 - name: featured-image
-  src: featured-image.jpg
+  src: featured-image.jpg  
 - name: featured-image-preview
   src: featured-image-preview.jpg
 
 toc:
   enable: true
 math:
-  enable: false
+  enable: false 
 lightgallery: true
 seo:
   images: []
