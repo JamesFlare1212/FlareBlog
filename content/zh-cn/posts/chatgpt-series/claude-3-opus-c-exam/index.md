@@ -21,7 +21,7 @@ tags:
   - LLM
   - 基准测试
 categories:
-  - 测评
+  - 评测
   - 编程语言
   - 大语言模型
 hiddenFromHomePage: false

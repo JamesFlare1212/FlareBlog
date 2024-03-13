@@ -21,7 +21,6 @@ tags:
   - Python
   - Programming
 categories:
-  - CSCI
   - Programming
 collections:
   - CSCI 1100

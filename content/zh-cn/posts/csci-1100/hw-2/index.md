@@ -21,7 +21,6 @@ tags:
   - Python
   - 编程
 categories:
-  - CSCI
   - 编程语言
 collections:
   - CSCI 1100
