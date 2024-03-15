@@ -119,7 +119,7 @@ Write a python program, `hw5_part1.py` that does the following:
 
 	Very important: we strongly urge you to write a function called `get_nbrs` that takes as parameters a row, col location, together with the number of rows and columns in the grid, and returns a list of tuples containing the locations that are neighbors of the row, col location and are within the bounds of the grid. You will make use of this function frequently.
 
-5. Gets the suggested path, decides if it is a valid path (each location is a neighbor of the next), and then calculates the total downward elevation change and the total upward elevation change. For example using the grid above, if the path is `(3, 1), (3, 0), (2, 0), (1, 0), (1, 1), (0, 1), (0, 2), (1, 2)` the downward elevation changes are from (3, 1) to (3, 0) (change of 4) and from (1, 1) to (0, 1) (change) of 3 for a total of 7, and the upward elevation changes are from (3, 0) to (2, 0), from (2, 0) to (1, 0), from (1, 0) to (1, 1), from (0, 1) to (0, 2) and from (0, 2) to (1, 2) for a total of (2 + 1 + 6 + 2 + 5) = 16). The output should be:
+5. Gets the suggested path, decides if it is a valid path (each location is a neighbor of the next), and then calculates the total downward elevation change and the total upward elevation change. For example using the grid above, if the path is `(3, 1), (3, 0), (2, 0), (1, 0), (1, 1), (0, 1), (0, 2), (1, 2)` the downward elevation changes are from (3, 1) to (3, 0) (change of 4) and from (1, 1) to (0, 1) (change of 3) for a total of 7, and the upward elevation changes are from (3, 0) to (2, 0), from (2, 0) to (1, 0), from (1, 0) to (1, 1), from (0, 1) to (0, 2) and from (0, 2) to (1, 2) for a total of (2 + 1 + 6 + 2 + 5) = 16. The output should be:
 
 ```plaintext
 Valid path
