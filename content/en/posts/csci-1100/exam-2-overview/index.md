@@ -16,7 +16,7 @@ comment: true
 weight: 0
 tags:
   - CSCI 1100
-  - Homework
+  - Exam
   - RPI
   - Python
   - Programming
