@@ -113,95 +113,30 @@ To help us compare the quantization types, I made a table to show the size and p
 | Q6\_K | 5.15G | +0.0008 | @ LLaMA-v1-7B |
 | Q8\_0 | 6.70G | +0.0004 | @ LLaMA-v1-7B |
 
-To help us understand the relationship between size and ppl change, I made a scatter plot to show the relationship.
+To help us understand the relationship between size and ppl change, I made a quadrant chart to show the relationship.
 
-{{< echarts >}}
-{
-  "title": {
-    "text": "ppl Change vs Size",
-    "top": "2%",
-    "left": "center"
-  },
-  "xAxis": {
-    "name": "Size (GB)",
-    "nameLocation": "middle",
-    "nameGap": 30
-  },
-  "yAxis": {
-    "name": "ppl Change",
-    "nameLocation": "middle",
-    "nameGap": 40
-  },
-  "series": [
-    {
-      "symbolSize": 10,
-      "data": [
-        {
-          "name": "Q2_K",
-          "value": [2.63, 0.6717]
-        },
-        {
-          "name": "Q3_K_S",
-          "value": [2.75, 0.5551]
-        },
-        {
-          "name": "Q3_K_M",
-          "value": [3.07, 0.2496]
-        },
-        {
-          "name": "Q3_K_L",
-          "value": [3.35, 0.1764]
-        },
-        {
-          "name": "Q4_0",
-          "value": [3.56, 0.2166]
-        },
-        {
-          "name": "Q4_K_S",
-          "value": [3.59, 0.0992]
-        },
-        {
-          "name": "Q4_K_M",
-          "value": [3.80, 0.0532]
-        },
-        {
-          "name": "Q4_1",
-          "value": [3.90, 0.1585]
-        },
-        {
-          "name": "Q5_0",
-          "value": [4.33, 0.0683]
-        },
-        {
-          "name": "Q5_K_S",
-          "value": [4.33, 0.0400]
-        },
-        {
-          "name": "Q5_1",
-          "value": [4.70, 0.0349]
-        },
-        {
-          "name": "Q5_K_M",
-          "value": [4.45, 0.0122]
-        },
-        {
-          "name": "Q6_K",
-          "value": [5.15, 0.0008]
-        },
-        {
-          "name": "Q8_0",
-          "value": [6.70, 0.0004]
-        }
-      ],
-      "type": "scatter"
-    }
-  ],
-  "tooltip": {
-    "trigger": "item",
-    "formatter": "Q Type: {b}<br/>Data: {c}"
-  }
-}
-{{< /echarts >}}
+```mermaid
+quadrantChart
+    title Size vs Perplexity Change
+    x-axis Small Size --> Large Size
+    y-axis Small Perplexity Change --> Large Perplexity Change
+    quadrant-1 Worst model
+    quadrant-2 High potential
+    quadrant-3 Best models
+    quadrant-4 Low priority
+    Q3_K_M: [0.05, 0.95]
+    Q3_K_L: [0.1, 0.8]
+    Q4_0: [0.15, 0.85]
+    Q4_K_S: [0.2, 0.55]
+    Q4_K_M: [0.25, 0.4]
+    Q4_1: [0.3, 0.7]
+    Q5_0: [0.4, 0.45]
+    Q5_K_S: [0.4, 0.35]
+    Q5_1: [0.5, 0.3]
+    Q5_K_M: [0.45, 0.2]
+    Q6_K: [0.7, 0.08]
+    Q8_0: [0.95, 0.05]
+```
 
 ## Summary
 

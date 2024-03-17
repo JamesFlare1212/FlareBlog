@@ -10,13 +10,20 @@ Clone the repository:
 git clone https://github.com/JamesFlare1212/FlareBlog.git
 ```
 
-install hugo:
+Then, install Hugo.
 
+For Linux:
 ```bash
-apt install hugo
+wget https://github.com/gohugoio/hugo/releases/download/v0.122.0/hugo_extended_0.122.0_linux-amd64.deb
+dpkg -i hugo_extended_0.122.0_linux-amd64.deb
 ```
 
-Run the server:
+For MacOS:
+```bash
+brew install hugo
+```
+
+Server the blog locally:
 
 ```bash
 cd FlareBlog
