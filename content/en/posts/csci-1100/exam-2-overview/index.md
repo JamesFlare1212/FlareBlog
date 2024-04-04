@@ -54,10 +54,10 @@ repost:
 - Most students will take the exam from 6:00 - 7:30 pm. Students who provided us with an accommodation letter indicating the need for extra time or a quiet location will be given a separate room and may be allowed to continue past 7:30.
 - Room assignments will be posted on Submitty by the Wednesday night before the exam, March 13th.
 - Students MUST:
-    - Go to their assigned rooms.
-    - Bring their IDs to the exam.
-    - Sit in the correct section.
-    - Put away all calculators, phones, etc. and take off/out all headphones and earbuds
+   - Go to their assigned rooms.
+   - Bring their IDs to the exam.
+   - Sit in the correct section.
+   - Put away all calculators, phones, etc. and take off/out all headphones and earbuds
 
 Failing to do one of these may result in a 20 point penalty on the exam score. Failure to do all can cost up to 80 points.
 

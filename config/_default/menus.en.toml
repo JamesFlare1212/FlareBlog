@@ -74,8 +74,8 @@
 [[main]]
   identifier = "resume"
   parent = "about"
-  name = "My Resume"
-  url = "/resume/"
+  name = "About Me"
+  url = "/me/"
   weight = 5
   [main.params]
-    icon = "fa-solid fa-newspaper"
+    icon = "fa-solid fa-clipboard-user"

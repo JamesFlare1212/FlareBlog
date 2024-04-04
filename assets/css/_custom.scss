@@ -1,0 +1,23 @@
+// ==============================
+// Custom style
+// 自定义样式
+// ==============================
+
+ul, ol {
+    padding-inline-start: 0px;
+    margin-left: 1.33em;
+}
+
+li {
+    margin-left: 0.5em;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+h3 .heading-mark{
+    padding-inline-end: 6px;
+}
+
+details summary strong {
+    margin-left: 6px;
+}

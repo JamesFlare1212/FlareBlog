@@ -917,7 +917,7 @@ defaultContentLanguageInSubdir = true
     selector = "article" # FixIt 0.2.17 | NEW
 
   # FixIt 0.2.12 | NEW Watermark config
-  # Detail config see https://github.com/Lruihao/watermark#readme
+  # Detail config see https://github.com/Lruihao/watermark#readme 
   [params.watermark]
     enable = false
     # watermark's text (HTML format is supported)
