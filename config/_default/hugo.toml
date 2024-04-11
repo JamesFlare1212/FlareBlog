@@ -592,7 +592,7 @@ defaultContentLanguageInSubdir = true
     # FixIt 0.3.0 | NEW whether to show link to report issue for the post
     linkToReport = true
     # whether to show the full text content in RSS
-    rssFullText = true
+    rssFullText = false
     # FixIt 0.2.13 | NEW Page style ["narrow", "normal", "wide", ...]
     pageStyle = "wide"
     # FixIt 0.2.17 | CHANGED Auto Bookmark Support
