@@ -1,4 +1,5 @@
 *.lock
 public/
-resources/
+resources/_gen/
 isableFastRander/
+.hugo_build.lock

@@ -297,7 +297,7 @@
       {{- with $giscus -}}
         {{- $commentConfig = .lightTheme | default "light" | dict "lightTheme" | dict "giscus" | merge $commentConfig -}}
         {{- $commentConfig = .darkTheme | default "dark" | dict "darkTheme" | dict "giscus" | merge $commentConfig -}}
-        <div id="giscus">
+        <div id="giscus" class="comment">
           <script
             src="https://giscus.app/client.js"
             data-repo="{{ .Repo }}"
@@ -325,7 +325,7 @@
     {{- end -}}
   </div>
   {{- /* lightgallery for Artalk and Twikoo */ -}}
-  {{- $params := .Scratch.Get "params" -}}
+  {{- $params := partial "function/params.html" -}}
   {{- if not $params.lightgallery | and (($artalk.enable | and $artalk.lightgallery) | or ($twikoo.enable | and $twikoo.lightgallery)) -}}
     {{- $source := $cdn.lightgalleryCSS | default "lib/lightgallery/css/lightgallery-bundle.min.css" -}}
     {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/style.html" -}}
