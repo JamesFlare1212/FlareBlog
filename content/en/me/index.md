@@ -21,3 +21,11 @@ I am a fan of technology, design, and innovation. Recently, I am watching Starsh
 ## What is this blog?
 
 This is a personal blog where I write about my thoughts and experiences. I hope you find it interesting and useful.
+
+## My Projects
+
+{{< gh-repo-card-container >}}
+  {{< gh-repo-card repo="JamesFlare1212/FlareBlog" >}}
+  {{< gh-repo-card repo="JamesFlare1212/SCDocs" >}}
+  {{< gh-repo-card repo="JamesFlare1212/NancyPortfolio" >}}
+{{< /gh-repo-card-container >}}

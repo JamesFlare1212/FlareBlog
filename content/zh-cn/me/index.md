@@ -21,3 +21,11 @@ lightgallery: false
 ## 这个博客是什么？
 
 这是一个个人博客，我在这里写下我的想法和经历。我希望你会觉得它有趣且有用。
+
+## 我的项目
+
+{{< gh-repo-card-container >}}
+  {{< gh-repo-card repo="JamesFlare1212/FlareBlog" >}}
+  {{< gh-repo-card repo="JamesFlare1212/SCDocs" >}}
+  {{< gh-repo-card repo="JamesFlare1212/NancyPortfolio" >}}
+{{< /gh-repo-card-container >}}

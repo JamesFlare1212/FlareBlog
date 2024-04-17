@@ -76,6 +76,6 @@
   parent = "about"
   name = "关于我"
   url = "/me/"
-  weight = 5
+  weight = 10
   [main.params]
     icon = "fa-solid fa-clipboard-user"

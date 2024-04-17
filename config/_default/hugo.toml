@@ -13,7 +13,7 @@ title = "FlareBlog"
 # Hostname (and path) to the root
 baseURL = "https://www.jamesflare.com/"
 # theme list
-theme = "FixIt" # enable in your site config file
+theme = ["FixIt", "component-projects"]
 # default amount of posts in each pages
 paginate = 12
 # copyright description used only for seo schema
