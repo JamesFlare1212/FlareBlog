@@ -181,6 +181,10 @@ flowchart TD
 
 我们可以用这个改进的Selenium Chromedriver绕过CloudFlare的验证码，UA，浏览器指纹等检测方式。
 
+或者更先进一点的，没有webdriver，也没有selenium，更加难以检测。
+
+[![undetected_chromedriver Git Card](https://github-readme-stats.jamesflare.com/api/pin/?username=ultrafunkamsterdam&repo=nodriver&theme=github_dark_dimmed&show_owner=false)](https://github.com/ultrafunkamsterdam/nodriver)
+
 然后找一个动态点，比如去搜索框输入随机内容搜索。再配合我们的IPv6人海战术，只需要几十rqs就可以导致它的性能危机。这么多Selenium Chromedriver可能确实会有些消耗性能，但是在自己笔记本上运行也不是很有难度。但是在Blue Team看来就头大了。他们会看见无比正常的一幕，不同的IP地址有一个用户每半个小时，一个小时甚至几个小时才访问一次。或者有一些IP地址的用户甚至不会访问第二次，你会不会疑惑自己的网站是不是发到哪里火了，而不是被攻击了。
 
 ## 总结

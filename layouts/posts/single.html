@@ -4,7 +4,7 @@
 {{- end -}}
 
 {{- define "content" -}}
-  {{- $params := .Scratch.Get "params" -}}
+  {{- $params := partial "function/params.html" -}}
   {{- $toc := .Scratch.Get "toc" -}}
   {{- $tocEmpty := eq .TableOfContents `<nav id="TableOfContents"></nav>` -}}
 
@@ -84,8 +84,8 @@
         <!--{{- $comment := .Scratch.Get "comment" | default dict -}}
         {{- $visitorIcon := dict "Class" "fa-regular fa-eye fa-fw me-1" | partial "plugin/icon.html" -}}
         {{- $commentIcon := dict "Class" "fa-regular fa-comments fa-fw me-1" | partial "plugin/icon.html" -}}
-        {{- /* Visitor Count */ -}}
         {{- if $comment.enable -}}
+        {{- /* Visitor Count */ -}}
           {{- if $comment.artalk.enable -}}
             <span class="comment-visitors" data-flag-title="{{ .Title }}">
               {{ $visitorIcon }}<span class="artalk-visitor-count" data-page-key="{{ .RelPermalink }}">-</span>&nbsp;{{ T "single.views" }}

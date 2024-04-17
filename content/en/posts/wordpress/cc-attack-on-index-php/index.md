@@ -181,6 +181,10 @@ Okay, let me give you another bad idea. Since we don't need a very large request
 
 We can use this modified Selenium Chromedriver to bypass CloudFlare's verification code, UA, browser fingerprint, and other detection methods.
 
+Or even more advanced, without webdriver, without selenium, it's even harder to detect.
+
+[![undetected_chromedriver Git Card](https://github-readme-stats.jamesflare.com/api/pin/?username=ultrafunkamsterdam&repo=nodriver&theme=github_dark_dimmed&show_owner=false)](https://github.com/ultrafunkamsterdam/nodriver)
+
 Then find a more dynamic point, such as entering random content in the search box to search. Coupled with our IPv6 human wave tactics, just a few dozen RPS can lead to a performance crisis for them. So many Selenium Chromedrivers may indeed consume some performance, but it's not very difficult to run on your own laptop. But from the Blue Team's perspective, it's a headache. They will see an extremely normal scene, with different IP addresses having a user accessing only once every half hour, an hour, or even a few hours. Or some IP addresses may not even access a second time. Will you wonder if your website has gone viral somewhere, rather than being attacked?
 
 ## Summary
