@@ -1,0 +1,99 @@
+{
+    "log": {
+        "level": "info",
+        "timestamp": true
+    },
+    "dns": {
+        "servers": [
+            {
+                "tag": "cloudflare",
+                "address": "1.1.1.1"
+            }
+        ],
+        "rules": [
+            {
+                "outbound": "any",
+                "server": "cloudflare"
+            }
+        ],
+        "strategy": "ipv4_only"
+    },
+    "inbounds": [
+        {
+            "type": "tun",
+            "tag": "tun-in",
+            "interface_name": "tun0",
+            "inet4_address": "172.28.0.1/30",
+            "auto_route": true,
+            "strict_route": true,
+            "stack": "system",
+            "sniff": true
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "vless",
+            "tag": "vless-out",
+            "server": "154.17.5.35",
+            "server_port": 443,
+            "uuid": "9337d5ec-b489-4bf4-a22c-19f7f6e8fbbd",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "server_name": "portfolio.newschool.edu",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "dpU-LTUuyoCyox_4fh5n-h5NCsSSUKXayFsOsfcIzRA",
+                    "short_id": "7fcff4362963e98e"
+                }
+            },
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "h2mux",
+                "max_streams": 10,
+                "padding": true,
+                "brutal": {
+                    "enabled": false,
+                    "up_mbps": 200,
+                    "down_mbps": 200
+                }
+            }
+        },
+        {
+            "type": "direct",
+            "tag": "direct"
+        },
+        {
+            "type": "dns",
+            "tag": "dns"
+        }
+    ],
+    "route": {
+        "geoip": {
+            "download_url": "https://github.com/SagerNet/sing-geoip/releases/latest/download/geoip.db",
+            "download_detour": "vless-out"
+        },
+        "geosite": {
+            "download_url": "https://github.com/SagerNet/sing-geosite/releases/latest/download/geosite.db",
+            "download_detour": "vless-out"
+        },
+        "rules": [
+            {
+                "protocol": "dns",
+                "outbound": "dns"
+            },
+            {
+                "geoip": [
+                    "private"
+                ],
+                "outbound": "direct"
+            }
+        ],
+        "auto_detect_interface": true
+    }
+}
