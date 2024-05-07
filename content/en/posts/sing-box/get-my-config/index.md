@@ -142,17 +142,121 @@ This is my personal configuration. Obviously, exposing it to the public network 
     "dns": {
         "servers": [
             {
-                "tag": "cloudflare",
-                "address": "1.1.1.1"
+                "tag": "dns_proxy",
+                "address": "https://1.1.1.1/dns-query",
+                "address_resolver": "dns_resolver",
+                "strategy": "ipv4_only",
+                "detour": "proxy"
+            },
+            {
+                "tag": "dns_direct",
+                "address": "https://dns.alidns.com/dns-query",
+                "address_resolver": "dns_resolver",
+                "strategy": "ipv4_only",
+                "detour": "direct"
+            },
+            {
+                "tag": "dns_resolver",
+                "address": "223.5.5.5",
+                "detour": "direct"
             }
         ],
         "rules": [
             {
                 "outbound": "any",
-                "server": "cloudflare"
+                "server": "dns_resolver"
+            },
+            {
+                "rule_set": "geosite-geolocation-!cn",
+                "server": "dns_proxy"
+            },
+            {
+                "rule_set": "geosite-cn",
+                "server": "dns_direct"
             }
         ],
-        "strategy": "ipv4_only"
+        "final": "dns_proxy"
+    },
+    "route": {
+        "rule_set": [
+            {
+                "tag": "geosite-geolocation-!cn",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-geolocation-!cn.srs",
+                "download_detour": "proxy"
+            },
+            {
+                "tag": "geoip-cn",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
+                "download_detour": "proxy"
+            },
+            {
+                "tag": "geosite-cn",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
+                "download_detour": "proxy"
+            }
+        ],
+        "rules": [
+            {
+                "protocol": "dns",
+                "outbound": "dns-out"
+            },
+            {
+                "port": 853,
+                "network": "tcp",
+                "outbound": "block"
+            },
+            {
+                "port": [
+                    443,
+                    853
+                ],
+                "network": "udp",
+                "outbound": "block"
+            },
+            {
+                "type": "logical",
+                "mode": "and",
+                "rules": [
+                    {
+                        "rule_set": "geoip-cn",
+                        "invert": true
+                    },
+                    {
+                        "rule_set": "geosite-geolocation-!cn"
+                    }
+                ],
+                "outbound": "proxy"
+            },
+            {
+                "type": "logical",
+                "mode": "and",
+                "rules": [
+                    {
+                        "rule_set": "geoip-cn"
+                    },
+                    {
+                        "rule_set": "geosite-cn"
+                    }
+                ],
+                "outbound": "direct"
+            },
+            {
+                "rule_set": "geoip-cn",
+                "outbound": "direct"
+            },
+            {
+                "ip_is_private": true,
+                "outbound": "direct"
+            }
+        ],
+        "final": "proxy",
+        "auto_detect_interface": true
     },
     "inbounds": [
         {
@@ -169,7 +273,7 @@ This is my personal configuration. Obviously, exposing it to the public network 
     "outbounds": [
         {
             "type": "vless",
-            "tag": "vless-out",
+            "tag": "proxy",
             "server": "154.17.5.35",
             "server_port": 443,
             "uuid": "9337d5ec-b489-4bf4-a22c-19f7f6e8fbbd",
@@ -187,50 +291,26 @@ This is my personal configuration. Obviously, exposing it to the public network 
                     "short_id": "7fcff4362963e98e"
                 }
             },
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "h2mux",
-                "max_streams": 10,
-                "padding": true,
-                "brutal": {
-                    "enabled": false,
-                    "up_mbps": 200,
-                    "down_mbps": 200
-                }
-            }
+            "packet_encoding": "xudp"
         },
         {
             "type": "direct",
             "tag": "direct"
         },
         {
+            "type": "block",
+            "tag": "block"
+        },
+        {
             "type": "dns",
-            "tag": "dns"
+            "tag": "dns-out"
         }
     ],
-    "route": {
-        "geoip": {
-            "download_url": "https://github.com/SagerNet/sing-geoip/releases/latest/download/geoip.db",
-            "download_detour": "vless-out"
-        },
-        "geosite": {
-            "download_url": "https://github.com/SagerNet/sing-geosite/releases/latest/download/geosite.db",
-            "download_detour": "vless-out"
-        },
-        "rules": [
-            {
-                "protocol": "dns",
-                "outbound": "dns"
-            },
-            {
-                "geoip": [
-                    "private"
-                ],
-                "outbound": "direct"
-            }
-        ],
-        "auto_detect_interface": true
+    "experimental": {
+        "cache_file": {
+            "enabled": true,
+            "path": "cache.db"
+        }
     }
 }
 ```
@@ -446,7 +526,7 @@ Download [client-windows.json](client-windows.json)
 Run the client
 
 ```bash
-./sing-box -c client-windows.json
+sing-box -c client-windows.json
 ```
 
 ### Run sing-box Android Client
