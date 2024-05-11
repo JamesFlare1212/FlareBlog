@@ -60,7 +60,7 @@ This is my personal configuration. Obviously, exposing it to the public network 
         {
             "type": "vless",
             "tag": "vless-in",
-            "listen": "0.0.0.0",
+            "listen": "::",
             "listen_port": 443,
             "users": [
                 {
@@ -109,7 +109,7 @@ This is my personal configuration. Obviously, exposing it to the public network 
 ```json
 {
     "type": "vless",
-    "tag": "vless-out",
+    "tag": "proxy",
     "server": "154.17.5.35",
     "server_port": 443,
     "uuid": "9337d5ec-b489-4bf4-a22c-19f7f6e8fbbd",
@@ -126,6 +126,18 @@ This is my personal configuration. Obviously, exposing it to the public network 
             "public_key": "dpU-LTUuyoCyox_4fh5n-h5NCsSSUKXayFsOsfcIzRA",
             "short_id": "7fcff4362963e98e"
         }
+    },
+    "multiplex": {
+        "enabled": false,
+        "protocol": "h2mux",
+        "max_streams": 32,
+        "padding": true,
+        "brutal": {
+            "enabled": false,
+            "up_mbps": 1000,
+            "down_mbps": 100
+        }
+
     },
     "packet_encoding": "xudp"
 }
@@ -145,14 +157,14 @@ This is my personal configuration. Obviously, exposing it to the public network 
                 "tag": "dns_proxy",
                 "address": "https://1.1.1.1/dns-query",
                 "address_resolver": "dns_resolver",
-                "strategy": "ipv4_only",
+                "strategy": "prefer_ipv6",
                 "detour": "proxy"
             },
             {
                 "tag": "dns_direct",
                 "address": "https://dns.alidns.com/dns-query",
                 "address_resolver": "dns_resolver",
-                "strategy": "ipv4_only",
+                "strategy": "prefer_ipv6",
                 "detour": "direct"
             },
             {
@@ -263,11 +275,29 @@ This is my personal configuration. Obviously, exposing it to the public network 
             "type": "tun",
             "tag": "tun-in",
             "interface_name": "tun0",
-            "inet4_address": "172.28.0.1/30",
+            "inet4_address": "172.19.0.1/30",
+            "inet6_address": "fdfe:dcba:9876::1/126",
+            "mtu": 9000,
             "auto_route": true,
             "strict_route": true,
-            "stack": "system",
+            "stack": "mixed",
             "sniff": true
+        },
+        {
+            "type": "mixed",
+            "tag": "mixed-in",
+            "listen": "::",
+            "listen_port": 1080,
+            "tcp_fast_open": true,
+            "tcp_multi_path": true,
+            "udp_fragment": true,
+            "udp_timeout": "5m",
+            "sniff": false,
+            "sniff_override_destination": false,
+            "sniff_timeout": "300ms",
+            "domain_strategy": "prefer_ipv6",
+            "udp_disable_domain_unmapping": false,
+            "set_system_proxy": false
         }
     ],
     "outbounds": [
@@ -290,6 +320,18 @@ This is my personal configuration. Obviously, exposing it to the public network 
                     "public_key": "dpU-LTUuyoCyox_4fh5n-h5NCsSSUKXayFsOsfcIzRA",
                     "short_id": "7fcff4362963e98e"
                 }
+            },
+            "multiplex": {
+                "enabled": false,
+                "protocol": "h2mux",
+                "max_streams": 32,
+                "padding": true,
+                "brutal": {
+                    "enabled": false,
+                    "up_mbps": 1000,
+                    "down_mbps": 100
+                }
+        
             },
             "packet_encoding": "xudp"
         },
@@ -329,14 +371,14 @@ This is my personal configuration. Obviously, exposing it to the public network 
                 "tag": "dns_proxy",
                 "address": "https://1.1.1.1/dns-query",
                 "address_resolver": "dns_resolver",
-                "strategy": "ipv4_only",
+                "strategy": "prefer_ipv6",
                 "detour": "proxy"
             },
             {
                 "tag": "dns_direct",
                 "address": "https://dns.alidns.com/dns-query",
                 "address_resolver": "dns_resolver",
-                "strategy": "ipv4_only",
+                "strategy": "prefer_ipv6",
                 "detour": "direct"
             },
             {
@@ -446,14 +488,14 @@ This is my personal configuration. Obviously, exposing it to the public network 
         {
             "type": "tun",
             "tag": "tun-in",
-            "inet4_address": "172.16.0.1/30",
-            "inet6_address": "fd00::1/126",
-            "mtu": 1400,
+            "interface_name": "tun0",
+            "inet4_address": "172.19.0.1/30",
+            "inet6_address": "fdfe:dcba:9876::1/126",
+            "mtu": 9000,
             "auto_route": true,
             "strict_route": true,
-            "stack": "gvisor",
-            "sniff": true,
-            "sniff_override_destination": false
+            "stack": "mixed",
+            "sniff": true
         }
     ],
     "outbounds": [
@@ -476,6 +518,18 @@ This is my personal configuration. Obviously, exposing it to the public network 
                     "public_key": "dpU-LTUuyoCyox_4fh5n-h5NCsSSUKXayFsOsfcIzRA",
                     "short_id": "7fcff4362963e98e"
                 }
+            },
+            "multiplex": {
+                "enabled": false,
+                "protocol": "h2mux",
+                "max_streams": 32,
+                "padding": true,
+                "brutal": {
+                    "enabled": false,
+                    "up_mbps": 1000,
+                    "down_mbps": 100
+                }
+        
             },
             "packet_encoding": "xudp"
         },
@@ -526,7 +580,7 @@ Download [client-windows.json](client-windows.json)
 Run the client
 
 ```bash
-sing-box -c client-windows.json
+sing-box run -c client-windows.json
 ```
 
 For WSL2
@@ -539,6 +593,15 @@ Change the host to your own value which is the first hop of your route in WSL2. 
 
 ```bash
 mtr jamesflare.com
+```
+
+### Run sing-box MacOS Client
+
+```bash
+brew install sing-box
+wget -c https://www.jamesflare.com/en/get-my-proxy/client-macos.json -O ~/sing-box/config.json
+
+sing-box run -c ~/sing-box/config.json
 ```
 
 ### Run sing-box Android Client
