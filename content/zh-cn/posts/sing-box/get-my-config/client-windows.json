@@ -9,14 +9,14 @@
                 "tag": "dns_proxy",
                 "address": "https://1.1.1.1/dns-query",
                 "address_resolver": "dns_resolver",
-                "strategy": "ipv4_only",
+                "strategy": "prefer_ipv6",
                 "detour": "proxy"
             },
             {
                 "tag": "dns_direct",
                 "address": "https://dns.alidns.com/dns-query",
                 "address_resolver": "dns_resolver",
-                "strategy": "ipv4_only",
+                "strategy": "prefer_ipv6",
                 "detour": "direct"
             },
             {
@@ -127,11 +127,29 @@
             "type": "tun",
             "tag": "tun-in",
             "interface_name": "tun0",
-            "inet4_address": "172.28.0.1/30",
+            "inet4_address": "172.19.0.1/30",
+            "inet6_address": "fdfe:dcba:9876::1/126",
+            "mtu": 9000,
             "auto_route": true,
             "strict_route": true,
             "stack": "mixed",
             "sniff": true
+        },
+        {
+            "type": "mixed",
+            "tag": "mixed-in",
+            "listen": "::",
+            "listen_port": 1080,
+            "tcp_fast_open": true,
+            "tcp_multi_path": true,
+            "udp_fragment": true,
+            "udp_timeout": "5m",
+            "sniff": false,
+            "sniff_override_destination": false,
+            "sniff_timeout": "300ms",
+            "domain_strategy": "prefer_ipv6",
+            "udp_disable_domain_unmapping": false,
+            "set_system_proxy": false
         }
     ],
     "outbounds": [
@@ -154,6 +172,18 @@
                     "public_key": "dpU-LTUuyoCyox_4fh5n-h5NCsSSUKXayFsOsfcIzRA",
                     "short_id": "7fcff4362963e98e"
                 }
+            },
+            "multiplex": {
+                "enabled": false,
+                "protocol": "h2mux",
+                "max_streams": 32,
+                "padding": true,
+                "brutal": {
+                    "enabled": false,
+                    "up_mbps": 1000,
+                    "down_mbps": 100
+                }
+        
             },
             "packet_encoding": "xudp"
         },

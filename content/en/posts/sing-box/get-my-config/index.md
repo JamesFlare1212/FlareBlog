@@ -33,7 +33,7 @@ resources:
     src: featured-image-preview.jpg
 toc: true
 math: false
-lightgallery: false
+lightgallery: true
 password: sing-box
 message:
 repost:
@@ -529,6 +529,29 @@ Run the client
 sing-box -c client-windows.json
 ```
 
+For WSL2
+
+```bash
+export ALL_PROXY=http://JamesFlare-NY-B.mshome.net:1080
+```
+
+Change the host to your own value which is the first hop of your route in WSL2. You can test it by
+
+```bash
+mtr jamesflare.com
+```
+
 ### Run sing-box Android Client
 
 Remote: https://www.jamesflare.com/en/get-my-proxy/client-android.json
+
+Import: [sing-box://import-remote-profile](sing-box://import-remote-profile?url=https%3A%2F%2Fwww.jamesflare.com%2Fen%2Fget-my-proxy%2Fclient-android.json#DMIT)
+
+{{< image src="sing-box-qr-code.png" width="240px" caption="sing-box QR Code" >}}
+
+## Tools
+
+### ip.skk.moe
+
+<iframe src="https://ip.skk.moe/simple" style="width: 100%; border: 0"></iframe>
+<iframe src="https://ip.skk.moe/simple-dark" style="width: 100%; border: 0"></iframe>

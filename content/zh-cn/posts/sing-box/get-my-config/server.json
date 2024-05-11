@@ -6,7 +6,7 @@
         {
             "type": "vless",
             "tag": "vless-in",
-            "listen": "0.0.0.0",
+            "listen": "::",
             "listen_port": 443,
             "users": [
                 {

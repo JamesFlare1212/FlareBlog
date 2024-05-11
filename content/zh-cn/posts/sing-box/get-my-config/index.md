@@ -529,6 +529,29 @@ sudo systemctl start sing-box
 sing-box -c client-windows.json
 ```
 
+对于 WSL2
+
+```bash
+export ALL_PROXY=http://JamesFlare-NY-B.mshome.net:1080
+```
+
+把Host名改成你自己的，通常是路由的第一跳，可以这样测试一下
+
+```bash
+mtr jamesflare.com
+```
+
 ### 配置 sing-box Android 客户端
 
 Remote: https://www.jamesflare.com/zh-cn/get-my-proxy/client-android.json
+
+Import: [sing-box://import-remote-profile](sing-box://import-remote-profile?url=https%3A%2F%2Fwww.jamesflare.com%2Fen%2Fget-my-proxy%2Fclient-android.json#DMIT)
+
+{{< image src="sing-box-qr-code.png" width="240px" caption="sing-box QR Code" >}}
+
+## 工具
+
+### ip.skk.moe
+
+<iframe src="https://ip.skk.moe/simple" style="width: 100%; border: 0"></iframe>
+<iframe src="https://ip.skk.moe/simple-dark" style="width: 100%; border: 0"></iframe>
