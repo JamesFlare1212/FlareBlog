@@ -599,7 +599,7 @@ mtr jamesflare.com
 
 ```bash
 brew install sing-box
-wget -c https://www.jamesflare.com/en/get-my-proxy/client-macos.json -O ~/sing-box/config.json
+wget -c https://www.jamesflare.com/zh-cn/get-my-proxy/client-macos.json -O ~/sing-box/config.json
 
 sing-box run -c ~/sing-box/config.json
 ```
@@ -608,7 +608,7 @@ sing-box run -c ~/sing-box/config.json
 
 Remote: https://www.jamesflare.com/zh-cn/get-my-proxy/client-android.json
 
-Import: [sing-box://import-remote-profile](sing-box://import-remote-profile?url=https%3A%2F%2Fwww.jamesflare.com%2Fen%2Fget-my-proxy%2Fclient-android.json#DMIT)
+Import: [sing-box://import-remote-profile](sing-box://import-remote-profile?url=https%3A%2F%2Fwww.jamesflare.com%2Fzh-cn%2Fget-my-proxy%2Fclient-android.json#DMIT)
 
 {{< image src="sing-box-qr-code.png" width="240px" caption="sing-box QR Code" >}}
 
