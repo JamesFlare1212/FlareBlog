@@ -113,48 +113,54 @@ sing-box generate uuid
 
 ```json
 {
-   "log":{
-      "level":"info"
-   },
-   "inbounds":[
-      {
-         "type":"vless",
-         "tag":"vless-in",
-         "listen":"0.0.0.0",
-         "listen_port":443,
-         "users":[
-            {
-               "name":"jamesflare",
-               "uuid":"11391936-7544-4af5-ad02-e9f3970b1f64",
-               "flow":"xtls-rprx-vision"
+    "log": {
+        "level": "info"
+    },
+    "inbounds": [
+        {
+            "type": "vless",
+            "tag": "vless-in",
+            "listen": "::",
+            "listen_port": 443,
+            "users": [
+                {
+                    "name": "jamesflare",
+                    "uuid": "11391936-7544-4af5-ad02-e9f3970b1f64",
+                    "flow": "xtls-rprx-vision"
+                }
+            ],
+            "tls": {
+                "enabled": true,
+                "server_name": "portfolio.newschool.edu",
+                "reality": {
+                    "enabled": true,
+                    "handshake": {
+                        "server": "portfolio.newschool.edu",
+                        "server_port": 443
+                    },
+                    "private_key": "0H5tYLhpDT_r675UC93iWAS2LqN6mPZoDcVDqsff018",
+                    "short_id": [
+                        "26079ba8291ff0fc"
+                    ]
+                }
+            },
+            "multiplex": {
+                "enabled": false,
+                "padding": true,
+                "brutal": {
+                    "enabled": false,
+                    "up_mbps": 1000,
+                    "down_mbps": 1000
+                }
             }
-         ],
-         "tls":{
-            "enabled":true,
-            "server_name":"www.rpi.edu",
-            "reality":{
-               "enabled":true,
-               "handshake":{
-                  "server":"www.rpi.edu",
-                  "server_port":443
-               },
-               "private_key":"0H5tYLhpDT_r675UC93iWAS2LqN6mPZoDcVDqsff018",
-               "short_id":[
-                  "26079ba8291ff0fc"
-               ]
-            }
-         },
-         "multiplex":{
-            "enabled":false
-         }
-      }
-   ],
-   "outbounds":[
-      {
-         "type":"direct",
-         "tag":"direct"
-      }
-   ]
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "direct",
+            "tag": "direct"
+        }
+    ]
 }
 ```
 
@@ -162,7 +168,7 @@ sing-box generate uuid
 
 - `name`
 - `uuid`
-- `server_name` 
+- `server_name`
 - `server`
 - `server_port`
 - `private_key`
@@ -175,7 +181,7 @@ sing-box generate uuid
 你需要将以下字段更改为你自己的值：
 
 - `server`
-- `server_port` 
+- `server_port`
 - `uuid`
 - `server_name`
 - `public_key`
@@ -185,94 +191,211 @@ sing-box generate uuid
 
 ```json
 {
-   "log":{
-      "level":"info",
-      "timestamp":true
-   },
-   "dns":{
-      "servers":[
+   "dns": {
+      "final": "dns_proxy",
+      "rules": [
          {
-            "tag":"cloudflare",
-            "address":"1.1.1.1"
+            "outbound": "any",
+            "server": "dns_resolver"
+         },
+         {
+            "rule_set": "geosite-geolocation-!cn",
+            "server": "dns_proxy"
+         },
+         {
+            "rule_set": "geosite-cn",
+            "server": "dns_direct"
          }
       ],
-      "rules":[
+      "servers": [
          {
-            "outbound":"any",
-            "server":"cloudflare"
+            "address": "https://1.1.1.1/dns-query",
+            "address_resolver": "dns_resolver",
+            "detour": "proxy",
+            "strategy": "prefer_ipv6",
+            "tag": "dns_proxy"
+         },
+         {
+            "address": "https://dns.alidns.com/dns-query",
+            "address_resolver": "dns_resolver",
+            "detour": "direct",
+            "strategy": "prefer_ipv6",
+            "tag": "dns_direct"
+         },
+         {
+            "address": "223.5.5.5",
+            "detour": "direct",
+            "tag": "dns_resolver"
          }
-      ],
-      "strategy":"ipv4_only"
+      ]
    },
-   "inbounds":[
+   "experimental": {
+      "cache_file": {
+         "enabled": true,
+         "path": "cache.db"
+      }
+   },
+   "inbounds": [
       {
-         "type":"tun",
-         "tag":"tun-in",
-         "interface_name":"tun0",
-         "inet4_address":"172.28.0.1/30",
-         "auto_route":true,
-         "strict_route":true,
-         "stack":"system",
-         "sniff":true
+         "auto_route": true,
+         "inet4_address": "172.19.0.1/30",
+         "inet6_address": "fdfe:dcba:9876::1/126",
+         "interface_name": "tun0",
+         "mtu": 9000,
+         "sniff": true,
+         "stack": "mixed",
+         "strict_route": true,
+         "tag": "tun-in",
+         "type": "tun"
+      },
+      {
+         "domain_strategy": "prefer_ipv6",
+         "listen": "::",
+         "listen_port": 1080,
+         "set_system_proxy": false,
+         "sniff": false,
+         "sniff_override_destination": false,
+         "sniff_timeout": "300ms",
+         "tag": "mixed-in",
+         "tcp_fast_open": true,
+         "tcp_multi_path": true,
+         "type": "mixed",
+         "udp_disable_domain_unmapping": false,
+         "udp_fragment": true,
+         "udp_timeout": "5m"
       }
    ],
-   "outbounds":[
+   "log": {
+      "level": "info",
+      "timestamp": true
+   },
+   "outbounds": [
       {
-         "type":"vless",
-         "tag":"vless-out",
-         "server":"your.server.ip.or.domain",
-         "server_port":443,
-         "uuid":"11391936-7544-4af5-ad02-e9f3970b1f64",
-         "flow":"xtls-rprx-vision",
-         "tls":{
-            "enabled":true,
-            "server_name":"www.rpi.edu",
-            "utls":{
-               "enabled":true,
-               "fingerprint":"chrome"
+         "flow": "xtls-rprx-vision",
+         "multiplex": {
+            "brutal": {
+               "down_mbps": 100,
+               "enabled": false,
+               "up_mbps": 1000
             },
-            "reality":{
-               "enabled":true,
-               "public_key":"SeIw41mp1LFEd6CEGArmnSoaIXzNlwnkIbduoEY-OXk",
-               "short_id":"26079ba8291ff0fc"
+            "enabled": false,
+            "max_streams": 32,
+            "padding": true,
+            "protocol": "h2mux"
+         },
+         "packet_encoding": "xudp",
+         "server": "your.server.ip.or.domain",
+         "server_port": 443,
+         "tag": "proxy",
+         "tls": {
+            "enabled": true,
+            "reality": {
+               "enabled": true,
+               "public_key": "SeIw41mp1LFEd6CEGArmnSoaIXzNlwnkIbduoEY-OXk",
+               "short_id": "26079ba8291ff0fc"
+            },
+            "server_name": "portfolio.newschool.edu",
+            "utls": {
+               "enabled": true,
+               "fingerprint": "chrome"
             }
          },
-         "packet_encoding":"xudp",
-         "multiplex":{
-            "enabled":false
-         }
+         "type": "vless",
+         "uuid": "11391936-7544-4af5-ad02-e9f3970b1f64"
       },
       {
-         "type":"direct",
-         "tag":"direct"
+         "tag": "direct",
+         "type": "direct"
       },
       {
-         "type":"dns",
-         "tag":"dns"
+         "tag": "block",
+         "type": "block"
+      },
+      {
+         "tag": "dns-out",
+         "type": "dns"
       }
    ],
-   "route":{
-      "geoip":{
-         "download_url":"https://github.com/SagerNet/sing-geoip/releases/latest/download/geoip.db",
-         "download_detour":"vless-out"
-      },
-      "geosite":{
-         "download_url":"https://github.com/SagerNet/sing-geosite/releases/latest/download/geosite.db",
-         "download_detour":"vless-out"
-      },
-      "rules":[
+   "route": {
+      "auto_detect_interface": true,
+      "final": "proxy",
+      "rule_set": [
          {
-            "protocol":"dns",
-            "outbound":"dns"
+            "download_detour": "proxy",
+            "format": "binary",
+            "tag": "geosite-geolocation-!cn",
+            "type": "remote",
+            "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-geolocation-!cn.srs"
          },
          {
-            "geoip":[
-               "private"
-            ],
-            "outbound":"direct"
+            "download_detour": "proxy",
+            "format": "binary",
+            "tag": "geoip-cn",
+            "type": "remote",
+            "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs"
+         },
+         {
+            "download_detour": "proxy",
+            "format": "binary",
+            "tag": "geosite-cn",
+            "type": "remote",
+            "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs"
          }
       ],
-      "auto_detect_interface":true
+      "rules": [
+         {
+            "outbound": "dns-out",
+            "protocol": "dns"
+         },
+         {
+            "network": "tcp",
+            "outbound": "block",
+            "port": 853
+         },
+         {
+            "network": "udp",
+            "outbound": "block",
+            "port": [
+               443,
+               853
+            ]
+         },
+         {
+            "mode": "and",
+            "outbound": "proxy",
+            "rules": [
+               {
+                  "invert": true,
+                  "rule_set": "geoip-cn"
+               },
+               {
+                  "rule_set": "geosite-geolocation-!cn"
+               }
+            ],
+            "type": "logical"
+         },
+         {
+            "mode": "and",
+            "outbound": "direct",
+            "rules": [
+               {
+                  "rule_set": "geoip-cn"
+               },
+               {
+                  "rule_set": "geosite-cn"
+               }
+            ],
+            "type": "logical"
+         },
+         {
+            "outbound": "direct",
+            "rule_set": "geoip-cn"
+         },
+         {
+            "ip_is_private": true,
+            "outbound": "direct"
+         }
+      ]
    }
 }
 ```
