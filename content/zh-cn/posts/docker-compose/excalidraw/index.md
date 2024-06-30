@@ -42,8 +42,8 @@ seo:
   images: []
 
 repost:
-  enable: true
-  url: ""
+  enable: false
+  url:
 
 # 查看 Front Matter 的详细配置说明：https://fixit.lruihao.cn/theme-documentation-content/#front-matter
 ---

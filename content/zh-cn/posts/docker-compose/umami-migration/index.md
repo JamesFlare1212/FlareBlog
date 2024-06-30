@@ -36,7 +36,7 @@ lightgallery: false
 password:
 message:
 repost:
-  enable: true
+  enable: false
   url:
 
 # 查看前言详细信息：https://fixit.lruihao.cn/documentation/content-management/introduction/#front-matter

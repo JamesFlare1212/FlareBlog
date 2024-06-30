@@ -19,9 +19,9 @@ tags:
   - 考试
   - RPI
   - Python
-  - 编程
+  - 编程语言
 categories:
-  - 编程
+  - 编程语言
 collections:
   - CSCI 1100
 hiddenFromHomePage: false
@@ -40,7 +40,7 @@ lightgallery: false
 password:
 message:
 repost:
-  enable: true
+  enable: false
   url:
 
 # See details front matter: https://fixit.lruihao.cn/documentation/content-management/introduction/#front-matter

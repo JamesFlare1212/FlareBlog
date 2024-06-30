@@ -40,7 +40,7 @@ lightgallery: false
 password:
 message:
 repost:
-  enable: true
+  enable: false
   url:
 
 # 有关详细的 front matter 设置，请参阅: https://fixit.lruihao.cn/documentation/content-management/introduction/#front-matter
