@@ -25,3 +25,25 @@ details summary strong {
 .aside-collection {
     margin-top: 64px;
 }
+
+// Short code - columns
+
+.md-columns {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -1rem;
+    margin-right: -1rem;
+  
+    >div {
+      flex: 1 1;
+      margin: 1rem 0;
+      min-width: 100px;
+      max-width: 100%;
+      padding: 0 1rem;
+    }
+  
+    .markdown-inner {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
