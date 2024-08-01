@@ -226,7 +226,7 @@ Finally, I tested Geekbench 5 only, with following script:
 curl -sL yabs.sh | bash -s -- -i -f  -n -5
 ```
 
-Here is Geekbench 6 Result:
+Here is Geekbench 5 Result:
 
 ```text
 Geekbench 5 Benchmark Test:
