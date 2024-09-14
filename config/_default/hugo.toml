@@ -1,6 +1,8 @@
 # =====================================================================================
 # It's recommended to use Alternate Theme Config to configure FixIt
 # Modifying this file may result in merge conflict
+# There are currently some restrictions to what a theme component can configure:
+# params, menu, outputformats and mediatypes
 # =====================================================================================
 
 # -------------------------------------------------------------------------------------
@@ -14,6 +16,13 @@ title = "FlareBlog"
 baseURL = "https://www.jamesflare.com/"
 # theme list
 theme = ["FixIt", "component-projects"]
+defaultContentLanguage = "en"
+# language code ["en", "zh-CN", "fr", "pl", ...]
+languageCode = "en"
+# language name ["English", "简体中文", "Français", "Polski", ...]
+languageName = "English"
+# whether to include Chinese/Japanese/Korean
+hasCJKLanguage = true
 # default amount of posts in each pages
 paginate = 12
 # copyright description used only for seo schema
@@ -24,9 +33,6 @@ enableRobotsTXT = true
 enableGitInfo = false
 # whether to use emoji code
 enableEmoji = true
-
-defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = true
 
 # -------------------------------------------------------------------------------------
 # Related content Configuration
@@ -94,18 +100,41 @@ defaultContentLanguageInSubdir = true
     ########## necessary configurations ##########
     guessSyntax = true
   # Goldmark is from Hugo 0.60 the default library used for Markdown
+  # https://gohugo.io/getting-started/configuration-markup/#goldmark
   [markup.goldmark]
+    duplicateResourceFiles = false
     [markup.goldmark.extensions]
       definitionList = true
       footnote = true
       linkify = true
-      strikethrough = true
+      linkifyProtocol = 'https'
+      strikethrough = false
       table = true
       taskList = true
       typographer = true
+      # https://gohugo.io/getting-started/configuration-markup/#extras
+      [markup.goldmark.extensions.extras]
+        [markup.goldmark.extensions.extras.delete]
+          enable = true
+        [markup.goldmark.extensions.extras.insert]
+          enable = true
+        [markup.goldmark.extensions.extras.mark]
+          enable = true
+        [markup.goldmark.extensions.extras.subscript]
+          enable = true
+        [markup.goldmark.extensions.extras.superscript]
+          enable = true
+    # TODO passthrough refactor https://gohugo.io/getting-started/configuration-markup/#parserattributeblock
+    # TODO hugo 0.122.0 https://gohugo.io/content-management/mathematics/
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
     [markup.goldmark.renderer]
+      hardWraps = false
       # whether to use HTML tags directly in the document
       unsafe = true
+      xhtml = false
   # Table Of Contents settings
   [markup.tableOfContents]
     ordered = false
@@ -161,11 +190,6 @@ defaultContentLanguageInSubdir = true
 # -------------------------------------------------------------------------------------
 
 [outputFormats]
-  # Options to make output .md files
-  [outputFormats.MarkDown]
-    mediaType = "text/markdown"
-    isPlainText = true
-    isHTML = false
   # FixIt 0.3.0 | NEW Options to make output /archives/index.html file
   [outputFormats.archives]
     path = "archives"
@@ -174,6 +198,7 @@ defaultContentLanguageInSubdir = true
     isPlainText = false
     isHTML = true
     permalinkable = true
+    notAlternative = true
   # FixIt 0.3.0 | NEW Options to make output /offline/index.html file
   [outputFormats.offline]
     path = "offline"
@@ -182,18 +207,29 @@ defaultContentLanguageInSubdir = true
     isPlainText = false
     isHTML = true
     permalinkable = true
+    notAlternative = true
   # FixIt 0.3.0 | NEW Options to make output readme.md file
-  [outputFormats.README]
+  [outputFormats.readme]
     baseName = "readme"
     mediaType = "text/markdown"
     isPlainText = true
     isHTML = false
+    notAlternative = true
   # FixIt 0.3.0 | CHANGED Options to make output baidu_urls.txt file
   [outputFormats.baidu_urls]
     baseName = "baidu_urls"
     mediaType = "text/plain"
     isPlainText = true
     isHTML = false
+    notAlternative = true
+  # FixIt 0.3.10 | NEW Options to make output search.json file
+  [outputFormats.search]
+    baseName = "search"
+    mediaType = "application/json"
+    rel = "search"
+    isPlainText = true
+    isHTML = false
+    permalinkable = true
 
 # -------------------------------------------------------------------------------------
 # Customizing Output Formats
@@ -207,11 +243,11 @@ defaultContentLanguageInSubdir = true
 # taxonomy: ["HTML", "RSS"]
 # term: ["HTML", "RSS"]
 [outputs]
-  home = ["HTML", "RSS", "JSON", "archives"]
-  page = ["HTML", "MarkDown"]
-  section = ["HTML", "RSS"]
-  taxonomy = ["HTML"]
-  term = ["HTML", "RSS"]
+  home = ["html", "rss", "archives", "offline", "search"]
+  page = ["html", "markdown"]
+  section = ["html", "rss"]
+  taxonomy = ["html"]
+  term = ["html", "rss"]
 
 # -------------------------------------------------------------------------------------
 # Taxonomies Configuration
@@ -248,8 +284,6 @@ defaultContentLanguageInSubdir = true
   enablePWA = false
   # FixIt 0.2.14 | NEW whether to add external Icon for external links automatically
   externalIcon = false
-  # FixIt 0.3.0 | NEW whether to reverse the order of the navigation menu
-  navigationReverse = false
   # FixIt 0.3.0 | NEW whether to add site title to the title of every page
   # remember to set up your site title in `hugo.toml` (e.g. title = "title")
   withSiteTitle = true
@@ -361,18 +395,22 @@ defaultContentLanguageInSubdir = true
     sticky = false
     showHome = false
 
+  # FixIt 0.3.10 | NEW Post navigation config
+  [params.navigation]
+    # whether to show the post navigation in section pages scope
+    inSection = false
+    # whether to reverse the next/previous post navigation order
+    reverse = false
+
   # Footer config
   [params.footer]
     enable = true
-    # FixIt 0.2.17 | CHANGED Custom content (HTML format is supported)
-    # For advanced use, see parameter `params.customFilePath.footer`
-    custom = ""
     # whether to show copyright info
     copyright = true
     # whether to show the author
     author = true
     # Site creation year
-    since = "2022"
+    since = ""
     # FixIt 0.2.12 | NEW Public network security only in China (HTML format is supported)
     gov = ""
     # ICP info only in China (HTML format is supported)
@@ -412,8 +450,12 @@ defaultContentLanguageInSubdir = true
     paginate = 20
     # date format (month and day)
     dateFormat = "01-02"
-    # amount of RSS pages
-    rss = 30
+    # FixIt 0.3.10 | NEW Section feed config for RSS, Atom and JSON feed.
+    [params.section.feed]
+      # The number of posts to include in the feed. If set to -1, all posts.
+      limit = -1
+      # whether to show the full text content in feed.
+      fullText = false
     # FixIt 0.2.13 | NEW recently updated pages config
     # TODO refactor to support archives, section, taxonomy and term
     [params.section.recentlyUpdated]
@@ -422,14 +464,18 @@ defaultContentLanguageInSubdir = true
       days = 30
       maxCount = 10
 
-  # List (category or tag) page config
+  # Term list (category or tag) page config
   [params.list]
     # special amount of posts in each list page
     paginate = 20
     # date format (month and day)
     dateFormat = "01-02"
-    # amount of RSS pages
-    rss = 10
+    # FixIt 0.3.10 | NEW Term list feed config for RSS, Atom and JSON feed.
+    [params.list.feed]
+      # The number of posts to include in the feed. If set to -1, all posts.
+      limit = -1
+      # whether to show the full text content in feed.
+      fullText = false
 
   # FixIt 0.2.17 | NEW TagCloud config for tags page
   [params.tagcloud]
@@ -441,8 +487,6 @@ defaultContentLanguageInSubdir = true
 
   # Home page config
   [params.home]
-    # amount of RSS pages
-    rss = 10
     # Home page profile
     [params.home.profile]
       enable = true
@@ -557,6 +601,14 @@ defaultContentLanguageInSubdir = true
     Phone = ""
     Email = "jamesflare1212@gmail.com"
     RSS = true
+    # custom social links like the following
+    # [params.social.twitter]
+    #   id = "lruihao"
+    #   weight = 3
+    #   prefix = "https://twitter.com/"
+    #   Title = "Twitter"
+    #   [social.twitter.icon]
+    #     class = "fa-brands fa-x-twitter fa-fw"
 
   # Page config
   [params.page]
@@ -636,7 +688,8 @@ defaultContentLanguageInSubdir = true
       closeComment = false
     # FixIt 0.3.0 | NEW page heading config
     [params.page.heading]
-      # used with `markup.tableOfContents.ordered` parameter
+      # FixIt 0.3.3 | NEW whether to capitalize automatic text of headings
+      capitalize = false
       [params.page.heading.number]
         # whether to enable auto heading numbering
         enable = false
@@ -664,6 +717,8 @@ defaultContentLanguageInSubdir = true
       mhchem = true
     # Code config
     [params.page.code]
+      # FixIt 0.3.9 | NEW whether to enable the code wrapper
+      enable = true
       # whether to show the copy button of the code block
       copy = true
       # FixIt 0.2.13 | NEW whether to show the edit button of the code block
@@ -815,6 +870,7 @@ defaultContentLanguageInSubdir = true
         texRenderer = false # FixIt 0.2.16 | NEW
         search = false # FixIt 0.2.16 | NEW
         recaptchaV3Key = "" # FixIt 0.2.16 | NEW
+        turnstileKey = "" # FixIt 0.3.8 | NEW
         reaction = false # FixIt 0.2.18 | NEW
       # Facebook comment config (https://developers.facebook.com/docs/plugins/comments)
       [params.page.comment.facebook]
@@ -941,11 +997,16 @@ defaultContentLanguageInSubdir = true
     # FixIt 0.2.13 | NEW watermark's fontFamily
     fontFamily = "inherit"
 
-  # FixIt 0.2.12 | NEW Busuanzi count
-  [params.ibruce]
+  # FixIt 0.3.10 | NEW Busuanzi count
+  [params.busuanzi]
+    # whether to enable busuanzi count
     enable = false
-    # Enable in post meta
-    enablePost = false
+    # busuanzi count core script source. Default is https://vercount.one/js
+    source = "https://vercount.one/js"
+    # whether to show the site views
+    siteViews = true
+    # whether to show the page views
+    pageViews = true
 
   # Site verification code config for Google/Bing/Yandex/Pinterest/Baidu/360/Sogou
   [params.verification]
@@ -1045,23 +1106,18 @@ defaultContentLanguageInSubdir = true
     # ["barber-shop", "big-counter", "bounce", "center-atom", "center-circle", "center-radar", "center-simple",
     # "corner-indicator", "fill-left", "flash", "flat-top", "loading-bar", "mac-osx", "material", "minimal"]
     theme = "minimal"
-  
-  # FixIt 0.2.17 | NEW Define custom file paths
-  # Create your custom files in site directory `layouts/partials/custom` and uncomment needed files below
-  [params.customFilePath]
-    # aside = "custom/aside.html"
-    # profile = "custom/profile.html"
-    # footer = "custom/footer.html"
+
+  # FixIt 0.3.10 | NEW Global Feed config for RSS, Atom and JSON feed.
+  [params.feed]
+    # The number of posts to include in the feed. If set to -1, all posts.
+    limit = 10
+    # whether to show the full text content in feed.
+    fullText = true
 
   # FixIt 0.2.15 | NEW Developer options
+  # Select the scope named `public_repo` to generate personal access token,
+  # Configure with environment variable `HUGO_PARAMS_GHTOKEN=xxx`, see https://gohugo.io/functions/os/getenv/#examples
   [params.dev]
     enable = false
     # Check for updates
     c4u = false
-    # Please do not expose to public!
-    githubToken = ""
-    # Mobile Devtools config
-    [params.dev.mDevtools]
-      enable = false
-      # "vConsole", "eruda" supported
-      type = "vConsole"
