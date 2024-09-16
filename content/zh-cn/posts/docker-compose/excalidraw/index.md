@@ -1,6 +1,6 @@
 ---
 slug: "excalidraw-full-stack-docker"
-title: "Excalidraw 全栈自部署教程"
+title: "使用Docker部署全栈Excalidraw"
 subtitle: ""
 date: 2023-01-13T15:54:36+08:00
 lastmod: 2024-03-11T12:39:36-05:00
@@ -14,25 +14,23 @@ description: 本文为你提供了一份使用 Docker Compose 部署完整 Excal
 license: ""
 comment: true
 weight: 0
-
 tags:
-- Excalidraw
-- 开源软件
-- Docker
+  - Excalidraw
+  - 开源软件
+  - Docker
 categories:
-- 教程
-- 资源分享
-
+  - 教程
+  - 资源分享
+collections:
+  - Docker Compose
 hiddenFromHomePage: false
 hiddenFromSearch: false
-
 summary: 通过本文，你将学会使用 Docker Compose 一键部署拥有前端界面、数据存储和多人协作等全部功能的 Excalidraw 技术栈，快速搭建一个可以私有使用、分享协作的 Excalidraw 部署。
 resources:
 - name: featured-image
   src: featured-image.jpg
 - name: featured-image-preview
   src: featured-image-preview.jpg
-
 toc:
   enable: true
 math:
@@ -40,7 +38,6 @@ math:
 lightgallery: true
 seo:
   images: []
-
 repost:
   enable: false
   url:

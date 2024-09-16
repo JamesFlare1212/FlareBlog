@@ -1,6 +1,6 @@
 ---
 slug: "excalidraw-full-stack-docker"
-title: "Excalidraw Full-Stack Self-Deployment"
+title: "Deploying a Full-stack Excalidraw Using Docker"
 subtitle: ""
 date: 2023-01-13T15:54:36+08:00
 lastmod: 2024-03-11T12:39:36-05:00
@@ -23,7 +23,8 @@ tags:
 categories:
 - Tutorials
 - Sharing
-
+collections:
+  - Docker Compose
 hiddenFromHomePage: false
 hiddenFromSearch: false
 

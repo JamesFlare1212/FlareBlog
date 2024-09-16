@@ -1,5 +1,5 @@
 ---
-title: Migrate Umami Docker From One Server to Another
+title: Migrate the Docker-deployed Umami From One Server to Another.
 subtitle:
 date: 2024-03-11T18:03:39-04:00
 slug: umami-docker-migration
@@ -15,12 +15,14 @@ license:
 comment: true
 weight: 0
 tags:
-- PostgreSQL
-- Open Source
-- Docker
-- Umami
+  - PostgreSQL
+  - Open Source
+  - Docker
+  - Umami
 categories:
-- Tutorials
+  - Tutorials
+collections:
+  - Docker Compose
 hiddenFromHomePage: false
 hiddenFromSearch: false
 hiddenFromRss: false

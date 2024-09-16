@@ -9,7 +9,7 @@ author:
   link: https://www.jamesflare.com
   email:
   avatar: /site-logo.avif
-description: This blog post introduces a Python programming assignment for analyzing and comparing text documents using natural language processing techniques, such as calculating word length, distinct word ratios, and Jaccard similarity between word sets and pairs.
+description: This blog post provides a detailed guide on completing Homework 8 for CSCI 1100, focusing on simulating a berry field with bears and tourists using Python classes. It covers the creation of BerryField, Bear, and Tourist classes, and instructions for submitting the assignment.
 keywords: ["Python", "Classes", "Simulation", "Homework 8"]
 license:
 comment: true
@@ -35,7 +35,7 @@ resources:
   - name: featured-image-preview
     src: featured-image-preview.jpg
 toc: true
-math: true
+math: false
 lightgallery: false
 password:
 message:
@@ -70,7 +70,7 @@ You will need to write at least three classes for this assignment corresponding 
 
 ### BerryField
 
-The BerryField class must maintain and manage the location of berries as a square Row X Column grid with (0,0) being the upper left corner and (N-1, N-1) being the lower right corner. Each space holds 0-10 berry units.
+The `BerryField` class must maintain and manage the location of berries as a square Row X Column grid with (0,0) being the upper left corner and (N-1, N-1) being the lower right corner. Each space holds 0-10 berry units.
 
 - The initializer class must, minimally, be able to take in a grid of values (think of our Sudoku lab) and use it to create a berry field with the values contained in the grid.
 - The string function must, minimally, be able to generate a string of the current state of the berry patch. Each block in the grid must be formatted with the `"{:>4}"` format specifier. If there is a bear at the location, the grid should have a `"B"`; if there is a tourist, the grid should have a `"T"`; and if there is both a bear and a tourist, the grid should have an `"X"`. If there is neither a bear nor a tourist, it should have the number of berries at the location.
@@ -146,7 +146,7 @@ As you go, report on any tourists or bears that leave or enter the field. Name y
 
 ## Supporting Files
 
-{{< link href="HW6.zip" content="HW6.zip" title="Download HW6.zip" download="HW6.zip" card=true >}}
+{{< link href="HW8.zip" content="HW8.zip" title="Download HW8.zip" download="HW8.zip" card=true >}}
 
 ## Solution
 

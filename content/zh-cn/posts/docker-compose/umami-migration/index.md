@@ -1,5 +1,5 @@
 ---
-title: 将 Umami Docker 从一台服务器迁移到另一台服务器
+title: 将Docker部署的Umami从一台服务器迁移到另一台服务器
 subtitle:
 date: 2024-03-11T18:03:39-04:00
 slug: umami-docker-migration
@@ -14,12 +14,14 @@ license:
 comment: true
 weight: 0
 tags:
-- PostgreSQL
-- 开源
-- Docker
-- Umami
+  - PostgreSQL
+  - 开源
+  - Docker
+  - Umami
 categories:
-- 教程
+  - 教程
+collections:
+  - Docker Compose
 hiddenFromHomePage: false
 hiddenFromSearch: false
 hiddenFromRss: false
