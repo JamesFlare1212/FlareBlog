@@ -60,7 +60,7 @@ You will need the data files we provide in `hw6_files.zip`, so be sure to downlo
 
 There are many software systems for analyzing the style and sophistication of written text and even deciding if two documents were authored by the same individual. The systems analyze documents based on the sophistication of word usage, frequently used words, and words that appear closely together. In this assignment you will write a Python program that reads two files containing the text of two different documents, analyzes each document, and compares the documents. The methods we use are simple versions of much more sophisticated methods that are used in practice in the field known as natural language processing (NLP).
 
-## Files and Parameters
+### Files and Parameters
 
 Your program must work with three files and an integer parameter.
 
@@ -77,7 +77,7 @@ Enter the maximum separation between words in a pair ==> 2
 2
 ```
 
-## Parsing
+### Parsing
 
 The job of parsing for this homework is to break a file of text into a single list of consecutive words. To do this, the contents from a file should first be split up into a list of strings, where each string contains consecutive non-white-space characters. Then each string should have all non-letters removed and all letters converted to lower case. For example, if the contents of a file (e.g., `doc1.txt`) are read to form the string (note the end-of-line and tab characters)
 
@@ -168,7 +168,7 @@ Once you have produced the word list with stop words removed, you are ready to a
 
 5. Finally, as a measure of how distinct the word pairs are, calculate and output, accurate to three decimal places, the ratio of the number of distinct word pairs to the total number of word pairs.
 
-#### Compare Documents
+### Compare Documents
 The last step is to compare the documents for complexity and similarity. There are many possible measures, so we will implement just a few.
 
 Before we do this we need to define a measure of similarity between two sets. A very common one, and the one we use here, is called Jaccard Similarity. This is a sophisticated-sounding name for a very simple concept (something that happens a lot in computer science and other STEM disciplines). If A and B are two sets, then the Jaccard similarity is just
@@ -197,13 +197,13 @@ See the example outputs for details.
 
 - Sorting a list or a set of two-tuples of strings is straightforward. (Note that when you sort a set, the result is a list.) The ordering produced is alphabetical by the first element of the tuple and then, for ties, alphabetical by the second. For example,
 
-```python
->>> v = [('elephant', 'kenya'), ('lion', 'kenya'), ('elephant', 'tanzania'), \
-         ('bear', 'russia'), ('bear', 'canada')]
->>> sorted(v)
-[('bear', 'canada'), ('bear', 'russia'), ('elephant', 'kenya'), \
- ('elephant', 'tanzania'), ('lion', 'kenya')]
-```
+    ```python
+    >>> v = [('elephant', 'kenya'), ('lion', 'kenya'), ('elephant', 'tanzania'), \
+            ('bear', 'russia'), ('bear', 'canada')]
+    >>> sorted(v)
+    [('bear', 'canada'), ('bear', 'russia'), ('elephant', 'kenya'), \
+    ('elephant', 'tanzania'), ('lion', 'kenya')]
+    ```
 
 - Submit just a single Python file, `hw6_sol.py`.
 
