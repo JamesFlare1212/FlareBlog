@@ -153,11 +153,6 @@ import hw4_util
 ### hw4_part1.py
 
 ```python
-"""
-This script is used to test password strength based on certain criteria.
-Author: Jinshan Zhou
-"""
-
 import hw4_util
 
 if __name__ == "__main__":

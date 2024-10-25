@@ -14,8 +14,8 @@ Then, install Hugo.
 
 For Linux:
 ```bash
-wget https://github.com/gohugoio/hugo/releases/download/v0.122.0/hugo_extended_0.122.0_linux-amd64.deb
-dpkg -i hugo_extended_0.122.0_linux-amd64.deb
+wget https://github.com/gohugoio/hugo/releases/download/v0.136.5/hugo_extended_0.136.5_linux-amd64.deb
+dpkg -i hugo_extended_0.136.5_linux-amd64.deb
 ```
 
 For MacOS:

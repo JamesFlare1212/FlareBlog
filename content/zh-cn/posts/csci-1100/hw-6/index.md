@@ -191,10 +191,7 @@ $$
 ### hw6_sol.py
 
 ```python
-"""
-This is a implement of the homework 6 solution for CSCI-1100
-"""
-
+# Debugging
 #work_dir = "/mnt/c/Users/james/OneDrive/RPI/Spring 2024/CSCI-1100/Homeworks/HW6/hw6_files/"
 work_dir = ""
 stop_word = "stop.txt"
