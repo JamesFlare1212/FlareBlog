@@ -2,7 +2,7 @@
 title: CSCI 1100 - Test 4 Overview and Practice Questions
 subtitle:
 date: 2024-04-26T03:54:07-04:00
-slug: csci-1100-exam-4overview
+slug: csci-1100-exam-4-overview
 draft: true
 author:
   name: James
