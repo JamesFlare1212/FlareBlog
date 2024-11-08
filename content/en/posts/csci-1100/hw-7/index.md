@@ -227,4 +227,257 @@ To determine the worst and best movies, the example code used a sort with the ra
 ## Solution
 
 > [!NOTE]
-> I didn't get a full mark in this assignment (Only 96%), so I didn't post the solution. I may redo it to get a full mark solution. After that, I will add it here.
+> I didn't get a full mark in this assignment (Only 96%), so you should not fully trust it. I may redo it to get a full mark solution. After that, I will add it here.
+
+### hw7_part1.py
+
+```python
+"""
+An implementation of HW7 Part 1
+"""
+
+# Global Variables
+word_path = ""
+#word_path = "/mnt/c/Users/james/OneDrive/RPI/Spring 2024/CSCI-1100/Homeworks/HW7/hw7_files/"
+
+# Debugging Variables
+dictionary_file = "words_10percent.txt"
+input_file = "input_words.txt"
+keyboard_file = "keyboard.txt"
+
+def get_dictionary(file_name):
+    words_dict = dict()
+    data = open(file_name, 'r')
+    for lines in data:
+        lines = lines.strip()
+        the_key = lines.split(",")[0]
+        the_value = float(lines.split(",")[1])
+        words_dict[the_key] = the_value
+    data.close()
+    return words_dict
+
+def get_keyboard(file_name):
+    keyboard_dict = dict()
+    data = open(file_name, 'r')
+    for lines in data:
+        lines = lines.strip()
+        the_key = lines.split(" ")[0]
+        keyboard_dict[the_key] = []
+        for i in lines.split(" ")[1:]:
+            keyboard_dict[the_key].append(i)
+    data.close()
+    return keyboard_dict
+
+def check_in_dictionary(word, dictionary):
+    if word in dictionary:
+        return True
+    return False
+
+def get_input_words(file_name):
+    input_words = []
+    file = open(file_name, 'r')
+    for lines in file:
+        lines = lines.strip()
+        input_words.append(lines)
+    file.close()
+    return input_words
+
+def get_drop_words(word):
+    drop_words = set()
+    for i in range(len(word)):
+        drop_words.add(word[:i] + word[i+1:])
+    return drop_words
+
+def get_insert_words(word):
+    insert_words = set()
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    for i in range(len(word)+1):
+        for j in alphabet:
+            insert_words.add(word[:i] + j + word[i:])
+            #print("Inserting: ", word[:i] + j + word[i:])
+    return insert_words
+
+def get_swap_words(word):
+    swap_words = set()
+    for i in range(len(word) - 1):
+        swap_words.add(word[:i] + word[i+1] + word[i] + word[i+2:])
+    return swap_words
+
+def get_replace_words(word, keyboard):
+    replace_words = set()
+    #print(keyboard)
+    for i in range(len(word)):
+        for j in range(len(word[i])):
+            for k in keyboard[word[i][j]]:
+                replace_words.add(word[:i] + k + word[i+1:])
+    return replace_words
+
+def get_all_possible_words(word, keyboard):
+    all_possible_words = set()
+    all_possible_words.update(get_drop_words(word))
+    all_possible_words.update(get_insert_words(word))
+    all_possible_words.update(get_swap_words(word))
+    all_possible_words.update(get_replace_words(word, keyboard))
+    return all_possible_words
+
+def get_suggestions(word, dictionary, keyboard):
+    suggestions = dict()
+    all_possible_words = get_all_possible_words(word, keyboard)
+    for i in all_possible_words:
+        if i in dictionary:
+            suggestions[i] = dictionary[i]
+    topx = sorted(suggestions, key=lambda x: (suggestions[x], x), reverse=True)
+    #print(topx)
+    return topx
+
+def construct_output(input_words, dictionary, keyboard):
+    output = ""
+    max_length = max([len(i) for i in input_words])
+    for i in input_words:
+        output += "    " + " " * (max_length - len(i)) + i + " -> "
+        if check_in_dictionary(i, dictionary):
+            output += "FOUND"
+        elif len(get_suggestions(i, dictionary, keyboard)) == 0:
+            output += "NOT FOUND"
+        else:
+            output += "FOUND {:2d}".format(len(get_suggestions(i, dictionary, keyboard))) + ": "
+            suggestions = get_suggestions(i, dictionary, keyboard)[:3]
+            for j in suggestions:
+                output += " " + j
+        output += "\n"
+    return output
+
+if __name__ == "__main__":
+    dictionary_file = input("Dictionary file => ").strip()
+    print(dictionary_file)
+    input_file = input("Input file => ").strip()
+    print(input_file)
+    keyboard_file = input("Keyboard file => ").strip()
+    print(keyboard_file)
+    
+    dictionary = get_dictionary(word_path + dictionary_file)
+    #print(dictionary)
+    keyboard = get_keyboard(word_path + keyboard_file)
+    #print(keyboard)
+    #print(get_input_words(word_path + input_file))
+    #print(get_drop_words("hello"))
+    #print("shut" in get_insert_words("shu"))
+    #print(get_swap_words("hello"))
+    #print("integers" in get_replace_words("inteters", keyboard))
+    #print(get_all_possible_words("hello", keyboard))
+    #print(get_suggestions("doitd", dictionary, keyboard))
+    print(construct_output(get_input_words(word_path + input_file), dictionary, keyboard), end = "")
+```
+
+### hw7_part2.py
+
+```python
+"""
+An implementation of HW7 Part 2
+"""
+import json
+
+# Global Variables
+word_path = ""
+#word_path = "/mnt/c/Users/james/OneDrive/RPI/Spring 2024/CSCI-1100/Homeworks/HW7/hw7_files/"
+genre = ""
+
+# Debugging Variables
+#min_year = 2000
+#max_year = 2016
+#imdb_weight = 0.7
+#twitter_weight = 0.3
+#genre = "sci-fi"
+
+def get_movie_ids(movies, min_year, max_year):
+    ids = set()
+    for i in movies.keys():
+        if movies[i]['movie_year'] >= min_year and movies[i]['movie_year'] <= max_year:
+            ids.add(int(i))
+    return ids
+            
+def get_imdb_rating(movies, movie_id):
+    return float(movies[str(movie_id)]['rating'])
+
+def get_twitter_rating(ratings, movie_id):
+    if str(movie_id) in ratings.keys():
+        return ratings[str(movie_id)]
+    else:
+        return []
+
+def get_num_twitter_ratings(ratings, movie_id):
+    return len(get_twitter_rating(ratings, movie_id))
+
+def get_weighted_rating(movies, ratings, movie_id, imdb_weight, twitter_weight):
+    imdb = get_imdb_rating(movies, movie_id)
+    twitter = 0.0
+    for i in get_twitter_rating(ratings, movie_id):
+        twitter += i
+    twitter /= len(get_twitter_rating(ratings, movie_id))
+    return (imdb * imdb_weight + twitter * twitter_weight) / (imdb_weight + twitter_weight)
+
+def get_movie_name(movies, movie_id):
+    return movies[str(movie_id)]['name']
+
+if __name__ == "__main__":
+    movies = json.loads(open(word_path + "movies.json").read())
+    ratings = json.loads(open(word_path + "ratings.json").read())
+    
+    """
+    movies['3520029'] = {'genre': ['Sci-Fi', 'Action', 'Adventure'],
+                         'movie_year': 2010, 'name': 'TRON: Legacy',
+                         'rating': 6.8, 'numvotes': 254865}
+    """
+    
+    min_year = int(input("Min year => ").strip())
+    print(min_year)
+    max_year = int(input("Max year => ").strip())
+    print(max_year)
+    imdb_weight = float(input("Weight for IMDB => ").strip())
+    print(imdb_weight)
+    twitter_weight = float(input("Weight for Twitter => ").strip())
+    print(twitter_weight)
+    
+    ids = get_movie_ids(movies, min_year, max_year)
+    #print(ids)
+    while genre.lower() !="stop":
+        genre = input("\nWhat genre do you want to see? ").strip()
+        print(genre)
+        
+        if genre == "stop":
+            break
+        
+        min_rating = 10000.0
+        max_rating = 0.0
+        min_name = ""
+        max_name = ""
+        mv_min_year = 10000
+        mv_max_year = 0
+        
+        for i in ids:
+            if get_num_twitter_ratings(ratings, i) <= 3:
+                continue
+            genres = movies[str(i)]['genre']
+            genres = [x.lower() for x in genres]
+            #print("Debug", i, genres)
+            if genre.lower() in genres:
+                rating = get_weighted_rating(movies, ratings, i, imdb_weight, twitter_weight)
+                #print("Debug", rating)
+                if rating < min_rating:
+                    min_rating = rating
+                    min_name = get_movie_name(movies, i)
+                    mv_min_year = movies[str(i)]['movie_year']
+                if rating > max_rating:
+                    max_rating = rating
+                    max_name = get_movie_name(movies, i)
+                    mv_max_year = movies[str(i)]['movie_year']
+        
+        if min_name == "" or max_name == "":
+            print("\nNo {} movie found in {} through {}".format(genre, mv_min_year, mv_max_year))
+        else:
+            print("\nBest:\n        Released in {}, {} has a rating of {:.2f}".format(mv_max_year, max_name, max_rating))
+            print("\nWorst:\n        Released in {}, {} has a rating of {:.2f}".format(mv_min_year, min_name, min_rating))        
+        
+        genre = genre
+        #genre = "stop" # Debugging Only
+```
