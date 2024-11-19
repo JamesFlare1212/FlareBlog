@@ -2,13 +2,14 @@
 title: {{ replace .TranslationBaseName "-" " " | title }}
 subtitle:
 date: {{ .Date }}
+lastmod: {{ .Date }}
 slug: {{ substr .File.UniqueID 0 7 }}
 draft: true
 author:
-  name:
-  link:
+  name: James
+  link: https://www.jamesflare.com
   email:
-  avatar:
+  avatar: /site-logo.avif
 description:
 keywords:
 license:
