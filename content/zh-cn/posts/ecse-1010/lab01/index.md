@@ -48,9 +48,11 @@ repost:
 
 <!--more-->
 
-## Lab Document
+## 0. 参考文档
 
-{{< link href="Lab01.pdf" content="Lab01.pdf" title="Download Lab01.pdf" download="Lab01.pdf" card=true >}}
+<div style="width: 100%; max-width: 600px; margin: 0 auto; display: block;">
+  <embed src="Lab01.pdf" type="application/pdf" width="100%" height="500px">
+</div>
 
 ## 1. 验证欧姆定律、KCL 和 KVL 在电路中的应用
 

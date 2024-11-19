@@ -48,9 +48,11 @@ repost:
 
 <!--more-->
 
-## Lab Document
+## 0. Lab Document
 
-{{< link href="Lab01.pdf" content="Lab01.pdf" title="Download Lab01.pdf" download="Lab01.pdf" card=true >}}
+<div style="width: 100%; max-width: 600px; margin: 0 auto; display: block;">
+  <embed src="Lab01.pdf" type="application/pdf" width="100%" height="500px">
+</div>
 
 ## 1. Prove Ohm's Law, KCL, and KVL in a Circuit
 
