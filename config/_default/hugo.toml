@@ -15,7 +15,8 @@ title = "FlareBlog"
 # Hostname (and path) to the root
 baseURL = "https://www.jamesflare.com/"
 # theme list
-theme = ["FixIt", "component-projects"]
+theme = ["FixIt", "component-projects", "hugo-embed-pdf-shortcode"]
+enableInlineShortcodes = true
 defaultContentLanguage = "en"
 # language code ["en", "zh-CN", "fr", "pl", ...]
 languageCode = "en"
