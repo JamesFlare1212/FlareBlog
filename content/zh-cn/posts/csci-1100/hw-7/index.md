@@ -192,9 +192,9 @@ print(ratings['3520029'])
 
 在这个家庭作业中，假设你有两个名为 `movies.json` 和 `ratings.json` 的文件。请从这些文件中读取数据，并让用户输入一个年份范围（最小和最大年份）以及两个权重：`w1` 和 `w2`。找到在 min 到 max 年之间制作的所有电影（包含 min 和 max）。对于每部电影，计算其综合评分为：
 
-$$
-(w1 \times imdb_rating + w2 \times average_twitter_rating) / (w1 + w2)
-$$
+```python
+(w1 * imdb_rating + w2 * average_twitter_rating) / (w1 + w2)
+```
 
 其中 `imdb_rating` 来自于 movies 文件，而 `average_twitter_rating` 是 ratings 文件中的平均评分。
 

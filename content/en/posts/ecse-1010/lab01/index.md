@@ -82,11 +82,11 @@ Based on $V = IR$, the total $I$ should be
 
 $$
 \begin{align*}
-	V &= IR \\\
-	I &= \frac{V}{R} \\\
-	I_{total} &= \frac{5}{10K + \cfrac{1}{\frac{1}{1K} + \frac{1}{1K}} + 10K} \\\
-	I_{total} &= \frac{5}{10000 + 500 + 10000} \\\
-	I_{total} &= 0.000243902439 \\\
+    V &= IR \\\
+    I &= \frac{V}{R} \\\
+    I_{total} &= \frac{5}{10K + \cfrac{1}{\frac{1}{1K} + \frac{1}{1K}} + 10K} \\\
+    I_{total} &= \frac{5}{10000 + 500 + 10000} \\\
+    I_{total} &= 0.000243902439 \\\
 \end{align*}
 $$
 
@@ -94,9 +94,9 @@ And $I(R2) = I(R3)$ should be
 
 $$
 \begin{align*}
-	 I(R2) = I(R3) &= I_{total} \times  \frac{R2}{R2 + R3} \\\
-	 I(R2) = I(R3) &= 0.000243902439 \times \frac{1000}{1000 + 1000} \\\
-	 I(R2) = I(R3) &= 0.0001219512195
+     I(R2) = I(R3) &= I_{total} \times  \frac{R2}{R2 + R3} \\\
+     I(R2) = I(R3) &= 0.000243902439 \times \frac{1000}{1000 + 1000} \\\
+     I(R2) = I(R3) &= 0.0001219512195
 \end{align*}
 $$
 
@@ -106,17 +106,17 @@ To find $V(R1) = V(R4)$ and $V(R2) = V(R3)$, we can use
 
 $$
 \begin{align*}
-	V(R1) = V(R4) &= V_{total} \times \frac{R1}{R1 + R2 \Vert R3 + R4} \\\
-	V(R1) = V(R4) &= 5 \times \frac{10000}{10000 + 500 + 10000} \\\
-	V(R1) = V(R4) &= 2.4390244
+    V(R1) = V(R4) &= V_{total} \times \frac{R1}{R1 + R2 \Vert R3 + R4} \\\
+    V(R1) = V(R4) &= 5 \times \frac{10000}{10000 + 500 + 10000} \\\
+    V(R1) = V(R4) &= 2.4390244
 \end{align*}
 $$
 
 $$
 \begin{align*}
-	V(R2) = V(R3) &= V_{total} \\\
-	V(R2) = V(R3) &= (5 - 2.4390244 - 2.4390244) \\\
-	V(R2) = V(R3) &= 0.1219512
+    V(R2) = V(R3) &= V_{total} \\\
+    V(R2) = V(R3) &= (5 - 2.4390244 - 2.4390244) \\\
+    V(R2) = V(R3) &= 0.1219512
 \end{align*}
 $$
 
@@ -135,14 +135,14 @@ We will check if the experimental results fit these expectations.
 ```text
        --- Operating Point ---
 
-V(n001):	 5	 voltage
-V(n002):	 2.56098	 voltage
-V(n003):	 2.43902	 voltage
-I(R1):	 -0.000243902	 device_current
-I(R2):	 0.000121951	 device_current
-I(R3):	 0.000121951	 device_current
-I(R4):	 0.000243902	 device_current
-I(V1):	 -0.000243902	 device_current
+V(n001):     5     voltage
+V(n002):     2.56098     voltage
+V(n003):     2.43902     voltage
+I(R1):     -0.000243902     device_current
+I(R2):     0.000121951     device_current
+I(R3):     0.000121951     device_current
+I(R4):     0.000243902     device_current
+I(V1):     -0.000243902     device_current
 ```
 
 ### Measurement
@@ -178,40 +178,40 @@ To find out the theoretic values of $V(R1)$, $V(R2) = V(R3)$ and $V(R4)$. We nee
 We know the simulation output is
 
 ```text
-V(n001):	 5	 voltage
-V(n002):	 2.56098	 voltage
-V(n003):	 2.43902	 voltage
+V(n001):     5     voltage
+V(n002):     2.56098     voltage
+V(n003):     2.43902     voltage
 ```
 
-and the voltage is the difference in potential. Based on that, we can caculate the theoretic values of $V(R1)$, $V(R2) = V(R3)$ and $V(R4)$.
+and the voltage is the difference in potential. Based on that, we can calculate the theoretic values of $V(R1)$, $V(R2) = V(R3)$ and $V(R4)$.
 
 $$
 \begin{align*}
-	V(R1) &= V(n001) - V(n002) \\\
-	V(R1) &= 5 - 2.56098 \\\
-	V(R1) &= \boxed{2.43902}
+    V(R1) &= V(n001) - V(n002) \\\
+    V(R1) &= 5 - 2.56098 \\\
+    V(R1) &= \boxed{2.43902}
 \end{align*}
 $$
 
 $$
 \begin{align*}
-	V(R2) = V(R3) &= V(n002) - V(n003) \\\
-	V(R2) = V(R3) &= 2.56098 - 2.43902 \\\
-	V(R2) = V(R3) &= \boxed{0.12196}
+    V(R2) = V(R3) &= V(n002) - V(n003) \\\
+    V(R2) = V(R3) &= 2.56098 - 2.43902 \\\
+    V(R2) = V(R3) &= \boxed{0.12196}
 \end{align*}
 $$
 
 $$
 \begin{align*}
-	V(R4) &= V(n003) - V(\text{GND}) \\\
-	V(R4) &= 2.43902 - 0 \\\
-	V(R4) &= \boxed{2.43902}
+    V(R4) &= V(n003) - V(\text{GND}) \\\
+    V(R4) &= 2.43902 - 0 \\\
+    V(R4) &= \boxed{2.43902}
 \end{align*}
 $$
 
 Let's make a table to compare the results
 
-|Iteams|Analysis|Simulation|Experiement|diff|$\%$diff|
+|Items|Analysis|Simulation|Experiment|diff|$\%$diff|
 |:-:|:-:|:-:|:-:|:-:|-:|
 |$V(R1)$|$2.4390V$|$2.4390V$|$2.4963V$|$57.28mV$|$2.3\%$|
 |$V(R2)$|$0.1219V$|$0.1219V$|$0.1665V$|$44.54mV$|$26.8\%$|
@@ -229,20 +229,20 @@ Now, let's check KCL.
 We got the simulations data like
 
 ```text
-I(R1):	 -0.000243902	 device_current
-I(R2):	 0.000121951	 device_current
-I(R3):	 0.000121951	 device_current
-I(R4):	 0.000243902	 device_current
-I(V1):	 -0.000243902	 device_current
+I(R1):     -0.000243902     device_current
+I(R2):     0.000121951     device_current
+I(R3):     0.000121951     device_current
+I(R4):     0.000243902     device_current
+I(V1):     -0.000243902     device_current
 ```
 
 Using the expectation $I(R1) = I(R2) + I(R3)$ from Analysis. We can check
 
 $$
 \begin{align*}
-	& I(R1) + I(R2) + I(R3) \\\
-	=& -0.000243902 + 0.000121951 + 0.000121951 \\\
-	=& \; \boxed{0}
+    & \quad \thickspace I(R1) + I(R2) + I(R3) \\\
+    &= -0.000243902 + 0.000121951 + 0.000121951 \\\
+    &= \boxed{0}
 \end{align*}
 $$
 
@@ -256,9 +256,9 @@ We can use the result from previous part.
 
 $$
 \begin{align*}
-	V(R1) &= 2.43902 \\\
-	V(R2) = V(R3) &= 0.12196 \\\
-	V(R4) &= 2.43902
+    V(R1) &= 2.43902 \\\
+    V(R2) = V(R3) &= 0.12196 \\\
+    V(R4) &= 2.43902
 \end{align*}
 $$
 
@@ -266,10 +266,10 @@ Use the expectation $V(n001) - V(n002) - V(n003) = 0$ from Analysis. We can chec
 
 $$
 \begin{align*}
-	& V(n001) - V(n002) - V(n003) \\\
-	=& \; 2.43902 - 0.12196 - 0.12196\\\
-	=& \; 0 \\\
-	& \; 0 = 0 \; \boxed{\text{True}}
+    & \quad \thickspace V(n001) - V(n002) - V(n003) \\\
+    &= 2.43902 - 0.12196 - 0.12196 \\\
+    &= 0 \\\
+    \boxed{\text{True}}
 \end{align*}
 $$
 
@@ -292,31 +292,31 @@ to calculate $I$ based on Ohm's Law.
 
 $$
 \begin{align*}
-	V &= IR \\\
-	I &= \frac{V}{R} \\\
-	I(R1) &= \frac{2.4963}{10000} = \boxed{0.00024963}
+    V &= IR \\\
+    I &= \frac{V}{R} \\\
+    I(R1) &= \frac{2.4963}{10000} = \boxed{0.00024963}
 \end{align*}
 $$
 
 $$
 \begin{align*}
-	V &= IR \\\
-	I &= \frac{V}{R} \\\
-	I(R2) = I(R3) &= \frac{0.1665}{1000} = \boxed{0.0001665}
+    V &= IR \\\
+    I &= \frac{V}{R} \\\
+    I(R2) = I(R3) &= \frac{0.1665}{1000} = \boxed{0.0001665}
 \end{align*}
 $$
 
 $$
 \begin{align*}
-	V &= IR \\\
-	I &= \frac{V}{R} \\\
-	I(R4) &= \frac{2.4616}{10000} = \boxed{0.00024616}
+    V &= IR \\\
+    I &= \frac{V}{R} \\\
+    I(R4) &= \frac{2.4616}{10000} = \boxed{0.00024616}
 \end{align*}
 $$
 
 Then, we can check these current result with simulation data.
 
-|Iteams|Analysis|Simulation|Experiement|diff|$\%$diff|
+|Items|Analysis|Simulation|Experiment|diff|$\%$diff|
 |:-:|:-|:-|:-|:-:|-:|
 |$I(R1)$|$0.2439mA$|$0.2439mA$|$0.2496mA$|$0.005728mA$|$2.3\%$|
 |$I(R2)$|$0.1665mA$|$0.1665mA$|$0.1219mA$|$0.044549mA$|$26.8\%$|
@@ -366,11 +366,11 @@ We know that $V_1 + V_2 = 5$ and $1 \cdot V_1 = 1 \cdot V_2$. So, we should expe
 ```text
        --- Operating Point ---
 
-V(n001):	 5	 voltage
-V(n002):	 2.5	 voltage
-I(R1):	 -0.00025	 device_current
-I(R2):	 -0.00025	 device_current
-I(V1):	 -0.00025	 device_current
+V(n001):     5     voltage
+V(n002):     2.5     voltage
+I(R1):     -0.00025     device_current
+I(R2):     -0.00025     device_current
+I(V1):     -0.00025     device_current
 ```
 
 ### Measurement
@@ -401,29 +401,29 @@ and the voltage is the difference in potential. Based on that, we can calculate 
 We know the simulation output is
 
 ```text
-V(n001):	 5	 voltage
-V(n002):	 2.5	 voltage
+V(n001):     5     voltage
+V(n002):     2.5     voltage
 ```
 
 $$
 \begin{align*}
-	V(R1) &= V(n001) - V(n002) \\\
-	V(R1) &= 5 - 2.5 \\\
-	V(R1) &= \boxed{2.5}
+    V(R1) &= V(n001) - V(n002) \\\
+    V(R1) &= 5 - 2.5 \\\
+    V(R1) &= \boxed{2.5}
 \end{align*}
 $$
 
 $$
 \begin{align*}
-	V(R2) &= V(n002) - \text{GND} \\\
-	V(R2) &= 2.5 - 0 \\\
-	V(R2) &= \boxed{2.5}
+    V(R2) &= V(n002) - \text{GND} \\\
+    V(R2) &= 2.5 - 0 \\\
+    V(R2) &= \boxed{2.5}
 \end{align*}
 $$
 
 Let's make a table to compare the results
 
-|Iteams|Analysis|Simulation|Experiement|diff|$\%$diff|
+|Items|Analysis|Simulation|Experiment|diff|$\%$diff|
 |:-:|:-:|:-:|:-:|:-:|-:|
 |$V(R1)$|$2.5V$|$2.5V$|$2.5539V$|$0.0539V$|$2.1\%$|
 |$V(R2)$|$2.5V$|$2.5V$|$2.5204V$|$0.0204V$|$0.8\%$|
@@ -469,8 +469,8 @@ Also, we know that $R_1 = R_2 = 10K$ and the voltage across the resistor can be 
 
 $$
 \begin{align*}
-	\frac{V_1}{V_2} &= \frac{R_1}{R_2} \\\
-	\frac{V_1}{V_2} &= \frac{10K}{10K} = \frac{1}{1}
+    \frac{V_1}{V_2} &= \frac{R_1}{R_2} \\\
+    \frac{V_1}{V_2} &= \frac{10K}{10K} = \frac{1}{1}
 \end{align*}
 $$
 
@@ -480,9 +480,9 @@ Using these values, we can find out $I(R1)$ and $I(R2)$ by
 
 $$
 \begin{align*}
-	I(R1) = I(R2) &= \frac{V}{R} \\\
-	I(R1) = I(R2) &= \frac{2.5}{10K} \\\
-	I(R1) = I(R2) &= \boxed{0.00025}
+    I(R1) = I(R2) &= \frac{V}{R} \\\
+    I(R1) = I(R2) &= \frac{2.5}{10K} \\\
+    I(R1) = I(R2) &= \boxed{0.00025}
 \end{align*}
 $$
 
@@ -495,11 +495,11 @@ We expect $I(R1)$ and $I(R2)$ to be $0.00025A$.
 ```text
        --- Operating Point ---
 
-V(n001):	 5	 voltage
-V(n002):	 2.5	 voltage
-I(R1):	 -0.00025	 device_current
-I(R2):	 -0.00025	 device_current
-I(V1):	 -0.00025	 device_current
+V(n001):     5     voltage
+V(n002):     2.5     voltage
+I(R1):     -0.00025     device_current
+I(R2):     -0.00025     device_current
+I(V1):     -0.00025     device_current
 ```
 
 ### Measurement
@@ -519,8 +519,8 @@ $V(R2) = 2.5204V$
 From the Simulation Result, 
 
 ```text
-I(R1):	 -0.00025	 device_current
-I(R2):	 -0.00025	 device_current
+I(R1):     -0.00025     device_current
+I(R2):     -0.00025     device_current
 ```
 
 It proves $I(R1)=I(R2)$, which
@@ -539,17 +539,17 @@ Based on the Ohm's Law - the relationship we got in Analysis $I = \frac{V}{R}$. 
 
 $$
 \begin{align*}
-	I(R1) &= \frac{V}{R} \\\
-	I(R1) &= \frac{2.5539}{10K} \\\
-	I(R1) &= 0.00025539
+    I(R1) &= \frac{V}{R} \\\
+    I(R1) &= \frac{2.5539}{10K} \\\
+    I(R1) &= 0.00025539
 \end{align*}
 $$
 
 $$
 \begin{align*}
-	I(R2) &= \frac{V}{R} \\\
-	I(R2) &= \frac{2.5204}{10K} \\\
-	I(R2) &= 0.00025204
+    I(R2) &= \frac{V}{R} \\\
+    I(R2) &= \frac{2.5204}{10K} \\\
+    I(R2) &= 0.00025204
 \end{align*}
 $$
 
@@ -589,9 +589,9 @@ Also, the voltage is potential difference between the component.
 
 $$
 \begin{align*}
-	V(R1) = V(R2) &= n001 - \text{GND} \\\
-	V(R1) = V(R2) &= 5 - 0 \\\
-	V(R1) = V(R2) &= \boxed{5}
+    V(R1) = V(R2) &= n001 - \text{GND} \\\
+    V(R1) = V(R2) &= 5 - 0 \\\
+    V(R1) = V(R2) &= \boxed{5}
 \end{align*}
 $$
 
@@ -637,9 +637,9 @@ Let's put values into equation
 
 $$
 \begin{align*}
-	I_{total} &= \frac{5}{\cfrac{1}{\frac{1}{10K} + \frac{1}{10K}}} \\\
-	I_{total} &= \frac{5}{5K} \\\
-	I_{total} &= \boxed{0.001}
+    I_{total} &= \frac{5}{\cfrac{1}{\frac{1}{10K} + \frac{1}{10K}}} \\\
+    I_{total} &= \frac{5}{5K} \\\
+    I_{total} &= \boxed{0.001}
 \end{align*}
 $$
 
@@ -652,10 +652,10 @@ We can check this to double confirm our result.
 ```text
        --- Operating Point ---
 
-V(n001):	 5	 voltage
-I(R2):	 0.0005	 device_current
-I(R1):	 0.0005	 device_current
-I(V1):	 -0.001	 device_current
+V(n001):     5     voltage
+I(R2):     0.0005     device_current
+I(R1):     0.0005     device_current
+I(V1):     -0.001     device_current
 ```
 
 ### Measurement
@@ -682,22 +682,22 @@ To find out the theoretic values of $V(R1)$ and $V(R2)$. We need to do some math
 We know the simulation output is
 
 ```text
-V(n001):	 5	 voltage
+V(n001):     5     voltage
 ```
 
 and the voltage is the difference in potential. Based on that, we can caculate the theoretic values of $V(R1)$ and $V(R2)$.
 
 $$
 \begin{align*}
-	V(R1) = V(R2) &= V(n001) - \text{GND} \\\
-	V(R1) = V(R2) &= 5 - 0 \\\
-	V(R1) = V(R2) &= \boxed{5}
+    V(R1) = V(R2) &= V(n001) - \text{GND} \\\
+    V(R1) = V(R2) &= 5 - 0 \\\
+    V(R1) = V(R2) &= \boxed{5}
 \end{align*}
 $$
 
 Let's make a table to compare the results
 
-|Iteams|Analysis|Simulation|Experiement|diff|$\%$diff|
+|Items|Analysis|Simulation|Experiment|diff|$\%$diff|
 |:-:|:-:|:-:|:-:|:-:|-:|
 |$V(R1)$|$5V$|$5V$|$5.0305V$|$0.0305V$|$0.6\%$|
 |$V(R2)$|$5V$|$5V$|$5.0305V$|$0.0305V$|$0.6\%$|
@@ -713,8 +713,8 @@ Secondly, we can check to $I_{total}$ as double confirm.
 We know the simulation output is
 
 ```text
-I(R2):	 0.0005	 device_current
-I(R1):	 0.0005	 device_current
+I(R2):     0.0005     device_current
+I(R1):     0.0005     device_current
 ```
 
 and from Analysis, we expect
@@ -733,10 +733,10 @@ So, we get
 
 $$
 \begin{align*}
-	I_{total} &= I(R2) + I(R1) \\\
-	I_{total} &= 0.0005 + 0.0005 \\\
-	I_{total} &= 0.001 \\\
-	& 0.001 = 0.001 \; \boxed{\text{True}}
+    I_{total} &= I(R2) + I(R1) \\\
+    I_{total} &= 0.0005 + 0.0005 \\\
+    I_{total} &= 0.001 \\\
+    & 0.001 = 0.001 \\; \boxed{\text{True}}
 \end{align*}
 $$
 
@@ -764,10 +764,10 @@ Then, we can find out $I(R1)$ and $I(R2)$ by
 
 $$
 \begin{align*}
-	V &= IR \\\
-	I &= \frac{V}{R} \\\
-	I(R1) = I(R2) &= \frac{5.0305}{10000} \\\
-	I(R1) = I(R2) &= \boxed{0.0005305}
+    V &= IR \\\
+    I &= \frac{V}{R} \\\
+    I(R1) = I(R2) &= \frac{5.0305}{10000} \\\
+    I(R1) = I(R2) &= \boxed{0.0005305}
 \end{align*}
 $$
 
@@ -808,9 +808,9 @@ Also, the voltage is potential difference between the component.
 
 $$
 \begin{align*}
-	V(R1) = V(R2) &= n001 - \text{GND} \\\
-	V(R1) = V(R2) &= 5 - 0 \\\
-	V(R1) = V(R2) &= \boxed{5}
+    V(R1) = V(R2) &= n001 - \text{GND} \\\
+    V(R1) = V(R2) &= 5 - 0 \\\
+    V(R1) = V(R2) &= \boxed{5}
 \end{align*}
 $$
 
@@ -830,17 +830,17 @@ and get
 
 $$
 \begin{align*}
-	I(R1) &= \frac{V(R1)}{R1} \\\
-	I(R1) &= \frac{5}{10K} \\\
-	I(R1) &= \boxed{0.0005}
+    I(R1) &= \frac{V(R1)}{R1} \\\
+    I(R1) &= \frac{5}{10K} \\\
+    I(R1) &= \boxed{0.0005}
 \end{align*}
 $$
 
 $$
 \begin{align*}
-	I(R2) &= \frac{V(R2)}{R2} \\\
-	I(R2) &= \frac{5}{10K} \\\
-	I(R2) &= \boxed{0.0005}
+    I(R2) &= \frac{V(R2)}{R2} \\\
+    I(R2) &= \frac{5}{10K} \\\
+    I(R2) &= \boxed{0.0005}
 \end{align*}
 $$
 
@@ -848,11 +848,11 @@ the relationship between $I(R1)$ and $I(R2)$ can be express as
 
 $$
 \begin{align*}
-	\frac{I(R1)}{I(R2)} &= \cfrac{\cfrac{V(R1)}{R1}}{\cfrac{V(R2)}{R2}} \\\
-	\because V(R1) &= V(R2) \\\
-	\therefore \frac{I(R1)}{I(R2)} &= \cfrac{\cfrac{\cancel{V(R1)}}{R1} \times \cfrac{1}{\cancel{V(R1)}}}{\cfrac{\cancel{V(R2)}}{R2} \times \cfrac{1}{\cancel{V(R2)}}} \\\
-	\frac{I(R1)}{I(R2)} &= \frac{\frac{1}{R1}}{\frac{1}{R2}} \\\
-	&\boxed{\frac{I(R1)}{I(R2)} = \frac{R2}{R1}}
+    \frac{I(R1)}{I(R2)} &= \cfrac{\cfrac{V(R1)}{R1}}{\cfrac{V(R2)}{R2}} \\\
+    \because V(R1) &= V(R2) \\\
+    \therefore \frac{I(R1)}{I(R2)} &= \cfrac{\cfrac{\cancel{V(R1)}}{R1} \times \cfrac{1}{\cancel{V(R1)}}}{\cfrac{\cancel{V(R2)}}{R2} \times \cfrac{1}{\cancel{V(R2)}}} \\\
+    \frac{I(R1)}{I(R2)} &= \frac{\frac{1}{R1}}{\frac{1}{R2}} \\\
+    &\boxed{\frac{I(R1)}{I(R2)} = \frac{R2}{R1}}
 \end{align*}
 $$
 
@@ -866,10 +866,10 @@ as we get the $I_{total}$ by
 
 $$
 \begin{align*}
-	I_{total} &= \frac{V_{total}}{R_{total}} \\\
-	I_{total} &= \frac{5}{\cfrac{1}{\cfrac{1}{10K} + \cfrac{1}{10K}}} \\\
-	I_{total} &= \frac{5}{5K} \\\
-	I_{total} &= 0.001
+    I_{total} &= \frac{V_{total}}{R_{total}} \\\
+    I_{total} &= \frac{5}{\cfrac{1}{\cfrac{1}{10K} + \cfrac{1}{10K}}} \\\
+    I_{total} &= \frac{5}{5K} \\\
+    I_{total} &= 0.001
 \end{align*}
 $$
 
@@ -883,9 +883,9 @@ We can get $I(R1)$ and $I(R2)$ by
 
 $$
 \begin{align*}
-	I(R1) = I(R2) &= I_{total} \times \frac {R1}{R1 + R2} \\\
-	I(R1) = I(R2) &= 0.001 \times \frac {10K}{10K + 10K} \\\
-	I(R1) = I(R2) &= \boxed{0.0005}
+    I(R1) = I(R2) &= I_{total} \times \frac {R1}{R1 + R2} \\\
+    I(R1) = I(R2) &= 0.001 \times \frac {10K}{10K + 10K} \\\
+    I(R1) = I(R2) &= \boxed{0.0005}
 \end{align*}
 $$
 
@@ -893,12 +893,12 @@ At this point, our logic is consistent, which
 
 $$
 \begin{align*}
-	& \because R1 = R2 = 10K \\\
-	& \because I(R1) = I(R2) = 0.0005 \\\
-	& \because V(R1) = V(R2) = 5 \\\
-	& \because I_{total} = I(R1) + I(R2) = 0.001 \\\
-	& \because  \frac{I(R1)}{I(R2)} = \frac{R2}{R1} \\\
-	& \therefore I(R1) = I(R2) = I_{total} \times \frac {R1}{R1 + R2} \\\
+    & \because R1 = R2 = 10K \\\
+    & \because I(R1) = I(R2) = 0.0005 \\\
+    & \because V(R1) = V(R2) = 5 \\\
+    & \because I_{total} = I(R1) + I(R2) = 0.001 \\\
+    & \because  \frac{I(R1)}{I(R2)} = \frac{R2}{R1} \\\
+    & \therefore I(R1) = I(R2) = I_{total} \times \frac {R1}{R1 + R2} \\\
 \end{align*}
 $$
 
@@ -921,10 +921,10 @@ $$
 ```text
        --- Operating Point ---
 
-V(n001):	 5	 voltage
-I(R2):	 0.0005	 device_current
-I(R1):	 0.0005	 device_current
-I(V1):	 -0.001	 device_current
+V(n001):     5     voltage
+I(R2):     0.0005     device_current
+I(R1):     0.0005     device_current
+I(V1):     -0.001     device_current
 ```
 
 ### Measurement
@@ -951,16 +951,16 @@ To find out the theoretic values of $V(R1)$ and $V(R2)$. We need to do some math
 We know the simulation output is
 
 ```text
-V(n001):	 5	 voltage
+V(n001):     5     voltage
 ```
 
-and the voltage is the difference in potential. Based on that, we can caculate the theoretic values of $V(R1)$ and $V(R2)$.
+and the voltage is the difference in potential. Based on that, we can calculate the theoretic values of $V(R1)$ and $V(R2)$.
 
 $$
 \begin{align*}
-	V(R1) = V(R2) &= V(n001) - \text{GND} \\\
-	V(R1) = V(R2) &= 5 - 0 \\\
-	V(R1) = V(R2) &= \boxed{5}
+    V(R1) = V(R2) &= V(n001) - \text{GND} \\\
+    V(R1) = V(R2) &= 5 - 0 \\\
+    V(R1) = V(R2) &= \boxed{5}
 \end{align*}
 $$
 
@@ -999,14 +999,14 @@ Then, we can find out $I(R1)$ and $I(R2)$ by
 
 $$
 \begin{align*}
-	V &= IR \\\
-	I &= \frac{V}{R} \\\
-	I(R1) = I(R2) &= \frac{5.0305}{10000} \\\
-	I(R1) = I(R2) &= \boxed{0.0005305}
+    V &= IR \\\
+    I &= \frac{V}{R} \\\
+    I(R1) = I(R2) &= \frac{5.0305}{10000} \\\
+    I(R1) = I(R2) &= \boxed{0.0005305}
 \end{align*}
 $$
 
-|Iteams|Analysis|Simulation|Experiement|diff|$\%$diff|
+|Items|Analysis|Simulation|Experiment|diff|$\%$diff|
 |:-:|:-:|:-:|:-:|:-:|-:|
 |$I(R1)$|$0.5mA$|$0.5mA$|$0.50305mA$|$0.00305mA$|$0.6\%$|
 |$I(R2)$|$0.5mA$|$0.5mA$|$0.50305mA$|$0.00305mA$|$0.6\%$|
@@ -1146,12 +1146,14 @@ But even we look the thermometer's reading, both of them shows around $24 \degre
 
 The wheatstone bridge is better than a normal voltage divider because it is more sensitive than a voltage divider. A voltage divider relies on the ratio of resistances between two resistors, so even if the ratio of the resistors change, as long as the change isn't massive, the output voltage stays the same.
 
-When a wheatstone bridge is balanced, meaning R1/R2=R3/R4, the current flowing through the galvanometer in the center of the wheatstone bridge is 0. When current is zero, the calculated resistance is no longer affected by innate resistance of wires, resistors, and voltameters. This allows measurements with the wheatstone bridge to be more accurate than a voltage divider. 
+When a wheatstone bridge is balanced, meaning R1/R2=R3/R4, the current flowing through the galvanometer in the center of the wheatstone bridge is 0. When current is zero, the calculated resistance is no longer affected by innate resistance of wires, resistors, and voltameters. This allows measurements with the wheatstone bridge to be more accurate than a voltage divider.
 
 Advantages:
+
 - Wheatstone bridge is more accurate than voltage divider
 - Voltage source does not need to be calibrated to measure resistance
 
-Disadvantages: 
-- Voltage divider is easier and cheaper to make 
+Disadvantages:
+
+- Voltage divider is easier and cheaper to make
 - Lower power consumption

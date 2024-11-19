@@ -47,3 +47,8 @@ details summary strong {
       margin-bottom: 0;
     }
   }
+
+.katex-display {
+    overflow-x: auto;
+    overflow-y: clip;
+}
