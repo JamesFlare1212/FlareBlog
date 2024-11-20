@@ -267,7 +267,7 @@ $$
     & \quad \thickspace V(n001) - V(n002) - V(n003) \\\
     &= 2.43902 - 0.12196 - 0.12196 \\\
     &= 0 \\\
-    \boxed{\text{True}}
+    & \boxed{\text{True}}
 \end{align*}
 $$
 
