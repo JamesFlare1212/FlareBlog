@@ -10,7 +10,7 @@ author:
   link: https/www.jamesflare.com
   email:
   avatar: /site-logo.avif
-description: This blog post discusses a detailed lab assignment focusing on proving various electrical concepts using resistors, diodes, op-amps, and nodal analysis. The experiments aim to validate Ohm's Law, non-linear IV curves for LEDs, differential resistance in diode IV curves, nodal voltage solving with Kirchhoff’s Laws, the function of an op amp comparator, mathematical op amp functionality, and two-channel audio mixer transfer functions.
+description: The experiments aim to validate Ohm's Law, non-linear IV curves for LEDs, differential resistance in diode IV curves, nodal voltage solving with Kirchhoff’s Laws, the function of an op amp comparator, mathematical op amp functionality, and two-channel audio mixer transfer functions.
 keywords: ["Electrical Engineering","Ohm's Law","IV curve","Nodal Analysis","Op-Amp"]
 license:
 comment: true
@@ -28,7 +28,7 @@ hiddenFromHomePage: false
 hiddenFromSearch: false
 hiddenFromRss: false
 hiddenFromRelated: false
-summary: This blog post discusses a detailed lab assignment focusing on proving various electrical concepts using resistors, diodes, op-amps, and nodal analysis. The experiments aim to validate Ohm's Law, non-linear IV curves for LEDs, differential resistance in diode IV curves, nodal voltage solving with Kirchhoff’s Laws, the function of an op amp comparator, mathematical op amp functionality, and two-channel audio mixer transfer functions.
+summary: The experiments aim to validate Ohm's Law, non-linear IV curves for LEDs, differential resistance in diode IV curves, nodal voltage solving with Kirchhoff’s Laws, the function of an op amp comparator, mathematical op amp functionality, and two-channel audio mixer transfer functions.
 resources:
   - name: featured-image
     src: featured-image.avif
@@ -68,7 +68,7 @@ Let's pick two resistor. The first one is
 
 $$
 \begin{align*}
-	33 \times (1\times10^1) = 330 \Omega \pm 5\%
+  33 \times (1\times10^1) = 330 \Omega \pm 5\%
 \end{align*}
 $$
 
@@ -84,7 +84,7 @@ The second one is
 
 $$
 \begin{align*}
-	11 \times (1\times10^2) = 1100 \Omega \pm 5\%
+  11 \times (1\times10^2) = 1100 \Omega \pm 5\%
 \end{align*}
 $$
 
@@ -350,7 +350,7 @@ we got
 
 ### Discussion
 
-Our experimental matches the datasheet. Consider the datasheet said 
+Our experimental matches the datasheet. Consider the datasheet said
 
 - $V_F = 1.7V$
 - $I_F = 100 mA$
@@ -667,7 +667,7 @@ $$
 \begin{equation*}
 V_{out}=\begin{cases}
           \text{if} \; V_{in} < V_{ref}, V_{out} = V_s - \\\
-		  \text{if} \; V_{in} > V_{ref}, V_{out} = V_s + \\\
+      \text{if} \; V_{in} > V_{ref}, V_{out} = V_s + \\\
      \end{cases}
   \end{equation*}
 $$
@@ -678,7 +678,7 @@ $$
 \begin{equation*}
 V_{out}=\begin{cases}
           \text{if} \; V_{in} < 0V, V_{out} = -5V \\\
-		  \text{if} \; V_{in} > 0V, V_{out} = 5V \\\
+      \text{if} \; V_{in} > 0V, V_{out} = 5V \\\
      \end{cases}
   \end{equation*}
 $$
@@ -723,8 +723,8 @@ In our case, we want to use $50K \Omega$ potentiometer as the resistors, so it c
 
 $$
 \begin{align*}
-	V_{out} &= - \frac{\cancel{50K}}{\cancel{50K}} \cdot V1 - \frac{\cancel{\cancel{50K}}}{\cancel{50K}} \cdot V2 \\\
-	V_{out} &= - V1 - V2 \\\
+  V_{out} &= - \frac{\cancel{50K}}{\cancel{50K}} \cdot V1 - \frac{\cancel{\cancel{50K}}}{\cancel{50K}} \cdot V2 \\\
+  V_{out} &= - V1 - V2 \\\
 \end{align*}
 $$
 
@@ -782,8 +782,8 @@ In our case, we want to use $50K \Omega$ potentiometer as the resistors, so it c
 
 $$
 \begin{align*}
-	V_{out} &= - \frac{\cancel{50K}}{\cancel{50K}} \cdot V1 - \frac{\cancel{\cancel{50K}}}{\cancel{50K}} \cdot V2 \\\
-	V_{out} &= - V1 - V2 \\\
+  V_{out} &= - \frac{\cancel{50K}}{\cancel{50K}} \cdot V1 - \frac{\cancel{\cancel{50K}}}{\cancel{50K}} \cdot V2 \\\
+  V_{out} &= - V1 - V2 \\\
 \end{align*}
 $$
 

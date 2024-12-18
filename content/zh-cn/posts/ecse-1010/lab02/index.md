@@ -10,7 +10,7 @@ author:
   link: https/www.jamesflare.com
   email:
   avatar: /site-logo.avif
-description: 本文讨论了一项详细的实验室作业，重点是通过使用电阻器、二极管、运算放大器和节点分析来验证各种电气概念。实验旨在验证欧姆定律、LED的非线性IV曲线、二极管IV曲线中的差分电阻、基尔霍夫定律下的节点电压求解、运算放大器比较器的功能、数学运算放大器功能以及双通道音频混音器的传递函数。
+description: 本实验旨在验证欧姆定律、LED的非线性IV曲线、二极管IV曲线中的差分电阻、基尔霍夫定律下的节点电压求解、运算放大器比较器的功能、数学运算放大器功能以及双通道音频混音器的传递函数。
 keywords: ["电气工程","欧姆定律","电流-电压曲线","节点分析法","运算放大器"]
 license:
 comment: true
@@ -28,7 +28,7 @@ hiddenFromHomePage: false
 hiddenFromSearch: false
 hiddenFromRss: false
 hiddenFromRelated: false
-summary: 本文讨论了一项详细的实验室作业，重点是通过使用电阻器、二极管、运算放大器和节点分析来验证各种电气概念。实验旨在验证欧姆定律、LED的非线性IV曲线、二极管IV曲线中的差分电阻、基尔霍夫定律下的节点电压求解、运算放大器比较器的功能、数学运算放大器功能以及双通道音频混音器的传递函数。
+summary: 本实验旨在验证欧姆定律、LED的非线性IV曲线、二极管IV曲线中的差分电阻、基尔霍夫定律下的节点电压求解、运算放大器比较器的功能、数学运算放大器功能以及双通道音频混音器的传递函数。
 resources:
   - name: featured-image
     src: featured-image.avif
