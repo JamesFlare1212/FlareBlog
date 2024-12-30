@@ -111,7 +111,10 @@ services:
 docker compose up -d
 ```
 
-然后记得正确配置反向代理，这个代理必须支持HTTPS，因为Logto的各项API必须跑在安全的环境下，不然就会报错[^2]。而且反向代理光有HTTPS还不行，还得把`X-Forwarded-Proto`标头的值设置成`https`来告诉Logto用户访问用的是HTTPS。我用的Nginx作为反代服务，以下配置可供参考，记得把内容按你的情况进行修改（比如`proxy_pass`）。
+> [!WARNING]
+> 别忘了在Ngnix里设置 `X-Forwarded-Proto` 标头！
+
+这个代理必须支持HTTPS，因为Logto的各项API必须跑在安全的环境下，不然就会报错[^2]。而且反向代理光有HTTPS还不行，还得把`X-Forwarded-Proto`标头的值设置成`https`来告诉Logto用户访问用的是HTTPS。我用的Nginx作为反代服务，以下配置可供参考，记得把内容按你的情况进行修改（比如`proxy_pass`）。
 
 [^2]: 有关报错的讨论 https://github.com/logto-io/logto/issues/4279
 

@@ -111,7 +111,10 @@ After modifying, write the `docker-compose.yaml` file. Then start the container:
 docker compose up -d  
 ```
 
-Remember to correctly configure a reverse proxy; this proxy must support HTTPS because all of Logto's APIs must be run in a secure environment, otherwise errors will occur[^2]. Additionally, just having HTTPS isn't enough; you also need to set the `X-Forwarded-Proto` header value to `https` to inform Logto that users are accessing it via HTTPS. I use Nginx as my reverse proxy service and provide a reference configuration below (modify according to your situation).
+> [!WARNING]
+> Don't forget to set `X-Forwarded-Proto` header in Nginx!
+
+this proxy must support HTTPS because all of Logto's APIs must be run in a secure environment, otherwise errors will occur[^2]. Additionally, just having HTTPS isn't enough; you also need to set the `X-Forwarded-Proto` header value to `https` to inform Logto that users are accessing it via HTTPS. I use Nginx as my reverse proxy service and provide a reference configuration below (modify according to your situation).
 
 [^2]: Discussion on errors https://github.com/logto-io/logto/issues/4279
 
