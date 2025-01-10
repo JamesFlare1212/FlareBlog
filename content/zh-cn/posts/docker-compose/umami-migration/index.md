@@ -15,7 +15,7 @@ comment: true
 weight: 0
 tags:
   - PostgreSQL
-  - 开源
+  - 开源软件
   - Docker
   - Umami
 categories:
