@@ -114,7 +114,13 @@ sudo apt install -y wget
 wget https://minio-lv-a.jamesflare.com/public/application/Xilinx_Vivado_SDK_2016.2_0605_1.tar.gz
 ```
 
-Then, unzip the achieve file.
+Check the MD5 sum value, it should equal to `0e41f991e5d89410ad5ed6d30407f379`
+
+```bash
+md5sum Xilinx_Vivado_SDK_2016.2_0605_1.tar.gz
+```
+
+If not, the file may be damaged. Then, unzip the achieve file.
 
 ```bash
 tar -xvzf Xilinx_Vivado_SDK_2016.2_0605_1.tar.gz

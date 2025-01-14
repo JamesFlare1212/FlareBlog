@@ -114,7 +114,13 @@ sudo apt install -y wget
 wget https://minio-lv-a.jamesflare.com/public/application/Xilinx_Vivado_SDK_2016.2_0605_1.tar.gz
 ```
 
-然后，解压文件。
+检查文件的 MD5 校验值是否等于 `0e41f991e5d89410ad5ed6d30407f379`
+
+```bash
+md5sum Xilinx_Vivado_SDK_2016.2_0605_1.tar.gz
+```
+
+如果不是，文件可能被篡改或者损坏。然后，解压文件。
 
 ```bash
 tar -xvzf Xilinx_Vivado_SDK_2016.2_0605_1.tar.gz
