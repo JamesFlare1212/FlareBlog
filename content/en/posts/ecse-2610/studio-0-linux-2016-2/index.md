@@ -96,7 +96,7 @@ ldconfig -p | grep libncurses.so.5
 
 You should get something like this
 
-```text
+```console
 libncurses.so.5 (libc6,x86-64) => /lib/x86_64-linux-gnu/libncurses.so.5
 ```
 
@@ -134,7 +134,7 @@ cd Xilinx_Vivado_SDK_2016.2_0605_1
 
 This is how it look like
 
-```text
+```console
 james@Desktop:~$ cd Xilinx_Vivado_SDK_2016.2_0605_1
 james@Desktop:~/Xilinx_Vivado_SDK_2016.2_0605_1$ ls
 bin   lib           msvcr110.dll  scripts  vccorlib110.dll  xsetup.exe
