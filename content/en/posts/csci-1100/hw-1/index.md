@@ -10,7 +10,7 @@ author:
   email:
   avatar: /site-logo.avif
 description: This blog post provides a detailed overview of a Python programming homework assignment, which includes creating a Mad Libs game, calculating speed and pace, and generating a framed box with user-specified dimensions.
-keywords: ["Python", "programming", "homework", "Mad Libs", "speed calculation", "framed box"]
+keywords: ["Python", "Programming", "Homework", "Mad Libs", "Speed calculation", "Framed box"]
 license:
 comment: true
 weight: 0
@@ -119,8 +119,6 @@ We will test your code for the values used in our examples as well as a range of
 ## Supporting Files
 
 {{< link href="HW1.zip" content="HW1.zip" title="Download HW1.zip" download="HW1.zip" card=true >}}
-
-***
 
 ## Solution
 

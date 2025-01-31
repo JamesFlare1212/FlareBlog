@@ -120,8 +120,6 @@ Good morning <proper name>!
 
 {{< link href="HW1.zip" content="HW1.zip" title="下载 HW1.zip" download="HW1.zip" card=true >}}
 
-***
-
 ## 参考答案
 
 ### hw1_part1.py

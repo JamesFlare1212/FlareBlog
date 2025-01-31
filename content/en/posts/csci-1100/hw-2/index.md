@@ -182,8 +182,6 @@ Test your code well and when you are sure that it works, please submit it as a f
 
 {{< link href="HW2.zip" content="HW2.zip" title="Download HW2.zip" download="HW2.zip" card=true >}}
 
-***
-
 ## Solution
 
 ### hw2_part1.py

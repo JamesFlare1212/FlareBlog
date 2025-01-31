@@ -182,8 +182,6 @@ repost:
 
 {{< link href="HW2.zip" content="HW2.zip" title="下载 HW2.zip" download="HW2.zip" card=true >}}
 
-***
-
 ## 参考答案
 
 ### hw2_part1.py
