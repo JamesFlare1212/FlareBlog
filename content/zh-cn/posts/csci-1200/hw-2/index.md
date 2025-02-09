@@ -406,7 +406,7 @@ A: 与 Uber 相同。保留一位小数。直接截断即可。例如，如果�
 
 由于流程图比较大，我暂时把它转换成了图片。
 
-{{< image src="csci-1200-hw-2-flowchart-zh_cn.svg" caption="Flow Chart" >}}
+{{< image src="csci-1200-hw-2-flowchart-zh_cn.svg" width="100%" caption="Flow Chart" >}}
 
 Mermaid 源码如下：
 

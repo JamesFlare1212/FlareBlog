@@ -22,7 +22,7 @@ tags:
 categories:
   - 大语言模型
 collections:
-  - Ollama
+  - LLM
 hiddenFromHomePage: false
 hiddenFromSearch: false
 hiddenFromRss: false

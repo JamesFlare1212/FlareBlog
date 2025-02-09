@@ -412,7 +412,7 @@ Due to the complexity of this assignment, it is best to carefully plan how to im
 
 Since the flowchart is quite large, I have temporarily converted it into an image.
 
-{{< image src="csci-1200-hw-2-flowchart-zh_cn.svg" caption="Flow Chart" >}}
+{{< image src="csci-1200-hw-2-flowchart-zh_cn.svg" width="100%" caption="Flow Chart" >}}
 
 Mermaid source code as follows:
 
