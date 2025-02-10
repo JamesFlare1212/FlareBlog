@@ -160,7 +160,7 @@ repost:
 }
 {{< /echarts >}}
 
-Ollama提供了更方便使用和管理模型的接口和工具，后端是llama.cpp。基于CPU推理优化的工具，也支持GPU。
+Ollama提供了更方便使用和管理模型的接口和工具，它的后端是llama.cpp。一个基于CPU推理优化的工具，也支持GPU。
 
 {{< gh-repo-card-container >}}
   {{< gh-repo-card repo="ollama/ollama" >}}
@@ -252,7 +252,13 @@ Flash Attention是必开的，KV Cache我建议选`q8_0`，实测发现`q4_0`会
 
 ### Windows 11
 
-要在Windows 11中设置环境变量，需要进入“高级系统设置”，然后选择“环境变量”，之后选择“新建”。重启Ollama使其生效。
+要在Windows 11中设置环境变量，需要进入“高级系统设置”，
+
+{{< image src="system-properties.avif" width="320px" caption="System Properties" >}}
+
+然后选择“环境变量”，之后选择“新建”。重启Ollama使其生效。
+
+{{< image src="environment-variables.avif" width="480px" caption="Environment Variables" >}}
 
 ### MacOS
 

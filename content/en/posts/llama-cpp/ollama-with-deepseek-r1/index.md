@@ -162,6 +162,11 @@ This can be seen in the official [chart](https://raw.githubusercontent.com/deeps
 
 Ollama provides a convenient interface and tools for using and managing models, with the backend being llama.cpp. It supports both CPU and GPU inference optimization.
 
+{{< gh-repo-card-container >}}
+  {{< gh-repo-card repo="ollama/ollama" >}}
+  {{< gh-repo-card repo="ggerganov/llama.cpp" >}}
+{{< /gh-repo-card-container >}}
+
 ## Installation of Ollama
 
 Follow the instructions on [Download Ollama](https://ollama.com/download) to complete the installation. My environment is as follows:
@@ -247,7 +252,13 @@ Flash Attention must be enabled. I recommend setting `OLLAMA_KV_CACHE_TYPE` to `
 
 ### Windows 11
 
-To set environment variables on Windows 11, go to "Advanced System Settings," then choose "Environment Variables." After that, select "New" to add a new variable. Restart Ollama for changes to take effect.
+To set environment variables on Windows 11, go to "Advanced System Settings," then choose "Environment Variables."
+
+{{< image src="system-properties.avif" width="320px" caption="System Properties" >}}
+
+After that, select "New" to add a new variable. Restart Ollama for changes to take effect.
+
+{{< image src="environment-variables.avif" width="480px" caption="Environment Variables" >}}
 
 ### MacOS
 
