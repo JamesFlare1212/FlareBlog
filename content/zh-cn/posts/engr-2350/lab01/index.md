@@ -92,6 +92,10 @@ repost:
 
 {{< link href="lab1_template.zip" content="lab1_template.zip" title="下载 lab1_template.zip" download="lab1_template.zip" card=true >}}
 
+### 原始快照
+
+{{< link href="Laboratory1" content="Laboratory 1: Digital Input_Output (GPIO) — ENGR-2350 documentation.html" title="下载 Laboratory 1: Digital Input_Output (GPIO) — ENGR-2350 documentation.html" download="Laboratory 1: Digital Input_Output (GPIO) — ENGR-2350 documentation.html" card=true >}}
+
 ## 第一部分：构建和测试 I/O
 
 本实验室的第一天包括建立所需的硬件，生成 GPIO 初始化代码，并实现测试以验证所有输入和输出的正确操作。所需电路如图 Lab 1 原理图所示。请注意，此原理图提供了 TI-RSLK 上包含的电路以及需要在外部面包板上构建的部分电路。需要在外部面包板上构建的电路应允许其他团队使用同一辆车。

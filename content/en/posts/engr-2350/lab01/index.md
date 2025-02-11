@@ -92,6 +92,10 @@ Students should complete Activities 1-5 prior to starting this laboratory. *A go
 
 {{< link href="lab1_template.zip" content="lab1_template.zip" title="Download lab1_template.zip" download="lab1_template.zip" card=true >}}
 
+### Original Snapshot
+
+{{< link href="Laboratory1" content="Laboratory 1: Digital Input_Output (GPIO) — ENGR-2350 documentation.html" title="Download Laboratory 1: Digital Input_Output (GPIO) — ENGR-2350 documentation.html" download="Laboratory 1: Digital Input_Output (GPIO) — ENGR-2350 documentation.html" card=true >}}
+
 ## Part A: Build and Test I/O
 
 The first day of this lab consists of building the hardware required, producing the GPIO initialization code, and implementing tests to verify the correct operation of all inputs and outputs. The circuitry needed is shown in the Figure Lab 1 Schematic. Note that this schematic provides both the circuitry included on the |rslk| and that which needs to be built. The circuitry that needs to be built should be done on an external breadboard, *not the one mounted on the RSLK*, to allow for other teams to use the same car.
