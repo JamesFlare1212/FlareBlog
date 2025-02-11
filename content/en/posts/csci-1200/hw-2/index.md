@@ -597,9 +597,9 @@ classDiagram
    void exportDrivers(const std::string &filename, const std::vector<Driver> &drivers) {
        //...
        std::ofstream ofs(filename);
-   -    for (const auto &d : drivers) {
-   +    for (int i = 0; i < (int)drivers.size(); i++) {
-   +        const Driver &d = drivers[i];
+   -   for (const auto &d : drivers) {
+   +   for (int i = 0; i < (int)drivers.size(); i++) {
+   +       const Driver &d = drivers[i];
            ofs << d.toFileString() << "\n";
        }
        ofs.close();

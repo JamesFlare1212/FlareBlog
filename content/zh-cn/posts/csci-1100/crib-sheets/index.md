@@ -17,7 +17,7 @@ comment: true
 weight: 0
 tags:
   - CSCI 1100
-  - 作业
+  - 考试
   - RPI
   - Python
   - 编程
