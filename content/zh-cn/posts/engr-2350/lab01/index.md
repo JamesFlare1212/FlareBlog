@@ -10,8 +10,8 @@ author:
   link: https://www.jamesflare.com
   email:
   avatar: /site-logo.avif
-description:
-keywords:
+description: 这篇博客文章提供了ENGR 2350课程第一实验室的指南，重点介绍了使用TI-RSLK机器人进行数字输入/输出（GPIO）的操作。实验包括构建硬件电路、初始化GPIO引脚以及实现控制逻辑以根据用户输入管理电机运动。
+keywords: ["C语言","编程","RPI","ENGR 2350"]
 license:
 comment: true
 weight: 0
@@ -30,7 +30,7 @@ hiddenFromHomePage: false
 hiddenFromSearch: false
 hiddenFromRss: false
 hiddenFromRelated: false
-summary:
+summary: 这篇博客文章提供了ENGR 2350课程第一实验室的指南，重点介绍了使用TI-RSLK机器人进行数字输入/输出（GPIO）的操作。实验包括构建硬件电路、初始化GPIO引脚以及实现控制逻辑以根据用户输入管理电机运动。
 resources:
   - name: featured-image
     src: featured-image.jpg

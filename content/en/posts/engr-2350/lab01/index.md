@@ -10,8 +10,8 @@ author:
   link: https://www.jamesflare.com
   email:
   avatar: /site-logo.avif
-description:
-keywords:
+description: This blog post provides a guide on Lab 1 of ENGR 2350, focusing on digital input/output (GPIO) using the TI-RSLK robot. The lab involves building hardware circuits, initializing GPIO pins, and implementing control logic to manage motor movements based on user inputs.
+keywords: ["C","Programming","RPI","ENGR 2350","Lab"]
 license:
 comment: true
 weight: 0
@@ -30,7 +30,7 @@ hiddenFromHomePage: false
 hiddenFromSearch: false
 hiddenFromRss: false
 hiddenFromRelated: false
-summary:
+summary: This blog post provides a guide on Lab 1 of ENGR 2350, focusing on digital input/output (GPIO) using the TI-RSLK robot. The lab involves building hardware circuits, initializing GPIO pins, and implementing control logic to manage motor movements based on user inputs.
 resources:
   - name: featured-image
     src: featured-image.jpg
