@@ -101,8 +101,8 @@ if (!PB1 && !PB2){
 > 将流程图转换为等效的代码段。
 >
 > ```mermaid
->  flowchart TB
->     A([Start]) --> B{"Are a and b\nboth zero?"}
+>  flowchart LR
+>     A([Start]) --> B{Are a and b<br/>both zero?}
 >     B -- Yes --> C([Done])
 >     B -- No --> D[Divide a by 2<br/>and save back into a]
 >     D --> E[Multiply b by a<br/>and save back into b]

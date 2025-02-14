@@ -100,8 +100,8 @@ if (!PB1 && !PB2){
 > Convert the flow chart to an equivalent segment of code.
 >
 > ```mermaid
->  flowchart TB
->     A([Start]) --> B{"Are a and b\nboth zero?"}
+>  flowchart LR
+>     A([Start]) --> B{Are a and b<br/>both zero?}
 >     B -- Yes --> C([Done])
 >     B -- No --> D[Divide a by 2<br/>and save back into a]
 >     D --> E[Multiply b by a<br/>and save back into b]
