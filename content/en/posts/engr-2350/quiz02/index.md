@@ -57,19 +57,38 @@ repost:
 
 > ...what must be the timer's period (in number of counts) be such that the overflow period is **8 ms**? Assume that the timer's clock divider is set to **32**.
 
-$$\text{Timer clock} = \frac{12\text{ MHz}}{32} = 375000 \text{ Hz} \quad (375 \text{ kHz})$$
+$$\text{Timer clock} = \frac{12\text{ MHz}}{32} = 375000 \text{ Hz}$$
 $$N = 375000 \times 0.008 \text{ s} = \boxed{3000} \text{ ticks}$$
 
 ### Q1.2
 
 > What is the smallest divider possible that could still allow the timer to produce the same overflow period? Assume, of course, that the timer's period (in counts) can also change.
 
-If we want the smallest divider possible, we’d ideally choose a divider of $\boxed{1}$
+We have a 16-bit Timer_A (so its maximum count is 65536). We can use this inequality.
+
+$$
+\begin{align*}
+  N_{DIV} &\ge T_{period} \times \frac{f_{SMCLK}}{N_{period}} \\\
+  N_{DIV} &\ge 0.008 \times \frac{12000000}{65536} \\\
+  N_{DIV} &\approx 1.4648
+\end{align*}
+$$
+
+The divider must be an integer, so we need round up to $\boxed{2}$
 
 ## Q2 Basic GPIO
 
 > Answer the following questions about GPIO functionality and usage considering the circuit as provided below.
 > {{< image src="q2-gpio.avif" width="480px" caption="Q2 Basic GPIO Pin Out" >}}
+
+## Q2.1
+
+Initialize the GPIO used in the diagram above using Registers only. Do not modify any other pins in the port.
+
+```c
+P6DIR |= 0x10; // for pin 4
+P6DIR &= ~0x42; // or 0xBD for 0x40 (pin 6) and 0x02 (pin 1) 
+```
 
 ### Q2.2
 
@@ -174,9 +193,9 @@ Because the line `Timer_A_registerInterrupt(timer, TIMER_A_CCRX_AND_OVERFLOW_INT
 
 > How often is this function triggered by the hardware? Give your answer in milliseconds.
 
-$$\text{Timer Clock} = \frac{12\,\text{MHz}}{32} = 375\,\text{kHz}$$
-$$\text{Tick Period} = \frac{1}{375\,\text{kHz}} \approx 2.667\,\mu\text{s}$$
-$$\text{Interrupt Period} = 12345 \times 2.667\,\mu\text{s} \approx \boxed{32.92}\,\text{ms}$$
+$$\text{Timer Clock} = \frac{12\,\text{MHz}}{32} = 375 \text{ kHz}$$
+$$\text{Tick Period} = \frac{1}{375\,\text{kHz}} \approx 2.667 \\, \mu\text{s}$$
+$$\text{Interrupt Period} = 12345 \times 2.667\,\mu\text{s} \approx \boxed{32.92} \text{ ms}$$
 
 ### Q4.3
 

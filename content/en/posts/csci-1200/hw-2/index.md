@@ -51,9 +51,7 @@ repost:
 
 ## Assignment Requirements
 
-````markdown
-# Homework 2 — Designing a Simple Uber
-
+{{< details >}}
 In this assignment you will develop a simple ride sharing application called New York Ride. Please read the entire handout before starting to code the assignment.
 
 ## Learning Objectives
@@ -255,7 +253,7 @@ The only difference between this command and the first command is the last argum
 
 When a rider cancels a request, you should just cancel the request; when a driver cancels a request, you should cancel the request, but at the same time, find another closest driver for this rider.
 
-Only drivers who are on the way to a pickup location, or riders whose driver is on the way, should be allowed to cancel a request. 
+Only drivers who are on the way to a pickup location, or riders whose driver is on the way, should be allowed to cancel a request.
 
 When this second command is run, and
 
@@ -400,7 +398,7 @@ README.txt file.
   - Does not use std::vector to store drivers or riders. (-5)
   - Uses std::list or data structures which have not been covered in this class. (-5)
   - Member variables are public. (-2)
-````
+{{< /details >}}
 
 ## Supporting Files
 

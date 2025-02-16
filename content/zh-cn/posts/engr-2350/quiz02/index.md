@@ -57,20 +57,39 @@ repost:
 
 > 要让定时器的溢出周期为 **8 ms**，需要设置其周期（以计数值表示）为多少？假设定时器的时钟分频器设置为 **32**。
 
-$$\text{Timer clock} = \frac{12\,\text{MHz}}{32} = 375000 \text{ Hz} \quad (375 \text{ kHz})$$
+$$\text{Timer clock} = \frac{12\,\text{MHz}}{32} = 375000 \text{ Hz}$$
 $$N = 375000 \times 0.008 \text{ s} = \boxed{3000} \text{ ticks}$$
 
 ##### Q1.2
 
 > 要使定时器仍能产生相同的溢出周期，最小的分频器应该是多少？假设定时器的周期（以计数值表示）可以调整。
 
-如果我们想要最小的分频器设置为 1，则可以满足要求。因此，最小的分频器设置为 $\boxed{1}$
+我们有一个16位的Timer_A（因此它的最大计数值为65536）。我们可以使用以下不等式：
+
+$$
+\begin{align*}
+  N_{DIV} &\ge T_{period} \times \frac{f_{SMCLK}}{N_{period}} \\\
+  N_{DIV} &\ge 0.008 \times \frac{12000000}{65536} \\\
+  N_{DIV} &\approx 1.4648
+\end{align*}
+$$
+
+分频器必须是整数，所以我们需要向上取整到 $\boxed{2}$。
 
 #### Q2 基本 GPIO
 
 > 请回答以下关于 GPIO 功能和使用的问题，并考虑提供的电路图。
 >
 > {{< image src="q2-gpio.avif" width="480px" caption="Q2 Basic GPIO Pin Out" >}}
+
+## Q2.1
+
+使用寄存器仅初始化上述图中使用的GPIO，不要修改端口中的其他引脚。
+
+```c
+P6DIR |= 0x10; // for pin 4
+P6DIR &= ~0x42; // or 0xBD for 0x40 (pin 6) and 0x02 (pin 1) 
+```
 
 ##### Q2.2
 
@@ -175,9 +194,9 @@ IncC()
 
 > 这个函数被硬件触发的频率是多少？请给出答案并用毫秒为单位。
 
-$$\text{Timer Clock} = \frac{12\,\text{MHz}}{32} = 375\,\text{kHz}$$
-$$\text{Tick Period} = \frac{1}{375\,\text{kHz}} \approx 2.667\,\mu\text{s}$$
-$$\text{Interrupt Period} = 12345 \times 2.667\,\mu\text{s} \approx \boxed{32.92}\,\text{ms}$$
+$$\text{Timer Clock} = \frac{12\,\text{MHz}}{32} = 375 \text{ kHz}$$
+$$\text{Tick Period} = \frac{1}{375\,\text{kHz}} \approx 2.667\\,\mu\text{s}$$
+$$\text{Interrupt Period} = 12345 \times 2.667\,\mu\text{s} \approx \boxed{32.92} \text{ ms}$$
 
 ##### Q4.3
 
