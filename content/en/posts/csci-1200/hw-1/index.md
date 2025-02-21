@@ -1,5 +1,5 @@
 ---
-title: CSCI 1200 - Homework 1 — Spotify Playlists
+title: CSCI 1200 - Homework 1 - Spotify Playlists
 subtitle:
 date: 2025-02-15T13:38:46-05:00
 lastmod: 2025-02-15T13:38:46-05:00

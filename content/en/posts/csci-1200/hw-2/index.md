@@ -1,5 +1,5 @@
 ---
-title: CSCI 1200 - Homework 2 — Designing a Simple Uber
+title: CSCI 1200 - Homework 2 - Designing a Simple Uber
 subtitle:
 date: 2025-01-22T09:28:20-05:00
 lastmod: 2025-01-22T09:28:20-05:00
