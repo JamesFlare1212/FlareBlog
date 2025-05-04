@@ -1,5 +1,5 @@
 ---
-title: "For 杨文雅 - 祝你学业顺利"
+title: "For 杨文雅 - 祝你学业顺利！"
 subtitle: 
 date: 2023-01-13T19:45:45+08:00
 lastmod: 2024-03-10T1:36:05-05:00
@@ -15,24 +15,22 @@ keywords:
 license: ""
 comment: true
 weight: 0
-
 tags:
-- 贺卡
-- 数学
-- 知识论
+  - 贺卡
+  - 数学
+  - 知识论
 categories:
-- 贺卡
-
+  - 贺卡
+collections:
+  - 贺卡
 hiddenFromHomePage: false
 hiddenFromSearch: false
-
 summary: "给杨文雅的贺卡，恭喜你上大学了，很高兴认识你！本页是一份现代化的贺卡，不出意外你将通过二维码扫描获得。不同于普通的文本，这是富文本，当然我个人还是喜欢戏称其为肥文本。"
 resources:
 - name: featured-image
   src: featured-image.jpg
 - name: featured-image-preview
   src: featured-image-preview.jpg
-
 toc:
   enable: true
 math:
@@ -40,7 +38,6 @@ math:
 lightgallery: true
 seo:
   images: []
-
 repost:
   enable: false
   url:
@@ -48,14 +45,15 @@ repost:
 # See details front matter: https://fixit.lruihao.cn/theme-documentation-content/#front-matter
 ---
 
-> **Change Log**
-> 
-> - 2024/3/10
->   - 优化正文语法
->   - 优化并备份 bilibili 视频
->   - 修正二维码 URL
->   - 将资源文件嵌入 Adobe Illustrator 项目
->   - 优化贺卡布局
+## Change Log
+
+```timeline {reverse=true, placement=top}
+events:
+  - timestamp: 2024-03-10
+    content: "优化正文语法，优化并备份 bilibili 视频，修正二维码 URL，嵌入 Adobe Illustrator 项目，优化贺卡布局"
+  - timestamp: 2024-01-13
+    content: "创建项目"
+```
 
 ## Card
 

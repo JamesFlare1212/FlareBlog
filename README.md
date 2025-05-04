@@ -7,7 +7,7 @@ This is a git repository for the FlareBlog. The Blog is based on [Hugo](https://
 Clone the repository:
 
 ```bash
-git clone https://github.com/JamesFlare1212/FlareBlog.git
+git clone --recurse-submodules https://github.com/JamesFlare1212/FlareBlog.git
 ```
 
 Then, install Hugo.
