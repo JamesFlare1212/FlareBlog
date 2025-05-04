@@ -518,11 +518,11 @@ $$
 Substituting known values. Given $V_A = 5$ and $V_D = 0$, the equations become:
 
 $$
-2.5V_B - V_C = 5 \\\
+2.5V_B - V_C = 5 \\
 2V_C - V_B = 0
 $$
 
-Matrix form: $\begin{bmatrix} 2.5 & -1 \\\ -1 & 2 \end{bmatrix}$ $\begin{bmatrix} V_B \\\ V_C \end{bmatrix} =$ $\begin{bmatrix} 5 \\\ 0 \end{bmatrix}$
+Matrix form: $\begin{bmatrix} 2.5 & -1 \\ -1 & 2 \end{bmatrix}$ $\begin{bmatrix} V_B \\ V_C \end{bmatrix} =$ $\begin{bmatrix} 5 \\ 0 \end{bmatrix}$
 
 Solve them "by hand"
 
@@ -547,7 +547,7 @@ The solution is:
     1.2500
 ```
 
-Thus, $\begin{bmatrix} V_B \\\ V_C \end{bmatrix} =$ $\begin{bmatrix}2.5 \\\ 1.25 \end{bmatrix}$
+Thus, $\begin{bmatrix} V_B \\ V_C \end{bmatrix} =$ $\begin{bmatrix}2.5 \\ 1.25 \end{bmatrix}$
 
 ### Simulation
 
@@ -666,8 +666,8 @@ A non-inverted comparator has a transfer function of
 $$
 \begin{equation*}
 V_{out}=\begin{cases}
-          \text{if} \; V_{in} < V_{ref}, V_{out} = V_s - \\\
-      \text{if} \; V_{in} > V_{ref}, V_{out} = V_s + \\\
+          \text{if} \; V_{in} < V_{ref}, V_{out} = V_s - \\
+      \text{if} \; V_{in} > V_{ref}, V_{out} = V_s + \\
      \end{cases}
   \end{equation*}
 $$
@@ -677,8 +677,8 @@ In our case, we got
 $$
 \begin{equation*}
 V_{out}=\begin{cases}
-          \text{if} \; V_{in} < 0V, V_{out} = -5V \\\
-      \text{if} \; V_{in} > 0V, V_{out} = 5V \\\
+          \text{if} \; V_{in} < 0V, V_{out} = -5V \\
+      \text{if} \; V_{in} > 0V, V_{out} = 5V \\
      \end{cases}
   \end{equation*}
 $$
@@ -723,8 +723,8 @@ In our case, we want to use $50K \Omega$ potentiometer as the resistors, so it c
 
 $$
 \begin{align*}
-  V_{out} &= - \frac{\cancel{50K}}{\cancel{50K}} \cdot V1 - \frac{\cancel{\cancel{50K}}}{\cancel{50K}} \cdot V2 \\\
-  V_{out} &= - V1 - V2 \\\
+  V_{out} &= - \frac{\cancel{50K}}{\cancel{50K}} \cdot V1 - \frac{\cancel{\cancel{50K}}}{\cancel{50K}} \cdot V2 \\
+  V_{out} &= - V1 - V2 \\
 \end{align*}
 $$
 
@@ -782,8 +782,8 @@ In our case, we want to use $50K \Omega$ potentiometer as the resistors, so it c
 
 $$
 \begin{align*}
-  V_{out} &= - \frac{\cancel{50K}}{\cancel{50K}} \cdot V1 - \frac{\cancel{\cancel{50K}}}{\cancel{50K}} \cdot V2 \\\
-  V_{out} &= - V1 - V2 \\\
+  V_{out} &= - \frac{\cancel{50K}}{\cancel{50K}} \cdot V1 - \frac{\cancel{\cancel{50K}}}{\cancel{50K}} \cdot V2 \\
+  V_{out} &= - V1 - V2 \\
 \end{align*}
 $$
 

@@ -71,8 +71,8 @@ repost:
 We know that, the Ohm's Law, KCL, and KVL can be shown as these formulas:
 
 $$
-V = IR \\\
-\textstyle \sum I_{in} = \sum I_{out} \\\
+V = IR \\
+\textstyle \sum I_{in} = \sum I_{out} \\
 \textstyle \sum V_{n} = 0
 $$
 
@@ -82,11 +82,11 @@ Based on $V = IR$, the total $I$ should be
 
 $$
 \begin{align*}
-    V &= IR \\\
-    I &= \frac{V}{R} \\\
-    I_{total} &= \frac{5}{10K + \cfrac{1}{\frac{1}{1K} + \frac{1}{1K}} + 10K} \\\
-    I_{total} &= \frac{5}{10000 + 500 + 10000} \\\
-    I_{total} &= 0.000243902439 \\\
+    V &= IR \\
+    I &= \frac{V}{R} \\
+    I_{total} &= \frac{5}{10K + \cfrac{1}{\frac{1}{1K} + \frac{1}{1K}} + 10K} \\
+    I_{total} &= \frac{5}{10000 + 500 + 10000} \\
+    I_{total} &= 0.000243902439 \\
 \end{align*}
 $$
 
@@ -94,8 +94,8 @@ And $I(R2) = I(R3)$ should be
 
 $$
 \begin{align*}
-     I(R2) = I(R3) &= I_{total} \times  \frac{R2}{R2 + R3} \\\
-     I(R2) = I(R3) &= 0.000243902439 \times \frac{1000}{1000 + 1000} \\\
+     I(R2) = I(R3) &= I_{total} \times  \frac{R2}{R2 + R3} \\
+     I(R2) = I(R3) &= 0.000243902439 \times \frac{1000}{1000 + 1000} \\
      I(R2) = I(R3) &= 0.0001219512195
 \end{align*}
 $$
@@ -106,16 +106,16 @@ To find $V(R1) = V(R4)$ and $V(R2) = V(R3)$, we can use
 
 $$
 \begin{align*}
-    V(R1) = V(R4) &= V_{total} \times \frac{R1}{R1 + R2 \Vert R3 + R4} \\\
-    V(R1) = V(R4) &= 5 \times \frac{10000}{10000 + 500 + 10000} \\\
+    V(R1) = V(R4) &= V_{total} \times \frac{R1}{R1 + R2 \Vert R3 + R4} \\
+    V(R1) = V(R4) &= 5 \times \frac{10000}{10000 + 500 + 10000} \\
     V(R1) = V(R4) &= 2.4390244
 \end{align*}
 $$
 
 $$
 \begin{align*}
-    V(R2) = V(R3) &= V_{total} \\\
-    V(R2) = V(R3) &= (5 - 2.4390244 - 2.4390244) \\\
+    V(R2) = V(R3) &= V_{total} \\
+    V(R2) = V(R3) &= (5 - 2.4390244 - 2.4390244) \\
     V(R2) = V(R3) &= 0.1219512
 \end{align*}
 $$
@@ -187,24 +187,24 @@ and the voltage is the difference in potential. Based on that, we can calculate 
 
 $$
 \begin{align*}
-    V(R1) &= V(n001) - V(n002) \\\
-    V(R1) &= 5 - 2.56098 \\\
+    V(R1) &= V(n001) - V(n002) \\
+    V(R1) &= 5 - 2.56098 \\
     V(R1) &= \boxed{2.43902}
 \end{align*}
 $$
 
 $$
 \begin{align*}
-    V(R2) = V(R3) &= V(n002) - V(n003) \\\
-    V(R2) = V(R3) &= 2.56098 - 2.43902 \\\
+    V(R2) = V(R3) &= V(n002) - V(n003) \\
+    V(R2) = V(R3) &= 2.56098 - 2.43902 \\
     V(R2) = V(R3) &= \boxed{0.12196}
 \end{align*}
 $$
 
 $$
 \begin{align*}
-    V(R4) &= V(n003) - V(\text{GND}) \\\
-    V(R4) &= 2.43902 - 0 \\\
+    V(R4) &= V(n003) - V(\text{GND}) \\
+    V(R4) &= 2.43902 - 0 \\
     V(R4) &= \boxed{2.43902}
 \end{align*}
 $$
@@ -240,8 +240,8 @@ Using the expectation $I(R1) = I(R2) + I(R3)$ from Analysis. We can check
 
 $$
 \begin{align*}
-    & \quad \thickspace I(R1) + I(R2) + I(R3) \\\
-    &= -0.000243902 + 0.000121951 + 0.000121951 \\\
+    & \quad \thickspace I(R1) + I(R2) + I(R3) \\
+    &= -0.000243902 + 0.000121951 + 0.000121951 \\
     &= \boxed{0}
 \end{align*}
 $$
@@ -256,8 +256,8 @@ We can use the result from previous part.
 
 $$
 \begin{align*}
-    V(R1) &= 2.43902 \\\
-    V(R2) = V(R3) &= 0.12196 \\\
+    V(R1) &= 2.43902 \\
+    V(R2) = V(R3) &= 0.12196 \\
     V(R4) &= 2.43902
 \end{align*}
 $$
@@ -266,9 +266,9 @@ Use the expectation $V(n001) - V(n002) - V(n003) = 0$ from Analysis. We can chec
 
 $$
 \begin{align*}
-    & \quad \thickspace V(n001) - V(n002) - V(n003) \\\
-    &= 2.43902 - 0.12196 - 0.12196 \\\
-    &= 0 \\\
+    & \quad \thickspace V(n001) - V(n002) - V(n003) \\
+    &= 2.43902 - 0.12196 - 0.12196 \\
+    &= 0 \\
     & \boxed{\text{True}}
 \end{align*}
 $$
@@ -292,24 +292,24 @@ to calculate $I$ based on Ohm's Law.
 
 $$
 \begin{align*}
-    V &= IR \\\
-    I &= \frac{V}{R} \\\
+    V &= IR \\
+    I &= \frac{V}{R} \\
     I(R1) &= \frac{2.4963}{10000} = \boxed{0.00024963}
 \end{align*}
 $$
 
 $$
 \begin{align*}
-    V &= IR \\\
-    I &= \frac{V}{R} \\\
+    V &= IR \\
+    I &= \frac{V}{R} \\
     I(R2) = I(R3) &= \frac{0.1665}{1000} = \boxed{0.0001665}
 \end{align*}
 $$
 
 $$
 \begin{align*}
-    V &= IR \\\
-    I &= \frac{V}{R} \\\
+    V &= IR \\
+    I &= \frac{V}{R} \\
     I(R4) &= \frac{2.4616}{10000} = \boxed{0.00024616}
 \end{align*}
 $$
@@ -407,16 +407,16 @@ V(n002):     2.5     voltage
 
 $$
 \begin{align*}
-    V(R1) &= V(n001) - V(n002) \\\
-    V(R1) &= 5 - 2.5 \\\
+    V(R1) &= V(n001) - V(n002) \\
+    V(R1) &= 5 - 2.5 \\
     V(R1) &= \boxed{2.5}
 \end{align*}
 $$
 
 $$
 \begin{align*}
-    V(R2) &= V(n002) - \text{GND} \\\
-    V(R2) &= 2.5 - 0 \\\
+    V(R2) &= V(n002) - \text{GND} \\
+    V(R2) &= 2.5 - 0 \\
     V(R2) &= \boxed{2.5}
 \end{align*}
 $$
@@ -469,7 +469,7 @@ Also, we know that $R_1 = R_2 = 10K$ and the voltage across the resistor can be 
 
 $$
 \begin{align*}
-    \frac{V_1}{V_2} &= \frac{R_1}{R_2} \\\
+    \frac{V_1}{V_2} &= \frac{R_1}{R_2} \\
     \frac{V_1}{V_2} &= \frac{10K}{10K} = \frac{1}{1}
 \end{align*}
 $$
@@ -480,8 +480,8 @@ Using these values, we can find out $I(R1)$ and $I(R2)$ by
 
 $$
 \begin{align*}
-    I(R1) = I(R2) &= \frac{V}{R} \\\
-    I(R1) = I(R2) &= \frac{2.5}{10K} \\\
+    I(R1) = I(R2) &= \frac{V}{R} \\
+    I(R1) = I(R2) &= \frac{2.5}{10K} \\
     I(R1) = I(R2) &= \boxed{0.00025}
 \end{align*}
 $$
@@ -539,16 +539,16 @@ Based on the Ohm's Law - the relationship we got in Analysis $I = \frac{V}{R}$. 
 
 $$
 \begin{align*}
-    I(R1) &= \frac{V}{R} \\\
-    I(R1) &= \frac{2.5539}{10K} \\\
+    I(R1) &= \frac{V}{R} \\
+    I(R1) &= \frac{2.5539}{10K} \\
     I(R1) &= 0.00025539
 \end{align*}
 $$
 
 $$
 \begin{align*}
-    I(R2) &= \frac{V}{R} \\\
-    I(R2) &= \frac{2.5204}{10K} \\\
+    I(R2) &= \frac{V}{R} \\
+    I(R2) &= \frac{2.5204}{10K} \\
     I(R2) &= 0.00025204
 \end{align*}
 $$
@@ -589,8 +589,8 @@ Also, the voltage is potential difference between the component.
 
 $$
 \begin{align*}
-    V(R1) = V(R2) &= n001 - \text{GND} \\\
-    V(R1) = V(R2) &= 5 - 0 \\\
+    V(R1) = V(R2) &= n001 - \text{GND} \\
+    V(R1) = V(R2) &= 5 - 0 \\
     V(R1) = V(R2) &= \boxed{5}
 \end{align*}
 $$
@@ -637,8 +637,8 @@ Let's put values into equation
 
 $$
 \begin{align*}
-    I_{total} &= \frac{5}{\cfrac{1}{\frac{1}{10K} + \frac{1}{10K}}} \\\
-    I_{total} &= \frac{5}{5K} \\\
+    I_{total} &= \frac{5}{\cfrac{1}{\frac{1}{10K} + \frac{1}{10K}}} \\
+    I_{total} &= \frac{5}{5K} \\
     I_{total} &= \boxed{0.001}
 \end{align*}
 $$
@@ -689,8 +689,8 @@ and the voltage is the difference in potential. Based on that, we can caculate t
 
 $$
 \begin{align*}
-    V(R1) = V(R2) &= V(n001) - \text{GND} \\\
-    V(R1) = V(R2) &= 5 - 0 \\\
+    V(R1) = V(R2) &= V(n001) - \text{GND} \\
+    V(R1) = V(R2) &= 5 - 0 \\
     V(R1) = V(R2) &= \boxed{5}
 \end{align*}
 $$
@@ -733,9 +733,9 @@ So, we get
 
 $$
 \begin{align*}
-    I_{total} &= I(R2) + I(R1) \\\
-    I_{total} &= 0.0005 + 0.0005 \\\
-    I_{total} &= 0.001 \\\
+    I_{total} &= I(R2) + I(R1) \\
+    I_{total} &= 0.0005 + 0.0005 \\
+    I_{total} &= 0.001 \\
     & 0.001 = 0.001 \\; \boxed{\text{True}}
 \end{align*}
 $$
@@ -764,9 +764,9 @@ Then, we can find out $I(R1)$ and $I(R2)$ by
 
 $$
 \begin{align*}
-    V &= IR \\\
-    I &= \frac{V}{R} \\\
-    I(R1) = I(R2) &= \frac{5.0305}{10000} \\\
+    V &= IR \\
+    I &= \frac{V}{R} \\
+    I(R1) = I(R2) &= \frac{5.0305}{10000} \\
     I(R1) = I(R2) &= \boxed{0.0005305}
 \end{align*}
 $$
@@ -808,8 +808,8 @@ Also, the voltage is potential difference between the component.
 
 $$
 \begin{align*}
-    V(R1) = V(R2) &= n001 - \text{GND} \\\
-    V(R1) = V(R2) &= 5 - 0 \\\
+    V(R1) = V(R2) &= n001 - \text{GND} \\
+    V(R1) = V(R2) &= 5 - 0 \\
     V(R1) = V(R2) &= \boxed{5}
 \end{align*}
 $$
@@ -830,16 +830,16 @@ and get
 
 $$
 \begin{align*}
-    I(R1) &= \frac{V(R1)}{R1} \\\
-    I(R1) &= \frac{5}{10K} \\\
+    I(R1) &= \frac{V(R1)}{R1} \\
+    I(R1) &= \frac{5}{10K} \\
     I(R1) &= \boxed{0.0005}
 \end{align*}
 $$
 
 $$
 \begin{align*}
-    I(R2) &= \frac{V(R2)}{R2} \\\
-    I(R2) &= \frac{5}{10K} \\\
+    I(R2) &= \frac{V(R2)}{R2} \\
+    I(R2) &= \frac{5}{10K} \\
     I(R2) &= \boxed{0.0005}
 \end{align*}
 $$
@@ -848,10 +848,10 @@ the relationship between $I(R1)$ and $I(R2)$ can be express as
 
 $$
 \begin{align*}
-    \frac{I(R1)}{I(R2)} &= \cfrac{\cfrac{V(R1)}{R1}}{\cfrac{V(R2)}{R2}} \\\
-    \because V(R1) &= V(R2) \\\
-    \therefore \frac{I(R1)}{I(R2)} &= \cfrac{\cfrac{\cancel{V(R1)}}{R1} \times \cfrac{1}{\cancel{V(R1)}}}{\cfrac{\cancel{V(R2)}}{R2} \times \cfrac{1}{\cancel{V(R2)}}} \\\
-    \frac{I(R1)}{I(R2)} &= \frac{\frac{1}{R1}}{\frac{1}{R2}} \\\
+    \frac{I(R1)}{I(R2)} &= \cfrac{\cfrac{V(R1)}{R1}}{\cfrac{V(R2)}{R2}} \\
+    \because V(R1) &= V(R2) \\
+    \therefore \frac{I(R1)}{I(R2)} &= \cfrac{\cfrac{\cancel{V(R1)}}{R1} \times \cfrac{1}{\cancel{V(R1)}}}{\cfrac{\cancel{V(R2)}}{R2} \times \cfrac{1}{\cancel{V(R2)}}} \\
+    \frac{I(R1)}{I(R2)} &= \frac{\frac{1}{R1}}{\frac{1}{R2}} \\
     &\boxed{\frac{I(R1)}{I(R2)} = \frac{R2}{R1}}
 \end{align*}
 $$
@@ -866,9 +866,9 @@ as we get the $I_{total}$ by
 
 $$
 \begin{align*}
-    I_{total} &= \frac{V_{total}}{R_{total}} \\\
-    I_{total} &= \frac{5}{\cfrac{1}{\cfrac{1}{10K} + \cfrac{1}{10K}}} \\\
-    I_{total} &= \frac{5}{5K} \\\
+    I_{total} &= \frac{V_{total}}{R_{total}} \\
+    I_{total} &= \frac{5}{\cfrac{1}{\cfrac{1}{10K} + \cfrac{1}{10K}}} \\
+    I_{total} &= \frac{5}{5K} \\
     I_{total} &= 0.001
 \end{align*}
 $$
@@ -883,8 +883,8 @@ We can get $I(R1)$ and $I(R2)$ by
 
 $$
 \begin{align*}
-    I(R1) = I(R2) &= I_{total} \times \frac {R1}{R1 + R2} \\\
-    I(R1) = I(R2) &= 0.001 \times \frac {10K}{10K + 10K} \\\
+    I(R1) = I(R2) &= I_{total} \times \frac {R1}{R1 + R2} \\
+    I(R1) = I(R2) &= 0.001 \times \frac {10K}{10K + 10K} \\
     I(R1) = I(R2) &= \boxed{0.0005}
 \end{align*}
 $$
@@ -893,12 +893,12 @@ At this point, our logic is consistent, which
 
 $$
 \begin{align*}
-    & \because R1 = R2 = 10K \\\
-    & \because I(R1) = I(R2) = 0.0005 \\\
-    & \because V(R1) = V(R2) = 5 \\\
-    & \because I_{total} = I(R1) + I(R2) = 0.001 \\\
-    & \because  \frac{I(R1)}{I(R2)} = \frac{R2}{R1} \\\
-    & \therefore I(R1) = I(R2) = I_{total} \times \frac {R1}{R1 + R2} \\\
+    & \because R1 = R2 = 10K \\
+    & \because I(R1) = I(R2) = 0.0005 \\
+    & \because V(R1) = V(R2) = 5 \\
+    & \because I_{total} = I(R1) + I(R2) = 0.001 \\
+    & \because  \frac{I(R1)}{I(R2)} = \frac{R2}{R1} \\
+    & \therefore I(R1) = I(R2) = I_{total} \times \frac {R1}{R1 + R2} \\
 \end{align*}
 $$
 
@@ -958,8 +958,8 @@ and the voltage is the difference in potential. Based on that, we can calculate 
 
 $$
 \begin{align*}
-    V(R1) = V(R2) &= V(n001) - \text{GND} \\\
-    V(R1) = V(R2) &= 5 - 0 \\\
+    V(R1) = V(R2) &= V(n001) - \text{GND} \\
+    V(R1) = V(R2) &= 5 - 0 \\
     V(R1) = V(R2) &= \boxed{5}
 \end{align*}
 $$
@@ -999,9 +999,9 @@ Then, we can find out $I(R1)$ and $I(R2)$ by
 
 $$
 \begin{align*}
-    V &= IR \\\
-    I &= \frac{V}{R} \\\
-    I(R1) = I(R2) &= \frac{5.0305}{10000} \\\
+    V &= IR \\
+    I &= \frac{V}{R} \\
+    I(R1) = I(R2) &= \frac{5.0305}{10000} \\
     I(R1) = I(R2) &= \boxed{0.0005305}
 \end{align*}
 $$
@@ -1038,7 +1038,7 @@ We are going to use NTC 100K as our thermistor, and we will compare the reading 
 NTC thermistor uses Beta formula to calculate the resistance under a specific temperature. The formula is like
 
 $$
-\frac{1}{T_1} = \frac{1}{T_0} + \frac{1}{\beta} \ln\left(\frac{R_1}{R_0}\right) \\\
+\frac{1}{T_1} = \frac{1}{T_0} + \frac{1}{\beta} \ln\left(\frac{R_1}{R_0}\right) \\
 $$
 
 We can move $R_1$ to the left side to get
@@ -1054,7 +1054,7 @@ Since we want to find out the resistance of this thermistor under a specific tem
 The thermistor we are using is NTC 100K. Which means it has $100k \Omega$ at the reference temperature $25 \degree C$
 
 $$
-T_0 = 298.15K \\\
+T_0 = 298.15K \\
 R_0 = 100k \Omega
 $$
 
@@ -1107,7 +1107,7 @@ We used the math function in Scope with
 to get the temperature in $\degree C$. This is from
 
 $$
-\frac{1}{T_1} = \frac{1}{T_0} + \frac{1}{\beta} \ln\left(\frac{R_1}{R_0}\right) \\\
+\frac{1}{T_1} = \frac{1}{T_0} + \frac{1}{\beta} \ln\left(\frac{R_1}{R_0}\right) \\
 $$
 
 which $T_1$ is the temperature reading we want.

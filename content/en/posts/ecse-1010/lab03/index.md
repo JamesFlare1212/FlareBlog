@@ -227,7 +227,7 @@ Plugging in the Values
 
 $$
 \begin{align*}
-  f_c &= \frac{510}{2 \times \pi \times 0.001} \\\
+  f_c &= \frac{510}{2 \times \pi \times 0.001} \\
   f_c &= \frac{510}{0.00628318} \approx 81,000 \text{ Hz}
 \end{align*}
 $$
@@ -329,7 +329,7 @@ we can get the capacitance of the target LP filter.
 
 $$
 \begin{align*}
-  300 &= \frac{1}{2 \pi \cdot  1K \cdot C} \\\
+  300 &= \frac{1}{2 \pi \cdot  1K \cdot C} \\
   C &= 5.6 \times 10^{-7}
 \end{align*}
 $$

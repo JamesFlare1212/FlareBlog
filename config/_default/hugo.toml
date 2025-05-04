@@ -9,7 +9,7 @@
 # Hugo Configuration
 # See: https://gohugo.io/getting-started/configuration/
 # -------------------------------------------------------------------------------------
-ignoreLogs = ['error-get-gh-repo', 'error-get-remote-json']
+#ignoreLogs = ['error-get-gh-repo', 'error-get-remote-json']
 # website title
 title = "FlareBlog"
 # Hostname (and path) to the root
@@ -114,6 +114,11 @@ enableEmoji = true
       table = true
       taskList = true
       typographer = true
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)'], ['$', '$']]
       # https://gohugo.io/getting-started/configuration-markup/#extras
       [markup.goldmark.extensions.extras]
         [markup.goldmark.extensions.extras.delete]
