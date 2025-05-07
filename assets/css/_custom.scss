@@ -4,8 +4,12 @@
 // ==============================
 
 ul, ol {
-    padding-inline-start: 0px;
-    margin-left: 1.33em;
+    padding-inline-start: 0.66rem;
+    //margin-left: 0rem;
+}
+
+.single .content ul li[data-task] {
+    margin-left: -0.66em;
 }
 
 li {
