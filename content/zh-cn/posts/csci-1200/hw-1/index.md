@@ -17,12 +17,12 @@ comment: true
 weight: 0
 tags:
   - CSCI 1200
-  - Homework
+  - 作业
   - RPI
   - C++
-  - Programming
+  - 编程
 categories:
-  - Programming
+  - 编程语言
 collections:
   - CSCI 1200
 hiddenFromHomePage: false
