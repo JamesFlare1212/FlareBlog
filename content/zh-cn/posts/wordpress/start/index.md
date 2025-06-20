@@ -10,7 +10,7 @@ author:
   link: https://www.jamesflare.com
   email:
   avatar: /site-logo.avif
-description:
+description: 本文是写给所有想将WordPress用于他们业务的新人的文章。比如WP擅长什么，又不擅长什么，或许它没有想象中的美好。除此之外，还有一个快速上手运行一个实例的指南，希望你取得成功。
 keywords:
 license:
 comment: true
@@ -25,7 +25,7 @@ hiddenFromHomePage: false
 hiddenFromSearch: false
 hiddenFromRss: false
 hiddenFromRelated: false
-summary:
+summary: 本文是写给所有想将WordPress用于他们业务的新人的文章。比如WP擅长什么，又不擅长什么，或许它没有想象中的美好。除此之外，还有一个快速上手运行一个实例的指南，希望你取得成功。
 resources:
   - name: featured-image
     src: featured-image.jpg
