@@ -57,24 +57,25 @@ In this assignment you will develop a simple ride sharing application called New
 ## Learning Objectives
 
 - Practice implementing and working with C++ classes.
-- Practice using std::string, std::vector.
+- Practice using `std::string`, `std::vector`.
 
 ## Specification
 
 The New York Ride application should support 2 different roles: drivers, riders. Riders can perform two tasks:
 
 - Request a ride
-- Cancel a ride request 
+- Cancel a ride request
 
 Drivers can perform one task:
 
 - Cancel a ride request
 
-*Note*: A commercial ride sharing product like Uber or Lyft of course allows riders and drivers to perform more tasks, but let's be honest, Uber/Lyft has thousands of software engineers, but you only have one person and only have one week to work on this assignment, so let's simplify the tasks.
+> [!NOTE]
+> A commercial ride sharing product like Uber or Lyft of course allows riders and drivers to perform more tasks, but let's be honest, Uber/Lyft has thousands of software engineers, but you only have one person and only have one week to work on this assignment, so let's simplify the tasks.
 
 ## Input Files
 
-Companies like Uber and Lyft maintain all drivers and riders information in their database, but database is way beyond the scope of this course, and therefore we will just store drivers information and riders information in two simple text files, [drivers.txt](drivers.txt) and [riders.txt](riders.txt). In this assignment you will once again read these files as the input of your program, parse them so as to retrieve drivers and/or riders information, and store them in your own data structures. In this assignment, you must use *std::vector* to store drivers and riders. You are recommended to use one *std::vector* instance to store all drivers, use another *std::vector* instance to store all riders.
+Companies like Uber and Lyft maintain all drivers and riders information in their database, but database is way beyond the scope of this course, and therefore we will just store drivers information and riders information in two simple text files, [drivers.txt](drivers.txt) and [riders.txt](riders.txt). In this assignment you will once again read these files as the input of your program, parse them so as to retrieve drivers and/or riders information, and store them in your own data structures. In this assignment, you must use `std::vector` to store drivers and riders. You are recommended to use one `std::vector` instance to store all drivers, use another `std::vector` instance to store all riders.
 
 ### Driver Information
 
@@ -117,7 +118,8 @@ A driver can be in one of the following states:
 - On the way to a pickup location (request accepted)
 - During a trip
 
-When the driver is in an Available state, it means this driver is not assigned a ride request, and therefore is not associated with any rider, and as such, the last 3 fields of this driver will just be 
+When the driver is in an Available state, it means this driver is not assigned a ride request, and therefore is not associated with any rider, and as such, the last 3 fields of this driver will just be
+
 ```console
 null null null
 ```
@@ -167,7 +169,7 @@ A rider can be in one of the following states:
 
 Ideally, there should be four states, and this other state would be: Ride requested but not yet accepted by any driver. However, as we mentioned, in this assignment, we assume that when a rider issues a request, it will be accepted by a driver, and thus we can exclude this state from our consideration.
 
-When the rider is in Ready_to_request state, it means no driver is now assigned to this ride request, and therefore, the last 3 fields of this rider will just be 
+When the rider is in `Ready_to_request` state, it means no driver is now assigned to this ride request, and therefore, the last 3 fields of this rider will just be
 
 ```console
 null null null
@@ -187,59 +189,65 @@ nyride.exe drivers.txt riders.txt output0.txt output1.txt output2.txt phoneNumbe
 
 Here
 
-- drivers.txt is the input file which contains all drivers' information. Your program should never change this file.
-- riders.txt is the input file which contains all riders' information. Your program should never change this file.
-- output0.txt is the output file where you print messages to rider or driver.
-- output1.txt is the output file where you print the updated drivers information, thus this file should have the same format as drivers.txt.
-- output2.txt is the output file where you print the updated riders information, thus this file should have the same format as riders.txt.
-- phoneNumber. Ideally this should be a phone number which corresponds to one of the riders in the riders.txt whose state is "Ready_to_request"; but life is not always ideal, and how your program should cope with various phone number cases will be described in this section.
-- request indicates this is a ride request.
+- `drivers.txt`is the input file which contains all drivers' information. Your program should never change this file.
+- `riders.txt` is the input file which contains all riders' information. Your program should never change this file.
+- `output0.txt` is the output file where you print messages to rider or driver.
+- `output1.txt` is the output file where you print the updated drivers information, thus this file should have the same format as `drivers.txt`.
+- `output2.txt` is the output file where you print the updated riders information, thus this file should have the same format as `riders.txt`.
+- `phoneNumber`. Ideally this should be a phone number which corresponds to one of the riders in the `riders.txt` whose state is `Ready_to_request`; but life is not always ideal, and how your program should cope with various phone number cases will be described in this section.
+- `request` indicates this is a ride request.
 
 When this command is run, and
 
 1. if a driver is found, your program should
 
-1.1 print the following information into the output0.txt file:
-```console
-Ride requested for rider Rebecca, looking for an Economy vehicle.
-Pick Up Location: Williamsburg, Drop Off Location: Statue_of_Liberty.
-We have found the closest driver Elena(4.7) for you.
-Elena is now 7.9 miles away from you.
-```
-Replace *Rebecca* with the rider's first name, replace *Economy* with the rider's preferred vehicle type, replace *Williamsburg* with the rider's pickup location, and replace *Statue_of_Liberty* with the rider's drop off location. Replace *Elena* with the driver's first name, replace *4.7* with the driver's rating. Replace *7.9* with the driver's distance from the rider.
+   - print the following information into the output0.txt file:
 
-1.2 print an updated version of drivers.txt into output1.txt.
+        ```console
+        Ride requested for rider Rebecca, looking for an Economy vehicle.
+        Pick Up Location: Williamsburg, Drop Off Location: Statue_of_Liberty.
+        We have found the closest driver Elena(4.7) for you.
+        Elena is now 7.9 miles away from you.
+        ```
 
-1.3 print an updated version of riders.txt into output2.txt.
+        Replace `Rebecca` with the rider's first name, replace `Economy` with the rider's preferred vehicle type, replace `Williamsburg` with the rider's pickup location, and replace `Statue_of_Liberty` with the rider's drop off location. Replace `Elena` with the driver's first name, replace `4.7` with the driver's rating. Replace `7.9` with the driver's distance from the rider.
 
-2. if a driver can not be found, your program should print the following message into the output0.txt file:
-```console
-Ride requested for rider Isabella, looking for a Luxury vehicle.
-Pick Up Location: Williamsburg, Drop Off Location: Boerum_Hill.
-Sorry we can not find a driver for you at this moment.
-```
+   - print an updated version of `drivers.txt` into `output1.txt`.
+   - print an updated version of `riders.txt` into `output2.txt`.
 
-Replace *Isabella* with the rider's first name, replace *Luxury* with the rider's preferred vehicle type, replace Williamsburg with the rider's pickup location, and replace Boerum_Hill with the rider's drop off location.
+2. if a driver can not be found, your program should print the following message into the `output0.txt` file:
 
-3. if the phone number provided from the command line is not in the format of xxx-xxx-xxxx, your program should print the following message to the output0.txt file:
-```console
-Phone number is invalid.
-```
+    ```console
+    Ride requested for rider Isabella, looking for a Luxury vehicle.
+    Pick Up Location: Williamsburg, Drop Off Location: Boerum_Hill.
+    Sorry we can not find a driver for you at this moment.
+    ```
 
-4. if the phone number provided from the command line does not match with any of the riders' phone numbers, your program should print the following message to the output0.txt file:
-```console
-Account does not exist.
-```
+    Replace `Isabella` with the rider's first name, replace `Luxury` with the rider's preferred vehicle type, replace `Williamsburg` with the rider's pickup location, and replace `Boerum_Hill` with the rider's drop off location.
 
-5. if the rider who is issuing this request is in a state of "Driver_on_the_way", your program should print the following message to the output0.txt file:
-```console
-You have already requested a ride and your driver is on the way to the pickup location.
-```
+3. if the phone number provided from the command line is not in the format of xxx-xxx-xxxx, your program should print the following message to the `output0.txt` file:
 
-6. if the rider who is issuing this request is in a state of "During_the_trip", your program should print the following message to the output0.txt file:
-```console
-You can not request a ride at this moment as you are already on a trip.
-```
+    ```console
+    Phone number is invalid.
+    ```
+
+4. if the phone number provided from the command line does not match with any of the riders' phone numbers, your program should print the following message to the `output0.txt` file:
+
+    ```console
+    Account does not exist.
+    ```
+
+5. if the rider who is issuing this request is in a state of `Driver_on_the_way`, your program should print the following message to the `output0.txt` file:
+
+    ```console
+    You have already requested a ride and your driver is on the way to the pickup location.
+    ```
+
+6. if the rider who is issuing this request is in a state of `During_the_trip`, your program should print the following message to the output0.txt file:
+
+    ```console
+    You can not request a ride at this moment as you are already on a trip.
+    ```
 
 ### Canceling a Request
 
@@ -249,7 +257,7 @@ The second command allows a rider or a driver to cancel the request. Keep in min
 nyride.exe drivers.txt riders.txt output0.txt output1.txt output2.txt phoneNumber cancel
 ```
 
-The only difference between this command and the first command is the last argument here is *cancel*, whereas in the first command, the last argument is *request*.
+The only difference between this command and the first command is the last argument here is *cancel*, whereas in the first command, the last argument is `request`.
 
 When a rider cancels a request, you should just cancel the request; when a driver cancels a request, you should cancel the request, but at the same time, find another closest driver for this rider.
 
@@ -257,47 +265,53 @@ Only drivers who are on the way to a pickup location, or riders whose driver is 
 
 When this second command is run, and
 
-1. if the phone number provided from the command line does not match with any of the riders' phone numbers, and does not match with any of the drivers' phone numbers, your program should print the following message to the output0.txt file:
-```console
-Account does not exist.
-```
+1. if the phone number provided from the command line does not match with any of the riders' phone numbers, and does not match with any of the drivers' phone numbers, your program should print the following message to the `output0.txt` file:
 
-2. if the canceling request is issued by a rider whose state is NOT Driver_on_the_way, your program should print the following message to the output0.txt file:
-```console
-You can only cancel a ride request if your driver is currently on the way to the pickup location.
-```
+    ```console
+    Account does not exist.
+    ```
 
-3. if the canceling request is issued by a driver whose state is NOT On_the_way_to_pickup, your program should print the following message to the output0.txt file:
-```console
-You can only cancel a ride request if you are currently on the way to the pickup location.
-```
+2. if the canceling request is issued by a rider whose state is NOT `Driver_on_the_way`, your program should print the following message to the `output0.txt` file:
 
-4. if the canceling request is issued by a rider whose state is Driver_on_the_way, your program should:
+    ```console
+    You can only cancel a ride request if your driver is currently on the way to the pickup location.
+    ```
 
-4.1 print the following message to the output0.txt file:
-```console
-Ride request for rider Brenda is now canceled by the rider.
-```
-4.2 print an updated version of drivers.txt into output1.txt: the driver's state should be changed from On_the_way_to_pickup to Available, and the last 3 fields of the driver should be reset to null, meaning that this driver is now not associated with any rider.
+3. if the canceling request is issued by a driver whose state is NOT `On_the_way_to_pickup`, your program should print the following message to the `output0.txt` file:
 
-4.3 print an updated version of riders.txt into output2.txt: the rider's state should be changed from Driver_on_the_way to Ready_to_request, and the last 3 fields of the rider should be reset to null, meaning that no driver is now associated with this rider.
+    ```console
+    You can only cancel a ride request if you are currently on the way to the pickup location.
+    ```
 
-5. if the canceling request is issued by a driver whose state is On_the_way_to_pickup, your program should:
+4. if the canceling request is issued by a rider whose state is `Driver_on_the_way`, your program should:
 
-5.1 print the following message to the output0.txt file:
-```console
-Your driver Edward has canceled the ride request. We will now find a new driver for you.
-Ride requested for rider Angela, looking for a Standard vehicle.
-Pick Up Location: The_Met_Cloisters, Drop Off Location: Brooklyn_Navy_Yard.
-We have found the closest driver Robert(3.2) for you.
-Robert is now 2.1 miles away from you.
-```
+   - print the following message to the `output0.txt` file:
 
-Replace *Edward* with the driver's first name. Replace *Angela* with the rider's first name, replace *Standard* with the rider's preferred vehicle type. Replace *The_Met_Cloisters* with the rider's pickup location, and replace *Brooklyn_Navy_Yard* with the rider's drop off location. Replace *Robert* with the new driver's first name. Replace *3.2* with the new driver's rating. Replace *2.1* with the new driver's distance to the rider.
+       ```console
+       Ride request for rider Brenda is now canceled by the rider.
+       ```
 
-5.2 print an updated version of drivers.txt into output1.txt: the old driver's state should be changed from On_the_way_to_pickup to Available. A new driver should be assigned and that new driver's state should be updated accordingly. Also the old driver should no longer be associated with this rider, and the new driver should now be associated with this rider.
+   - print an updated version of drivers.txt into `output1.txt`: the driver's state should be changed from `On_the_way_to_pickup` to Available, and the last 3 fields of the driver should be reset to null, meaning that this driver is now not associated with any rider.
 
-5.3 print an updated version of riders.txt into output2.txt: the rider should now be associated with the new driver.
+   - print an updated version of riders.txt into `output2.txt`: the rider's state should be changed from `Driver_on_the_way` to `Ready_to_request`, and the last 3 fields of the rider should be reset to null, meaning that no driver is now associated with this rider.
+
+5. if the canceling request is issued by a driver whose state is `On_the_way_to_pickup`, your program should:
+
+   - print the following message to the `output0.txt` file:
+
+        ```console
+        Your driver Edward has canceled the ride request. We will now find a new driver for you.
+        Ride requested for rider Angela, looking for a Standard vehicle.
+        Pick Up Location: The_Met_Cloisters, Drop Off Location: Brooklyn_Navy_Yard.
+        We have found the closest driver Robert(3.2) for you.
+        Robert is now 2.1 miles away from you.
+        ```
+
+        Replace `Edward` with the driver's first name. Replace `Angela` with the rider's first name, replace `Standard` with the rider's preferred vehicle type. Replace `The_Met_Cloisters` with the rider's pickup location, and replace `Brooklyn_Navy_Yard` with the rider's drop off location. Replace `Robert` with the new driver's first name. Replace `3.2` with the new driver's rating. Replace `2.1` with the new driver's distance to the rider.
+
+   - print an updated version of drivers.txt into `output1.txt`: the old driver's state should be changed from `On_the_way_to_pickup` to `Available`. A new driver should be assigned and that new driver's state should be updated accordingly. Also the old driver should no longer be associated with this rider, and the new driver should now be associated with this rider.
+
+   - print an updated version of riders.txt into `output2.txt`: the rider should now be associated with the new driver.
 
 ## Calculate Distance Based on Haversine Formula
 
@@ -328,7 +342,7 @@ double calculateDistance(double lat1, double lon1, double lat2, double lon2) {
 }
 ```
 
-This function takes four parameters, which are the latitude and longitude of two geographical locations, and this function returns the distance (in miles) between these two locations. This function calls several math library functions, and therefore you need to include the *cmath* library:
+This function takes four parameters, which are the latitude and longitude of two geographical locations, and this function returns the distance (in miles) between these two locations. This function calls several math library functions, and therefore you need to include the `cmath `library:
 
 ```cpp
 #include <cmath>
@@ -336,7 +350,7 @@ This function takes four parameters, which are the latitude and longitude of two
 
 ## Include Guards
 
-If you are writing more than one class, you may run into strange compiler errors when you compile everything. This may be due to a problem with including your class files, which can be solved as follows: for a header file called myclass.h add these two lines at the very top of the header file:
+If you are writing more than one class, you may run into strange compiler errors when you compile everything. This may be due to a problem with including your class files, which can be solved as follows: for a header file called `myclass.h` add these two lines at the very top of the header file:
 
 ```cpp
 #ifndef __MYCLASS_H
@@ -353,11 +367,11 @@ This technique is known as the "Include Guards". Include guards ensure that the 
 
 ## FAQs
 
-1. Q: Is the requested vehicle type from a rider's perspective a strict requirement for finding a matching driver? Or is it just a preference. Essentially, if a rider requests Economy and there is no available drivers for Economy, but available drivers with other vehicle types, should we output that no driver could be found, or match the nearest driver with different vehicle type?
+> Q: Is the requested vehicle type from a rider's perspective a strict requirement for finding a matching driver? Or is it just a preference. Essentially, if a rider requests Economy and there is no available drivers for Economy, but available drivers with other vehicle types, should we output that no driver could be found, or match the nearest driver with different vehicle type?
 
 A: It is a strict requirement. Do not pick a different vehicle type for the rider.
 
-2. Q: What is the precision of the output distance? Is it one decimal place or significant figures or holding a certain number of spaces? Do we round up round down or simply trim it down?
+> Q: What is the precision of the output distance? Is it one decimal place or significant figures or holding a certain number of spaces? Do we round up round down or simply trim it down?
 
 A: Same as Uber. One decimal place. Just trim it. For example, if the distance is 11.4571 miles, you should output 11.4 miles, instead of 11.5 miles.
 
@@ -369,7 +383,7 @@ Use good coding style when you design and implement your program. Organize your 
 don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/spring25/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget
 to comment your code! Use the provided template [README.txt](./README.txt) file for notes you want the grader to read.
 You must do this assignment on your own, as described in the [Collaboration Policy & Academic Integrity](https://www.cs.rpi.edu/academics/courses/spring25/csci1200/academic_integrity.php) page. If you did discuss the problem or error messages, etc. with anyone, please list their names in your
-README.txt file. 
+README.txt file.
 
 **Due Date**: 01/23/2025, Thursday, 10pm.
 
@@ -410,7 +424,7 @@ Due to the complexity of this assignment, it is best to carefully plan how to im
 
 Since the flowchart is quite large, I have temporarily converted it into an image.
 
-{{< image src="csci-1200-hw-2-flowchart-zh_cn.svg" width="100%" caption="Flow Chart" >}}
+{{< image src="csci-1200-hw-2-flowchart-en.svg" width="100%" caption="Flow Chart" >}}
 
 Mermaid source code as follows:
 

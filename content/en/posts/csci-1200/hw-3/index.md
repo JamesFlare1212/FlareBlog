@@ -64,9 +64,9 @@ A matrix is a two-dimensional arrangement of numbers. In this assignment we will
 
 $$
 \begin{bmatrix}
--6 & 10 & 1 \\\
-3 & -8 & 22 \\\
--17 & 4 & 7 \\\
+-6 & 10 & 1 \\
+3 & -8 & 22 \\
+-17 & 4 & 7 \\
 2 & 5 & 0
 \end{bmatrix}
 $$
@@ -79,10 +79,10 @@ We will denote $a_{i,j}$ as the value in matrix $A$ that is in row $i$ and colum
 
 $$
 A = \begin{bmatrix}
-a_{0,0} & a_{0,1} & \cdots & a_{0,n-2} & a_{0,n-1} \\\
-a_{1,0} & a_{1,1} & \cdots & a_{1,n-2} & a_{1,n-1} \\\
-\vdots  & \vdots  & \ddots & \vdots    & \vdots    \\\
-a_{m-2,0} & a_{m-2,1} & \cdots & a_{m-2,n-2} & a_{m-2,n-1} \\\
+a_{0,0} & a_{0,1} & \cdots & a_{0,n-2} & a_{0,n-1} \\
+a_{1,0} & a_{1,1} & \cdots & a_{1,n-2} & a_{1,n-1} \\
+\vdots  & \vdots  & \ddots & \vdots    & \vdots    \\
+a_{m-2,0} & a_{m-2,1} & \cdots & a_{m-2,n-2} & a_{m-2,n-1} \\
 a_{m-1,0} & a_{m-1,1} & \cdots & a_{m-1,n-2} & a_{m-1,n-1}
 \end{bmatrix}
 $$
@@ -130,8 +130,8 @@ Let us assume in the above example that:
 $$
 m1 = \begin{bmatrix} \quad \end{bmatrix}, \quad
 m2 = \begin{bmatrix}
-3 & 5.21 \\\
--2 & 4 \\\
+3 & 5.21 \\
+-2 & 4 \\
 -18 & 1
 \end{bmatrix}
 $$
@@ -155,12 +155,9 @@ We will ignore whitespace, but we do expect that your operator outputs the eleme
 To start with, we introduce some basic matrix operations. The first is the method `multiply_by_coefficient()`, which takes a double called a coefficient. The method should multiply every element in the matrix by the coefficient. For example:
 
 $$
-m1 = \begin{bmatrix}
-1 & 2 \\\
-3 & 4
-\end{bmatrix}, \quad
-m1\text{.multiply\\_by\\_coefficient(5)} \Longrightarrow \begin{bmatrix}
-5 & 10 \\\
+m1 = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}, \quad
+m1 \text{.multiply\_by\_coefficient(5)} \Longrightarrow \begin{bmatrix}
+5 & 10 \\
 15 & 20
 \end{bmatrix}
 $$
@@ -169,13 +166,13 @@ Another common operation is to swap two rows of a matrix. This will be accomplis
 
 $$
 m1 = \begin{bmatrix}
-1 & 2 & 3 \\\
-4 & 5 & 6 \\\
+1 & 2 & 3 \\
+4 & 5 & 6 \\
 7 & 8 & 9
 \end{bmatrix}, \quad
-m1\text{.swap\\_row(1,2)} \Longrightarrow \begin{bmatrix}
-1 & 2 & 3 \\\
-7 & 8 & 9 \\\
+m1\text{.swap\_row(1,2)} \Longrightarrow \begin{bmatrix}
+1 & 2 & 3 \\
+7 & 8 & 9 \\
 4 & 5 & 6
 \end{bmatrix}
 $$
@@ -189,12 +186,12 @@ $$(\forall_{i, j}|i \in \\{0,1,\ldots,m-2,m-1\\}, j \in \\{0,1,\ldots,n-2,n-1\\}
 
 $$
 m1 = \begin{bmatrix}
-1 & 2 & 3 \\\
+1 & 2 & 3 \\
 4 & 5 & 6
 \end{bmatrix}, \quad
-m1\text{.transpose\\_row(1,2)} \Longrightarrow \begin{bmatrix}
-1 & 4 \\\
-2 & 5 \\\
+m1\text{.transpose\_row(1,2)} \Longrightarrow \begin{bmatrix}
+1 & 4 \\
+2 & 5 \\
 3 & 6
 \end{bmatrix}
 $$
@@ -204,7 +201,9 @@ $$
 Binary matrix operations are ones that involve two matrices. To keep things simple, we will write them as methods (not operators) that are inside the class definition, so the current Matrix object will always be the “left-hand” matrix $A$. You will be required to implement both `add()` and `subtract()`. Both functions take in just one argument, a second Matrix which we will refer to as $B$, and modify $A$ if the dimensions of $A$ and $B$ match. If the dimensions match, the functions should return `true`, otherwise they should return `false`. Addition of two matrices, $C = A + B$, and subtraction of two matrices, $D = A − B$ are formally defined as:
 
 $$
-(\forall_{i, j}|i \in \\{0,1,\ldots,m-2,m-1\\}, j \in \\{0,1,\ldots,n-2,n-1\\})C_{i,j} = a_{i,j} + b_{i,j} \\\
+(\forall_{i, j}|i \in \\{0,1,\ldots,m-2,m-1\\}, j \in \\ {0,1,\ldots,n-2,n-1\\})C_{i,j} = a_{i,j} + b_{i,j}
+$$
+$$
 (\forall_{i, j}|i \in \\{0,1,\ldots,m-2,m-1\\}, j \in \\{0,1,\ldots,n-2,n-1\\})D_{i,j} = a_{i,j} - b_{i,j}
 $$
 
@@ -212,33 +211,33 @@ Consider these two matrices:
 
 $$
 m1 = \begin{bmatrix}
-1 & 2 & 3 \\\
+1 & 2 & 3 \\
 4 & 5 & 6
 \end{bmatrix}, \quad
 m2 = \begin{bmatrix}
-4 & 16 & 25 \\\
+4 & 16 & 25 \\
 14 & 3.4 & 3.64159
 \end{bmatrix}
 $$
 
 $$
 m1 + m2 = \begin{bmatrix}
-1 + 4 & 2 + 16 & 3 + 25 \\\
+1 + 4 & 2 + 16 & 3 + 25 \\
 4 + 14 & 5 + 3.4 & 6 + 3.64159
 \end{bmatrix}
 = \begin{bmatrix}
-5 & 18 & 28 \\\
+5 & 18 & 28 \\
 18 & 8.4 & 9.64159
 \end{bmatrix}
 $$
 
 $$
 m1 - m2 = \begin{bmatrix}
-1 - 4 & 2 - 16 & 3 - 25 \\\
+1 - 4 & 2 - 16 & 3 - 25 \\
 4 - 14 & 5 - 3.4 & 6 - 3.64159
 \end{bmatrix}
 = \begin{bmatrix}
--3 & -14 & -22 \\\
+-3 & -14 & -22 \\
 -10 & 1.6 & 2.35841
 \end{bmatrix}
 $$
@@ -251,12 +250,12 @@ The final method we expect you to implement, `quarter()`, is not a traditional m
 
 $$
 m1 = \begin{bmatrix}
-1 & 2 & 3 & 4 \\\
+1 & 2 & 3 & 4 \\
 5 & 6 & 7 & 8
 \end{bmatrix}, \quad
 m2 = \begin{bmatrix}
-1 & 2 & 3 & 4 \\\
-5 & 6 & 7 & 8 \\\
+1 & 2 & 3 & 4 \\
+5 & 6 & 7 & 8 \\
 9 & 10 & 11 & 12
 \end{bmatrix}
 $$
@@ -270,19 +269,19 @@ $$
 
 $$
 m2^{(\mathrm{UL})} = \begin{bmatrix}
-1 & 2 \\\
+1 & 2 \\
 5 & 6
 \end{bmatrix}, \quad
 m2^{(\mathrm{UR})} = \begin{bmatrix}
-3 & 4 \\\
+3 & 4 \\
 7 & 8
 \end{bmatrix}, \quad
 m2^{(\mathrm{LL})} = \begin{bmatrix}
-5 & 6 \\\
+5 & 6 \\
 9 & 10
 \end{bmatrix}, \quad
 m2^{(\mathrm{LR})} = \begin{bmatrix}
-7 & 8 \\\
+7 & 8 \\
 11 & 12
 \end{bmatrix}
 $$

@@ -52,29 +52,30 @@ repost:
 ## 作业要求
 
 {{< details >}}
-在这个作业中，你将开发一个名为 New York Ride 的简单拼车应用程序。请在开始编写代码前阅读整个说明文件。
+在本作业中，您将开发一个简单的拼车应用程序，名为纽约拼车。在开始编写作业代码之前，请仔细阅读整个说明。
 
 ## 学习目标
 
 - 练习实现和使用 C++ 类。
-- 练习使用字符串类（std::string）和向量容器（std::vector）。
+- 练习使用 `std::string`，`std::vector`。
 
 ## 规范
 
-New York Ride 应用程序应该支持两种不同的角色：司机、乘客。乘客可以执行以下任务：
+纽约拼车应用程序应支持 2 种不同的角色：司机和乘客。乘客可以执行两个任务：
 
-- 请求乘车
-- 取消乘车请求 
+- 请求拼车
+- 取消拼车请求
 
 司机可以执行一个任务：
 
-- 取消乘车请求
+- 取消拼车请求
 
-*注意*: 一个像 Uber 或 Lyft 这样的商业拼车产品当然允许乘客和司机执行更多任务，但让我们诚实地说，Uber/Lyft 拥有成千上万的软件工程师，而你只有一个人，并且只有一周的时间来完成这个作业，因此我们简化了这些任务。
+> [!NOTE]
+> 像 Uber 或 Lyft 这样的商业拼车产品当然允许乘客和司机执行更多任务，但让我们诚实一点，Uber/Lyft 有数千名软件工程师，但你只有一人，只有一周时间来完成这个作业，所以让我们简化任务。
 
 ## 输入文件
 
-像 Uber 和 Lyft 这样的公司会将所有司机和乘客的信息存储在数据库中，但数据库超出了本课程的范围。因此我们将仅使用两个简单的文本文件 [drivers.txt](drivers.txt) 和 [riders.txt](riders.txt) 来存储司机和乘客的信息。在这个作业中，你将再次读取这些文件作为程序的输入，并解析它们以检索司机和/或乘客信息，并将其存储在自己的数据结构中。在这个任务中，你必须使用 *std::vector* 来存储司机和乘客。建议使用一个 *std::vector* 实例来存储所有司机，另一个 *std::vector* 实例来存储所有乘客。
+像 Uber 和 Lyft 这样的公司会将所有司机和乘客的信息存储在他们的数据库中，但数据库远远超出了本课程的范围，因此我们将只在两个简单的文本文件中存储司机信息和乘客信息，即 [drivers.txt](drivers.txt) 和 [riders.txt](riders.txt)。在本作业中，您将再次读取这些文件作为程序的输入，解析它们以检索司机和/或乘客的信息，并将它们存储在您自己的数据结构中。在本作业中，您必须使用 `std::vector` 存储司机和乘客。建议使用一个 `std::vector` 实例存储所有司机，使用另一个 `std::vector` 实例存储所有乘客。
 
 ### 司机信息
 
@@ -93,31 +94,32 @@ Mateo Robert Male 49 592-397-3458 3.5 40.4106 -73.3736 Economy On_the_way_to_pic
 Valentina Andres Female 40 299-602-1498 3.3 40.3159 -73.8891 Standard On_the_way_to_pickup Susan Edward 809-345-5043
 ```
 
-以上是 [drivers.txt](drivers.txt) 文件的前 10 行。它有 13 个字段，用空格分隔。这 13 个字段分别是：
+以上是 [drivers.txt](drivers.txt) 文件的前 10 行。它有 13 个字段，由空格分隔。这 13 个字段是：
 
-- 司机的名字
-- 司机的姓氏
+- 司机的名
+- 司机的姓
 - 司机的性别
 - 司机的年龄
 - 司机的电话号码
 - 司机的评分
-- 司机当前的位置纬度
-- 司机当前的位置经度
+- 司机的当前纬度
+- 司机的当前经度
 - 司机的车辆类型
-- 司机当前的状态
-- 乘客的名字（如果分配了乘车请求）
-- 乘客的姓氏（如果分配了乘车请求）
-- 乘客的电话号码（如果分配了乘车请求）
+- 司机的当前状态
+- 乘客的名
+- 乘客的姓
+- 乘客的电话号码
 
-最后三个字段只有在乘车请求分配给该司机时才有意义。在这个作业中，我们假设司机一旦被分配到这个请求就会接受。
+最后三个字段只有在拼车请求分配给该司机时才有意义。在本作业中，我们假设当请求分配给该司机时，司机将接受该请求。
 
-一个司机可以处于以下状态之一：
+司机可以处于以下状态之一：
 
 - 可用（等待请求）
-- 前往接客地点（已接受请求）
+- 正在前往接客地点（请求已接受）
 - 在行程中
 
-当司机处于可用状态时，这意味着这个司机没有被分配乘车请求，并且因此不与任何乘客关联。因此，该司机的最后三个字段将只是
+当司机处于可用状态时，表示该司机未被分配拼车请求，因此不与任何乘客关联，因此该司机的最后三个字段将只是
+
 ```console
 null null null
 ```
@@ -139,35 +141,35 @@ Linda Chen Female 60 320-807-7264 4.6 Bushwick 40.6944 -73.9213 Columbia_Univers
 Brenda Thomas Female 45 470-325-3275 3.2 Bay_Ridge 40.635 -74.019 High_Line_Park 40.748 -74.0048 Premium Driver_on_the_way John Javier 446-656-6614
 ```
 
-以上是 [riders.txt](riders.txt) 文件的前 10 行。它有 17 个字段，用空格分隔。这 17 个字段分别是：
+以上是 [riders.txt](riders.txt) 文件的前 10 行。它有 17 个字段，由空格分隔。这 17 个字段是：
 
-- 乘客的名字
-- 乘客的姓氏
+- 乘客的名
+- 乘客的姓
 - 乘客的性别
 - 乘客的年龄
 - 乘客的电话号码
 - 乘客的评分
-- 接客地点名称（如果分配了乘车请求）
-- 接客地点的位置纬度（如果分配了乘车请求）
-- 接客地点的位置经度（如果分配了乘车请求）
-- 目的地名称（如果分配了乘车请求）
-- 目的地位置的纬度（如果分配了乘车请求）
-- 目的地位置的经度（如果分配了乘车请求）
-- 乘客偏好的车辆类型
-- 乘客当前的状态
-- 司机的名字（如果分配了乘车请求）
-- 司机的姓氏（如果分配了乘车请求）
-- 司机的电话号码（如果分配了乘车请求）
+- 乘客的接客地点名称
+- 乘客的接客地点纬度
+- 乘客的接客地点经度
+- 乘客的下车地点名称
+- 乘客的下车地点纬度
+- 乘客的下车地点经度
+- 乘客的车辆偏好
+- 乘客的当前状态
+- 司机的名
+- 司机的姓
+- 司机的电话号码
 
-一个乘客可以处于以下状态之一：
+乘客可以处于以下状态之一：
 
-- 准备请求乘车
-- 司机正在前往接客地点（已接受请求）
+- 准备请求
+- 司机正在前往接客地点
 - 在行程中
 
-理想情况下，应该有四个状态，另一个状态是：已经发出请求但尚未被任何司机接受。然而，正如我们提到的，在这个作业中，假设当乘客发出请求时，它会被一个司机接受，因此我们可以排除这种状态。
+理想情况下，应该有四个状态，另一个状态是：拼车请求已发出但尚未被任何司机接受。然而，如我们所述，在本作业中，我们假设当乘客发出请求时，它将被司机接受，因此我们可以从考虑中排除此状态。
 
-当乘客处于准备请求乘车的状态时，这意味着没有司机现在被分配到该乘车请求，并且因此，该乘客的最后三个字段将只是
+当乘客处于 `Ready_to_request` 状态时，表示没有司机现在被分配给这个拼车请求，因此该乘客的最后三个字段将只是
 
 ```console
 null null null
@@ -175,135 +177,150 @@ null null null
 
 ## 支持的命令
 
-你的程序只需要支持两个命令：
+您的程序只需要支持两个命令：
 
-### 乘车请求
+### 拼车请求
 
-第一个命令允许乘客发送一个乘车请求。
+第一个命令允许乘客发送拼车请求。
 
 ```console
 nyride.exe drivers.txt riders.txt output0.txt output1.txt output2.txt phoneNumber request
 ```
 
-这里
+其中
 
-- `drivers.txt` 是包含所有司机信息的输入文件。你的程序不应该改变这个文件。
-- `riders.txt` 是包含所有乘客信息的输入文件。你的程序不应该改变这个文件。
-- `output0.txt` 是你向乘客或司机打印消息的输出文件。
-- `output1.txt` 是更新后的司机信息，因此该文件应该与 drivers.txt 格式相同。
-- `output2.txt` 是更新后的乘客信息，因此该文件应该与 riders.txt 格式相同。
-- `phoneNumber`。理想情况下这应该是与 riders.txt 中状态为 "Ready_to_request" 的一个乘客的电话号码对应的；但生活不总是理想的，并且你的程序如何处理各种电话号码情况将在本节中描述。
-- `request` 表示这是一个乘车请求。
+- `drivers.txt` 是包含所有司机信息的输入文件。您的程序不应更改此文件。
+- `riders.txt` 是包含所有乘客信息的输入文件。您的程序不应更改此文件。
+- `output0.txt` 是输出文件，您需要在此打印消息给乘客或司机。
+- `output1.txt` 是输出文件，您需要在此打印更新后的司机信息，因此此文件应具有与 `drivers.txt` 相同的格式。
+- `output2.txt` 是输出文件，您需要在此打印更新后的乘客信息，因此此文件应具有与 `riders.txt` 相同的格式。
+- `phoneNumber`。理想情况下，这应该是一个与 `riders.txt` 中某个乘客的 `Ready_to_request` 状态相对应的电话号码；但生活并不总是理想，如何处理各种电话号码情况将在本节中描述。
+- `request` 表示这是一个拼车请求。
 
-当运行此命令时，如果找到司机，则
+当运行此命令时，如果
 
-1. 你应该在 output0.txt 文件中打印以下信息：
-```console
-Ride requested for rider Rebecca, looking for an Economy vehicle.
-Pick Up Location: Williamsburg, Drop Off Location: Statue_of_Liberty.
-We have found the closest driver Elena(4.7) for you.
-Elena is now 7.9 miles away from you.
-```
-用乘客的名字替换 *Rebecca*，用乘客偏好的车辆类型替换 *Economy*，用接客地点名称替换 *Williamsburg*，用目的地名称替换 *Statue_of_Liberty*。用司机的名字替换 *Elena*，用司机的评分替换 *4.7*。用司机距离乘客的距离替换 *7.9*。
+1. 找到司机，您的程序应
 
-1.2 在 output1.txt 文件中打印更新后的 drivers.txt 版本。
-1.3 在 output2.txt 文件中打印更新后的 riders.txt 版本。
+   - 将以下信息打印到 `output0.txt` 文件中：
 
-2. 如果找不到司机，则你的程序应该在 output0.txt 文件中打印以下消息：
-```console
-Ride requested for rider Isabella, looking for a Luxury vehicle.
-Pick Up Location: Williamsburg, Drop Off Location: Boerum_Hill.
-Sorry we can not find a driver for you at this moment.
-```
+        ```console
+        为乘客 Rebecca 请求拼车，寻找经济型车辆。
+        接客地点：Williamsburg，下车地点：Statue_of_Liberty。
+        我们已为您找到最近的司机 Elena(4.7)。
+        Elena 现在距离您 7.9 英里。
+        ```
 
-用乘客的名字替换 *Isabella*，用乘客偏好的车辆类型替换 *Luxury*，用接客地点名称替换 *Williamsburg*，用目的地名称替换 *Boerum_Hill*。
+        将 `Rebecca` 替换为乘客的名，将 `经济型` 替换为乘客的偏好车辆类型，将 `Williamsburg` 替换为乘客的接客地点，将 `Statue_of_Liberty` 替换为乘客的下车地点。将 `Elena` 曹换为司机的名，将 `4.7` 替换为司机的评分。将 `7.9` 替换为司机与乘客之间的距离。
 
-3. 如果从命令行提供的电话号码不符合 xxx-xxx-xxxx 格式，则你的程序应该在 output0.txt 文件中打印以下消息：
-```console
-Phone number is invalid.
-```
+   - 将更新后的 `drivers.txt` 打印到 `output1.txt`。
+   - 将更新后的 `riders.txt` 打印到 `output2.txt`。
 
-4. 如果从命令行提供的电话号码与任何乘客的电话号码都不匹配，则你的程序应该在 output0.txt 文件中打印以下消息：
-```console
-Account does not exist.
-```
+2. 如果找不到司机，您的程序应将以下消息打印到 `output0.txt` 文件中：
 
-5. 如果发出此请求的乘客处于 "Driver_on_the_way" 状态，则你的程序应该在 output0.txt 文件中打印以下消息：
-```console
-You have already requested a ride and your driver is on the way to the pickup location.
-```
+    ```console
+    为乘客 Isabella 请求拼车，寻找豪华型车辆。
+    接客地点：Williamsburg，下车地点：Boerum_Hill。
+    抱歉，目前我们无法为您找到司机。
+    ```
 
-6. 如果发出此请求的乘客处于 "During_the_trip" 状态，则你的程序应该在 output0.txt 文件中打印以下消息：
-```console
-You can not request a ride at this moment as you are already on a trip.
-```
+    将 `Isabella` 替换为乘客的名，将 `豪华型` 替换为乘客的偏好车辆类型，将 `Williamsburg` 替换为乘客的接客地点，将 `Boerum_Hill` 替换为乘客的下车地点。
+
+3. 如果从命令行提供的电话号码格式不是 xxx-xxx-xxxx，您的程序应将以下消息打印到 `output0.txt` 文件中：
+
+    ```console
+    电话号码无效。
+    ```
+
+4. 如果从命令行提供的电话号码与任何乘客的电话号码都不匹配，您的程序应将以下消息打印到 `output0.txt` 文件中：
+
+    ```console
+    账户不存在。
+    ```
+
+5. 如果发出请求的乘客处于 `Driver_on_the_way` 状态，您的程序应将以下消息打印到 `output0.txt` 文件中：
+
+    ```console
+    您已经请求了拼车，您的司机正在前往接客地点。
+    ```
+
+6. 如果发出请求的乘客处于 `During_the_trip` 状态，您的程序应将以下消息打印到 `output0.txt` 文件中：
+
+    ```console
+    您目前无法请求拼车，因为您已经在行程中。
+    ```
 
 ### 取消请求
 
-第二个命令允许乘客或司机取消请求。请记住，乘客和司机都有权取消请求。
+第二个命令允许乘客或司机取消请求。请注意，乘客和司机都有权取消请求。
 
 ```console
 nyride.exe drivers.txt riders.txt output0.txt output1.txt output2.txt phoneNumber cancel
 ```
 
-此命令与第一个命令的唯一区别是最后一个参数是 *cancel*，而在第一个命令中，最后一个参数是 *request*。
+此命令与第一个命令的区别在于此处的最后一个参数是 *cancel*，而在第一个命令中，最后一个参数是 `request`。
 
-当乘客取消请求时，你应该只取消该请求；当司机取消请求时，你也应该取消该请求，但同时找到另一个最近的司机为这个乘客服务。
+当乘客取消请求时，您只需取消请求；当司机取消请求时，您应取消请求，同时为该乘客寻找另一个最近的司机。
 
-只有处于前往接客地点状态的司机或其司机正在前往接客地点的乘客才能取消请求。
+只有那些正在前往接客地点的司机或司机正在前往的乘客才允许取消请求。
 
-当运行此第二个命令时，
+当运行此第二个命令时，如果
 
-1. 如果从命令行提供的电话号码与任何乘客的电话号码都不匹配，并且也不与任何司机的电话号码匹配，则你的程序应该在 output0.txt 文件中打印以下消息：
-```console
-Account does not exist.
-```
+1. 从命令行提供的电话号码与任何乘客的电话号码都不匹配，也不与任何司机的电话号码匹配，您的程序应将以下消息打印到 `output0.txt` 文件中：
 
-2. 如果发出取消请求的是一个状态不是 "Driver_on_the_way" 的乘客，则你的程序应该在 output0.txt 文件中打印以下消息：
-```console
-You can only cancel a ride request if your driver is currently on the way to the pickup location.
-```
+    ```console
+    账户不存在。
+    ```
 
-3. 如果发出取消请求的是一个状态不是 "On_the_way_to_pickup" 的司机，则你的程序应该在 output0.txt 文件中打印以下消息：
-```console
-You can only cancel a ride request if you are currently on the way to the pickup location.
-```
+2. 如果取消请求是由乘客发出的，而该乘客的状态不是 `Driver_on_the_way`，您的程序应将以下消息打印到 `output0.txt` 文件中：
 
-4. 如果发出取消请求的是一个处于 "Driver_on_the_way" 状态的乘客，则
+    ```console
+    只有当您的司机正在前往接客地点时，您才能取消拼车请求。
+    ```
 
-4.1 在 output0.txt 文件中打印以下消息：
-```console
-Ride request for rider Brenda is now canceled by the rider.
-```
-4.2 在 output1.txt 文件中打印更新后的 drivers.txt 版本：司机的状态应从 "On_the_way_to_pickup" 更改为 "Available"，并且该司机的最后三个字段应重置为 null，这意味着这个司机现在不再与任何乘客关联。
+3. 如果取消请求是由司机发出的，而该司机的状态不是 `On_the_way_to_pickup`，您的程序应将以下消息打印到 `output0.txt` 文件中：
 
-4.3 在 output2.txt 文件中打印更新后的 riders.txt 版本：乘客的状态应从 "Driver_on_the_way" 更改为 "Ready_to_request"，并且该乘客的最后三个字段应重置为 null，这意味着没有司机现在与这个乘客关联。
+    ```console
+    只有当您正在前往接客地点时，您才能取消拼车请求。
+    ```
 
-5. 如果发出取消请求的是一个处于 "On_the_way_to_pickup" 状态的司机，则
+4. 如果取消请求是由乘客发出的，而该乘客的状态是 `Driver_on_the_way`，您的程序应：
 
-5.1 在 output0.txt 文件中打印以下消息：
-```console
-Your driver Edward has canceled the ride request. We will now find a new driver for you.
-Ride requested for rider Angela, looking for a Standard vehicle.
-Pick Up Location: The_Met_Cloisters, Drop Off Location: Brooklyn_Navy_Yard.
-We have found the closest driver Robert(3.2) for you.
-Robert is now 2.1 miles away from you.
-```
+   - 将以下消息打印到 `output0.txt` 文件中：
 
-用司机的名字替换 *Edward*。用乘客的名字替换 *Angela*，用乘客偏好的车辆类型替换 *Standard*。用接客地点名称替换 *The_Met_Cloisters*，用目的地名称替换 *Brooklyn_Navy_Yard*。用新司机的名字替换 *Robert*。用新司机的评分替换 *3.2*。用新司机距离乘客的距离替换 *2.1*。
+       ```console
+       乘客 Brenda 的拼车请求已被乘客取消。
+       ```
 
-5.2 在 output1.txt 文件中打印更新后的 drivers.txt 版本：旧司机的状态应从 "On_the_way_to_pickup" 更改为 "Available"。应该分配一个新的司机，并且该新司机的状态也应相应地更新。同时，旧司机不再与这个乘客关联，而新的司机现在与这个乘客关联。
+   - 将更新后的 `drivers.txt` 打印到 `output1.txt`：司机的状态应从 `On_the_way_to_pickup` 改为 `Available`，并且司机的最后三个字段应重置为 `null`，表示该司机现在不与任何乘客关联。
 
-5.3 在 output2.txt 文件中打印更新后的 riders.txt 版本：乘客现在应该与新的司机关联。
+   - 将更新后的 `riders.txt` 打印到 `output2.txt`：乘客的状态应从 `Driver_on_the_way` 改为 `Ready_to_request`，并且乘客的最后三个字段应重置为 `null`，表示现在没有司机与该乘客关联。
 
-## 基于 Haversine 公式的距离计算
+5. 如果取消请求是由司机发出的，而该司机的状态是 `On_the_way_to_pickup`，您的程序应：
 
-在查找司机时，你必须始终找到最近的车辆类型匹配乘客偏好的司机。当找到最接近的司机后，你也需要打印该司机和乘客之间的距离。因此，你需要一种方法来计算两个坐标之间的距离，在这个任务中，我们将使用 Haversine 公式，并且使用 Haversine 公式的代码如下：
+   - 将以下消息打印到 `output0.txt` 文件中：
+
+        ```console
+        您的司机 Edward 取消了拼车请求。我们现在将为您寻找新司机。
+        乘客 Angela 请求拼车，寻找标准型车辆。
+        接客地点：The_Met_Cloisters，下车地点：Brooklyn_Navy_Yard。
+        我们已为您找到最近的司机 Robert(3.2)。
+        Robert 现在距离您 2.1 英里。
+        ```
+
+        将 `Edward` 替换为司机的名。将 `Angela` 替换为乘客的名，将 `标准型` 替换为乘客的偏好车辆类型。将 `The_Met_Cloisters` 替换为乘客的接客地点，将 `Brooklyn_Navy_Yard` 替换为乘客的下车地点。将 `Robert` 替换为新司机的名，将 `3.2` 替换为新司机的评分。将 `2.1` 替换为新司机与乘客之间的距离。
+
+   - 将更新后的 `drivers.txt` 打印到 `output1.txt`：旧司机的状态应从 `On_the_way_to_pickup` 改为 `Available`。应分配新司机，并相应更新其状态。同时，旧司机应不再与该乘客关联，新司机现在应与该乘客关联。
+
+   - 将更新后的 `riders.txt` 打印到 `output2.txt`：乘客现在应与新司机关联。
+
+## 基于哈弗辛公式计算距离
+
+在寻找司机时，您必须始终找到与乘客偏好车辆类型匹配的最近司机。并且当找到最近的司机时，您还需要打印该司机与乘客之间的距离。因此，您需要一种计算两个坐标之间距离的方法，为此目的，在本作业中，您将使用哈弗辛公式，下面是使用哈弗辛公式的代码：
 
 ```cpp
-// 使用 Haversine 公式计算两个坐标之间的距离
+// 使用哈弗辛公式计算两个坐标之间的距离
 double calculateDistance(double lat1, double lon1, double lat2, double lon2) {
-    const double radiusOfEarth = 6371.0; // 地球半径（单位：公里）
+    const double radiusOfEarth = 6371.0; // 地球的半径，单位为公里
 
     // 将纬度和经度从度转换为弧度
     lat1 *= M_PI / 180.0;
@@ -311,87 +328,88 @@ double calculateDistance(double lat1, double lon1, double lat2, double lon2) {
     lat2 *= M_PI / 180.0;
     lon2 *= M_PI / 180.0;
 
-    // Haversine 公式
+    // 哈弗辛公式
     double dLat = lat2 - lat1;
     double dLon = lon2 - lon1;
     double a = sin(dLat / 2.0) * sin(dLat / 2.0) + cos(lat1) * cos(lat2) * sin(dLon / 2.0) * sin(dLon / 2.0);
     double c = 2.0 * atan2(sqrt(a), sqrt(1.0 - a));
-    // 距离（单位：公里）
+    // 距离单位为公里
     double distanceKM = radiusOfEarth * c;
-    // 将距离转换为英里
+    // 转换为英里
     double distanceMiles = distanceKM * 0.621371;
 
     return distanceMiles;
 }
 ```
 
-此函数接受四个参数，即两个地理位置的纬度和经度，并返回这两个位置之间的距离（单位：英里）。该函数调用了几个数学库函数，因此你需要包含 cmath 库：
+此函数接受四个参数，即两个地理位置的纬度和经度，并返回这两个位置之间的距离（单位为英里）。此函数调用了几个数学库函数，因此您需要包含 `cmath` 库：
 
 ```cpp
 #include <cmath>
 ```
 
-## 包含防护
+## 包含保护
 
-如果你编写了多个类，在编译时可能会遇到奇怪的编译错误。这可能是由于包括你的类文件的问题，可以通过以下方式解决：对于名为 myclass.h 的头文件，在该头文件顶部添加这两行：
+如果您正在编写多个类，可能会在编译时遇到奇怪的编译器错误。这可能是由于包含类文件的问题，可以通过以下方式解决：对于名为 `myclass.h` 的头文件，在头文件的最顶部添加以下两行：
 
 ```cpp
 #ifndef __MYCLASS_H
 #define __MYCLASS_H
 ```
 
-并在 .h 文件底部添加这一行：
+并在您的 `.h` 文件的最底部添加这一行：
 
 ```cpp
 #endif
 ```
 
-这种技术称为“包含防护”。包含防护确保编译器只会处理一次头文件，无论它被包括多少次。
+这种技术称为“包含保护”。包含保护确保无论包含多少次，编译器只会处理头文件一次。
 
 ## 常见问题
 
-1. Q: 乘客请求的车辆类型是否是严格要求？还是只是一个偏好。如果一个乘客请求 Economy 车型但没有可用的 Economy 司机，而有其他车型的司机，我们应该输出找不到司机，还是匹配最近的不同车型司机？
+> 问：乘客请求的车辆类型是寻找匹配司机的严格要求，还是只是偏好？换句话说，如果乘客请求经济型，但没有可用的经济型司机，但有其他车辆类型的可用司机，我们应该输出找不到司机，还是匹配最近的其他车辆类型司机？
 
-A: 这是一个严格的要求。不要为乘客选择不同的车型。
+答：这是严格要求。不要为乘客选择其他车辆类型。
 
-2. Q: 输出的距离精度是多少？是保留一位小数吗？是否需要四舍五入或直接截断？
+> 问：输出距离的精度是多少？是小数点后一位，还是有效数字，还是保留一定数量的空格？我们是向上取整、向下取整还是直接截断？
 
-A: 与 Uber 相同。保留一位小数。直接截断即可。例如，如果距离是 11.4571 英里，则应输出为 11.4 英里，而不是 11.5 英里。
+答：与 Uber 相同。小数点后一位。直接截断即可。例如，如果距离是 11.4571 英里，您应该输出 11.4 英里，而不是 11.5 英里。
 
-## 程序要求及提交细节
+## 程序要求与提交详情
 
-在这个作业中，你必须使用 vector 来存储所有司机，并使用 vector 来存储所有乘客。你不允许使用我们尚未学习的数据结构，特别是 std::list。你的程序应该涉及至少两个类的定义，每个类都有自己的 .h 和 .cpp 文件。
+在本作业中，您需要使用 vector 存储所有司机，并使用 vector 存储所有乘客。您不允许使用我们尚未学习的任何数据结构，特别是 `std::list`。您的程序应包含至少两个具有自己 `.h` 和 `.cpp` 文件的类，命名应适当。
 
-在设计和实现程序时，请采用良好的编程风格：将代码组织成函数，不要把所有的代码都放在 main 函数中！请务必阅读 [家庭作业政策](https://www.cs.rpi.edu/academics/courses/spring25/csci1200/homework_policies.php) 以完善你的解决方案。请务必创建新的测试用例来完全调试程序，并不要忘记注释代码！使用提供的模板 [README.txt](./README.txt) 文件来记录你想评分者阅读的笔记。
-你必须独立完成这个作业，如在 [合作政策及学术诚信](https://www.cs.rpi.edu/academics/courses/spring25/csci1200/academic_integrity.php) 页面中所述。如果你与任何人讨论过问题或错误信息等，请在 README.txt 文件中列出他们的名字。
+在设计和实现程序时使用良好的编码风格。将程序组织成函数：
+不要将所有代码放在 main 函数中！在完成解决方案时，请务必阅读 [Homework Policies](https://www.cs.rpi.edu/academics/courses/spring25/csci1200/homework_policies.php)。务必创建新的测试用例来彻底调试您的程序，并不要忘记注释您的代码！使用提供的模板 [README.txt](./README.txt) 文件来写注释，供评分者阅读。
+您必须按照 [Collaboration Policy & Academic Integrity](https://www.cs.rpi.edu/academics/courses/spring25/csci1200/academic_integrity.php) 页面所述独立完成此作业。如果您与他人讨论了问题或错误信息等，请在您的 `README.txt` 文件中列出他们的名字。
 
-**截止日期**: 2025 年 1 月 23 日，星期四晚上 10 点。
+**截止日期**：2025 年 01 月 23 日，星期四，晚上 10 点。
 
-## 打分标准
+## 评分标准
 
 14 分
 
-- README.txt 完成 (3 分)
-  - 缺少姓名、合作者或小时数中的一个 (-1)
-  - 缺少姓名、合作者或小时数中的两个以上 (-2)
-  - 没有反思 (-1)
-- 类声明及实现和编码风格（良好的类设计，拆分为 .h 和 .cpp 文件。超过一行的函数放在 .cpp 文件中。组织良好的类实现，并在适当位置添加注释。正确使用 const/const& 和类方法 const） (6 分)
-  - 没有信用（显著不完整的实现） (-6)
-  - 不成功声明或使用任何新类 (-6)
-  - 只声明或使用一个类 (-5)
-  - 几乎所有代码都在 main 函数中。建议为不同的任务创建单独的函数。 (-2)
-  - 错误使用或遗漏 const 和引用 (-1)
-  - 超过一行语句的函数体放在 .h 文件中（模板类可以例外） (-2)
-  - 函数没有很好地文档化，或者注释不足 (在 .h 或 .cpp 文件中) (-1)
-  - 缺乏间距、过多空白或不良缩进 (-1)
-  - 不良文件组织：将多个类放在一个文件中（非常小的辅助类可以例外） (-1)
-  - 变量名选择不当：非描述性名称（例如 'vec'，'str'，'var'），单字母变量名（除了单个循环计数器除外）等。 (-2)
-  - 使用全局变量 (-1)
-- 数据表示 (必须使用向量实现) (5 分)
-  - 没有信用（显著不完整的实现）。 (-5)
-  - 不使用 std::vector 存储司机或乘客 (-5)
-  - 使用 std::list 或本课程中未涵盖的数据结构 (-5)
-  - 成员变量是公开的。 (-2)
+- 完成 README.txt (3 分)
+  - 未填写姓名、合作者或工作时间中的一个。(-1)
+  - 未填写姓名、合作者或工作时间中的两个或更多。(-2)
+  - 没有反思。(-1)
+- 整体类声明与实现及编码风格 (良好的类设计，分成 .h 和 .cpp 文件。函数超过一行的放在 .cpp 文件中。类实现组织良好，注释合理。正确使用 const/const& 和类方法 const。) (6 分)
+  - 没有分数（实现严重不完整）。(-6)
+  - 无法成功声明和使用任何新类。(-6)
+  - 仅声明/使用一个类。(-5)
+  - 几乎所有代码都放在 main 函数中。最好为不同任务创建单独的函数。(-2)
+  - 错误使用或遗漏 const 和引用。(-1)
+  - 函数体中包含超过一条语句的放在 .h 文件中。（对于模板类是允许的）(-2)
+  - 函数未充分文档化或注释不充分，无论是在 .h 还是 .cpp 文件中。(-1)
+  - 代码排版拥挤，空格过多或缩进不当。(-1)
+  - 文件组织不良：将多个类放在一个文件中（对于非常小的辅助类是允许的）(-1)
+  - 变量命名选择不当：非描述性名称（例如 'vec'，'str'，'var'），单字母变量名称（除了单个循环计数器）等。(-2)
+  - 使用全局变量。(-1)
+- 数据表示（必须使用 vectors 实现）(5 分)
+  - 没有分数（实现严重不完整）。(-5)
+  - 未使用 std::vector 存储司机或乘客。(-5)
+  - 使用 std::list 或本课程未涉及的数据结构。(-5)
+  - 成员变量是公共的。(-2)
 {{< /details >}}
 
 ## 支持文件
