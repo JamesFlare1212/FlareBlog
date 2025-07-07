@@ -19,7 +19,7 @@ tags:
   - 考试
   - RPI
   - Python
-  - 编程语言
+  - 编程
 categories:
   - 编程语言
 collections:
