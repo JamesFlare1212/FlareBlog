@@ -63,7 +63,7 @@ Qwen3-Coder的发布带给我们带来了一个极强的编程模型，难能可
 
 我这里保守一点就设置成200K上下文，85%显存占用，如果需要更长的上下文可以增加`--gpu-memory-utilization`和`--max-model-len`，同时适当减少`--max-num-batched-tokens`。
 
-```bash
+```bash {data-open=true}
 VLLM_ATTENTION_BACKEND=FLASHINFER \
 vllm serve ~/models/Qwen3-Coder-30B-A3B-Instruct-FP8 \
 --served-model-name qwen3-coder-flash \
@@ -93,7 +93,7 @@ vllm serve ~/models/Qwen3-Coder-30B-A3B-Instruct-FP8 \
 
 更改Continue的配置文件，添加或修改成如下形式
 
-```yaml
+```yaml {data-open=true}
 name: my-configuration
 version: 0.0.1
 schema: v1
@@ -135,7 +135,7 @@ models:
 
 发现效果不佳。经过一段时间研究后，发现正确的[使用方式](https://github.com/QwenLM/Qwen3-Coder)类似于
 
-```python
+```python {data-open=true}
 input_text = """<|fim_prefix|>def quicksort(arr):
     if len(arr) <= 1:
         return arr

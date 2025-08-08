@@ -63,7 +63,7 @@ Installation steps are omitted here (refer to the official [vLLM docs](https://d
 
 For conservative operation, I configured 200K context length at 85% VRAM usage. Adjust `--gpu-memory-utilization` and `--max-model-len` for longer contexts while tuning `--max-num-batched-tokens` accordingly.
 
-```bash
+```bash {data-open=true}
 VLLM_ATTENTION_BACKEND=FLASHINFER \
 vllm serve ~/models/Qwen3-Coder-30B-A3B-Instruct-FP8 \
 --served-model-name qwen3-coder-flash \
@@ -92,7 +92,7 @@ Key parameters:
 
 Update Continue's config as follows:
 
-```yaml
+```yaml {data-open=true}
 name: my-configuration
 version: 0.0.1
 schema: v1
@@ -125,7 +125,7 @@ models:
 
 The autocomplete prompt template required special attention. Initially using Qwen2.5-Coder's template yielded poor results. The correct approach involves wrapping the FIM tokens in a chat completion format:
 
-```python
+```python {data-open=true}
 # Correct message format for /v1/chat/completions
 messages = [
     {"role": "system", "content": "You are a code completion assistant."},
