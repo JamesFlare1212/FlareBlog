@@ -78,7 +78,7 @@ vllm serve ~/models/Qwen3-Coder-30B-A3B-Instruct-FP8 \
 --kv-cache-dtype fp8_e4m3 \
 --dtype auto \
 --load-format auto \
---api-key sk-pvKXxjh8b9mJXfEe1fF979F65c9548BdAcCb85C7Cf8242B7 \
+--api-key sk-xxxx \
 --port 30000 --host 0.0.0.0
 ```
 
