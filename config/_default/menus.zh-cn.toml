@@ -40,7 +40,7 @@
   identifier = "collections"
   parent = "archives"
   name = "合集"
-  url = "collections/"
+  url = "/collections/"
   weight = 3
   [main.params]
     icon = "fa-solid fa-layer-group"
@@ -59,7 +59,7 @@
 [[main]]
   identifier = "about"
   name = "关于"
-  url = "about/"
+  url = "/about/"
   weight = 20
   [main.params]
     icon = "fa-solid fa-circle-info"
