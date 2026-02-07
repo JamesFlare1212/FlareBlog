@@ -1089,7 +1089,7 @@ quality = 75
     securityLevel = "loose"
     # FixIt 0.4.0 | NEW The appearance style for Mermaid diagrams
     # optional values: ["classic", "handDrawn"]
-    look = "handDrawn"
+    look = "classic"
     # FixIt 0.4.0 | NEW Specifies the font to be used in the rendered diagrams
     fontFamily = ""
     # FixIt 0.4.0 | NEW Layout loaders from ESM module CDN sources (e.g., ELK layout engine)

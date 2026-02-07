@@ -10,7 +10,7 @@ author:
   link: https://www.jamesflare.com
   email:
   avatar: /site-logo.avif
-description: 这篇博客文章解释了如何通过调整SGLang在RTX-32768上的融合专家混合（MoEMoe）Triton配置来解决GPU内存溢出问题，并优化专家混合（MoEMoe）模型的性能。
+description: 这篇博客文章解释了如何通过调整SGLang在RTX 4090上的融合专家混合（MoE）Triton配置来解决GPU内存溢出问题，并优化专家混合（MoE）模型的性能。
 keywords: ["SGLang", "Fused MoE Triton", "GPU memory", "RTX 4090", "tuning script", "MoE models"]
 license:
 comment: true
@@ -28,7 +28,7 @@ hiddenFromHomePage: false
 hiddenFromSearch: false
 hiddenFromRss: false
 hiddenFromRelated: false
-summary: 这篇博客文章解释了如何通过调整SGLang在RTX-32768上的融合专家混合（MoEMoe）Triton配置来解决GPU内存溢出问题，并优化专家混合（MoEMoe）模型的性能。
+summary: 这篇博客文章解释了如何通过调整SGLang在RTX 4090上的融合专家混合（MoE）Triton配置来解决GPU内存溢出问题，并优化专家混合（MoE）模型的性能。
 resources:
   - name: featured-image
     src: featured-image.jpg
