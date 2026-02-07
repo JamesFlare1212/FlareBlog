@@ -18,7 +18,7 @@ weight: 0
 tags:
   - 大语言模型
   - SGLang
-  - Qwen3
+  - GLM-4.7-Flash
 categories:
   - 大语言模型
   - 教程
