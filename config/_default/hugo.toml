@@ -186,6 +186,7 @@ quality = 75
 [permalinks]
 
 [permalinks.page]
+  posts = '/:sectionslugs[:-2]/:slug/'
 
 [permalinks.section]
 
