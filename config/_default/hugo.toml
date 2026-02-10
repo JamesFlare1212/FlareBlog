@@ -859,6 +859,8 @@ quality = 75
     [params.page.related]
       enable = true
       count = 5
+      # FixIt 0.3.20 | NEW position of related content, optional values: ["aside", "footer"]
+      position = ["footer"]
     # FixIt 0.2.17 | NEW Donate (Sponsor) settings
     [params.page.reward]
       enable = false
