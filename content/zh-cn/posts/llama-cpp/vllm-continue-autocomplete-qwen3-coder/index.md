@@ -19,7 +19,7 @@ tags:
   - 大语言模型
   - vLLM
   - VSCode
-  - Qwen3
+  - Qwen
 categories:
   - 大语言模型
   - 教程

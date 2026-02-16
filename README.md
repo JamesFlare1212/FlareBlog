@@ -31,3 +31,9 @@ hugo server
 ```
 
 Open the browser and go to `http://localhost:1313/` to see the blog.
+
+## Create new posts
+
+```bash
+hugo new content/zh-cn/posts/stellaris/dlc-unlocker/index.md
+```

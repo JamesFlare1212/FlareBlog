@@ -19,7 +19,7 @@ tags:
   - LLM
   - vLLM
   - VSCode
-  - Qwen3
+  - Qwen
 categories:
   - LLM
   - Tutorials

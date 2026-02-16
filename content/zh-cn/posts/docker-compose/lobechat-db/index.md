@@ -20,7 +20,6 @@ tags:
   - LobeChat
 categories:
   - 教程
-  - 资源分享
 collections:
   - Docker Compose
 hiddenFromHomePage: false

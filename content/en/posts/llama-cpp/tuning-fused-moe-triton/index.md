@@ -18,7 +18,7 @@ weight: 0
 tags:
   - LLM
   - SGLang
-  - Qwen3
+  - Qwen
 categories:
   - LLM
   - Tutorials

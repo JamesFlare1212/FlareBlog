@@ -18,7 +18,7 @@ weight: 0
 tags:
   - 大语言模型
   - SGLang
-  - GLM-4.7-Flash
+  - GLM
 categories:
   - 大语言模型
   - 教程

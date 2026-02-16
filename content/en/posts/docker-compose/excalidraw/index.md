@@ -22,7 +22,6 @@ tags:
 - Docker
 categories:
 - Tutorials
-- Sharing
 collections:
   - Docker Compose
 hiddenFromHomePage: false

@@ -18,7 +18,7 @@ weight: 0
 tags:
   - LLM
   - SGLang
-  - GLM-4.7-Flash
+  - GLM
 categories:
   - LLM
   - Tutorials

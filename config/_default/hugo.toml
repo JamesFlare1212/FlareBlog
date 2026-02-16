@@ -163,9 +163,14 @@ enableEmoji = true
 # See: https://gohugo.io/content-management/urls/#permalinks
 # -------------------------------------------------------------------------------------
 
+<<<<<<< HEAD
 [Permalinks]
   # posts = ":year/:month/:filename"
   posts = ":slugorfilename"
+=======
+[permalinks]
+  posts = ":slugorcontentbasename"
+>>>>>>> 2d3112b (create stellaris-dlc-unlocker)
 
 # -------------------------------------------------------------------------------------
 # Privacy Configuration
@@ -773,6 +778,11 @@ enableEmoji = true
     [params.page.related]
       enable = true
       count = 5
+<<<<<<< HEAD
+=======
+      # FixIt 0.3.20 | NEW position of related content, optional values: ["aside", "footer"]
+      position = ["aside", "footer"]
+>>>>>>> 2d3112b (create stellaris-dlc-unlocker)
     # FixIt 0.2.17 | NEW Donate (Sponsor) settings
     [params.page.reward]
       enable = false
