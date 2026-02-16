@@ -18,8 +18,8 @@ weight: 0
 tags:
   - Stellaris
 categories:
-  - Tutorial
-  - Resource Sharing
+  - Tutorials
+  - Sharing
 collections:
 hiddenFromHomePage: false
 hiddenFromSearch: false
