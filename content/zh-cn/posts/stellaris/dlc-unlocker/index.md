@@ -53,7 +53,9 @@ czp's blog在文章[用凝聚力购买 P 社游戏 DLC](https://www.hiczp.com/yo
 
 ## 全自动破解
 
-{{< gh-repo-card repo="seuyh/stellaris-dlc-unlocker" >}}
+{{< gh-repo-card-container >}}
+  {{< gh-repo-card repo="seuyh/stellaris-dlc-unlocker" >}}
+{{< /gh-repo-card-container >}}
 
 无需多说，直接运行它给出的工具，就可以直接完成 CreamAPI 以及 DLC 文件下载的工作。
 
@@ -65,7 +67,9 @@ czp's blog在文章[用凝聚力购买 P 社游戏 DLC](https://www.hiczp.com/yo
 
 这个可以避免我上述讲到的问题，应该是通用的。首先获取
 
-{{< gh-repo-card repo="FroggMaster/CreamInstaller" >}}
+{{< gh-repo-card-container >}}
+  {{< gh-repo-card repo="FroggMaster/CreamInstaller" >}}
+{{< /gh-repo-card-container >}}
 
 完成后运行 `CreamInstaller.exe`。扫描选中群星
 

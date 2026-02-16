@@ -53,7 +53,9 @@ Version of Stellaris at the time of writing: 4.2+
 
 ## Automated Crack
 
-{{< gh-repo-card repo="seuyh/stellaris-dlc-unlocker" >}}
+{{< gh-repo-card-container >}}
+  {{< gh-repo-card repo="seuyh/stellaris-dlc-unlocker" >}}
+{{< /gh-repo-card-container >}}
 
 No need to say more - just run the tool as provided, and it will complete the CreamAPI and DLC file download work for you.
 
@@ -65,7 +67,9 @@ If you haven't purchased Stellaris DLCs on Steam yet, testing shows it works in 
 
 This can avoid the problem I mentioned above and should be general-purpose. First, obtain
 
-{{< gh-repo-card repo="FroggMaster/CreamInstaller" >}}
+{{< gh-repo-card-container >}}
+  {{< gh-repo-card repo="FroggMaster/CreamInstaller" >}}
+{{< /gh-repo-card-container >}}
 
 Afterwards, run `CreamInstaller.exe`. Select Stellaris
 
