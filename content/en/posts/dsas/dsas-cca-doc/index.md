@@ -52,7 +52,7 @@ The DSAS CCA (Co-Curricular Activities) API provides programmatic access to info
 
 ## Base URL
 
-```
+```text
 https://dsas-cca.jamesflare.com
 ```
 
@@ -70,7 +70,7 @@ Please be considerate with your API usage. Excessive requests may be rate-limite
 
 #### 1. List All Clubs
 
-```
+```text
 GET /v1/activity/list
 ```
 
@@ -88,13 +88,12 @@ GET /v1/activity/list
     "name": "Student-led Exploring the Art Major 探索美术专业社 (G9-G12)",
     "photo": "https://minio-lv-a.jamesflare.com/dsas-cca/files/activity-3350-32f97667-81ef-446c-acc6-45fea9b9c989.jpeg"
   }
-  // More clubs...
 }
 ```
 
 #### 2. Filter Clubs by Category
 
-```
+```text
 GET /v1/activity/list?category={categoryName}
 ```
 
@@ -108,7 +107,7 @@ GET /v1/activity/list?category={categoryName}
 
 #### 3. Filter Clubs by Academic Year
 
-```
+```text
 GET /v1/activity/list?academicYear={academicYear}
 ```
 
@@ -122,7 +121,7 @@ GET /v1/activity/list?academicYear={academicYear}
 
 #### 4. Filter Clubs by Grade
 
-```
+```text
 GET /v1/activity/list?grade={grade}
 ```
 
@@ -136,7 +135,7 @@ GET /v1/activity/list?grade={grade}
 
 #### 5. Filter Clubs by isStudentLed
 
-```
+```text
 GET /v1/activity/list?isStudentLed={true|false}
 ```
 
@@ -150,7 +149,7 @@ GET /v1/activity/list?isStudentLed={true|false}
 
 #### 6. Available Categories
 
-```
+```text
 GET /v1/activity/category
 ```
 
@@ -172,7 +171,7 @@ GET /v1/activity/category
 
 #### 7. Available Academic Years
 
-```
+```text
 GET /v1/activity/academicYear
 ```
 
@@ -190,7 +189,7 @@ GET /v1/activity/academicYear
 
 #### 8. Get Club Details
 
-```
+```text
 GET /v1/activity/{activityId}
 ```
 
@@ -256,7 +255,7 @@ GET /v1/activity/{activityId}
 
 #### 1. Get All Staff
 
-```
+```text
 GET /v1/staffs
 ```
 
@@ -275,7 +274,6 @@ GET /v1/staffs
   "CL1-1006": "Mr Lim Wan",
   "CL1-1007": "Ms Christina Feng",
   "CL1-1008": "Mr Jason Fang"
-  // More staff members...
 }
 ```
 
@@ -283,7 +281,7 @@ GET /v1/staffs
 
 The Activity List endpoint supports combining multiple filters to refine your search:
 
-```
+```text
 GET /v1/activity/list?category=STEAM&grade=10&academicYear=2023/2024&isStudentLed=true
 ```
 
@@ -341,7 +339,7 @@ The API implements caching to improve performance:
 
 **Request**:
 
-```
+```text
 GET /v1/activity/3350
 ```
 
@@ -401,7 +399,7 @@ GET /v1/activity/3350
 
 **Request**:
 
-```
+```text
 GET /v1/activity/category
 ```
 
@@ -423,7 +421,7 @@ GET /v1/activity/category
 
 **Request**:
 
-```
+```text
 GET /v1/staffs
 ```
 
@@ -442,7 +440,7 @@ GET /v1/staffs
 
 **Request**:
 
-```
+```text
 GET /v1/activity/list?category=STEAM&grade=10&academicYear=2023/2024&isStudentLed=true
 ```
 
