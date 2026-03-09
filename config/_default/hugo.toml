@@ -83,7 +83,7 @@ enableEmoji = true
 [module]
   [module.hugoVersion]
     extended = true
-    min = "0.112.0"
+    min = "0.156.0"
 
 # -------------------------------------------------------------------------------------
 # Markup related configuration in Hugo
@@ -988,9 +988,36 @@ enableEmoji = true
     loop = false
 
   # FixIt 0.2.15 | NEW Mermaid config
+  # See http://fixit.lruihao.cn/documentation/content-management/diagrams-support/mermaid/
   [params.mermaid]
-    # For values, see https://mermaid.js.org/config/theming.html#available-themes
-    themes = ["default", "dark"]
+  # FixIt 0.4.0 | NEW Mermaid ESM module CDN source
+  # default is https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs
+  cdn = ""
+  # FixIt 0.4.0 | NEW ZenUML ESM module CDN source
+  # default is empty, you can set it to a CDN source to enable ZenUML support
+  # e.g. https://cdn.jsdelivr.net/npm/@mermaid-js/mermaid-zenuml/dist/mermaid-zenuml.esm.min.mjs
+  zenuml = ""
+  # For values, see https://mermaid.js.org/config/theming.html#available-themes
+  themes = [
+    "default",
+    "dark"
+  ]
+  # FixIt 0.4.0 | NEW The security level for Mermaid diagrams
+  # optional values: ["strict", "loose", "antiscript", "sandbox"]
+  securityLevel = "loose"
+  # FixIt 0.4.0 | NEW The appearance style for Mermaid diagrams
+  # optional values: ["classic", "handDrawn"]
+  look = "classic"
+  # FixIt 0.4.0 | NEW Specifies the font to be used in the rendered diagrams
+  fontFamily = ""
+  # FixIt 0.4.0 | NEW Layout loaders from ESM module CDN sources (e.g., ELK layout engine)
+  # Example: ["https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk/dist/mermaid-layout-elk.esm.min.mjs"]
+  # This will enable additional layout options: ["elk", "elk.layered", "elk.stress", "elk.force", "elk.mrtree"]
+  layoutLoaders = []
+  # Default layout algorithm for rendering diagrams
+  # Available options: "dagre" (default), "elk", "elk.layered", "elk.stress", "elk.force", "elk.mrtree"
+  # Note: ELK layouts require layoutLoaders to be configured first
+  layout = "dagre"
 
   # FixIt 0.3.13 | NEW Admonitions custom config
   # See https://fixit.lruihao.cn/documentation/content-management/shortcodes/extended/admonition/#custom-admonitions
