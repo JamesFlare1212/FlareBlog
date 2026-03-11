@@ -654,7 +654,7 @@ $$
 $$
 The magnitude of the derivative is:
 $$
-|\vec{r}'(t)| = \sqrt{1^2 + 1^2 + 1^2} = \sqrt{3}
+\|\vec{r}'(t)\| = \sqrt{1^2 + 1^2 + 1^2} = \sqrt{3}
 $$
 Therefore, the differential arc length is $ds = \sqrt{3} \, dt$, and the differential vector is $d\vec{r} = \langle 1, 1, 1 \rangle \, dt$.
 
@@ -1050,6 +1050,21 @@ $$
 
 ## Cribs
 
+### Double Integral in Polar Coordinates
+
+For a continuous function $f$ on the domain
+
+$$D: \theta_1 \le \theta \le \theta_2, \quad r_1(\theta) \le r \le r_2(\theta)$$
+
+$$\iint_D f(x,y) \, dA = \int_{\theta_1}^{\theta_2} \int_{r_1(\theta)}^{r_2(\theta)} f(r\cos\theta, r\sin\theta) \, r \, dr \, d\theta$$
+
+Here, the region $D$ is **radially simple**.
+
+**Notes:**
+- The transformation uses: $x = r\cos\theta$, $y = r\sin\theta$
+- The extra factor of $r$ in the integrand comes from the Jacobian determinant of the polar coordinate transformation
+- The region $D$ is described as a polar rectangle where the radial bounds may depend on the angle $\theta$
+
 ### Operations on Vector Fields
 
 Let $\vec{F} = \langle F_1, F_2, F_3 \rangle$ be a vector field. We define:
@@ -1128,3 +1143,24 @@ Rearranging to solve for the line integral along the non-closed curve $C$:
 $$\int_C \vec{F} \cdot d\vec{r} = \iint_D \left(\frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y}\right) dA - \int_{C_1} \vec{F} \cdot d\vec{r}$$
 
 **Note:** The orientation of $C$ and $C_1$ must be consistent with the positive (counterclockwise) orientation of the closed boundary $\partial D$.
+
+### Trigonometric Function
+
+$$
+\begin{align*}
+  \cos(\theta) &= x ,\: \sin(\theta) = y \\
+  \tan(\theta) &= \frac{\sin(\theta)}{\cos(\theta)} = \frac{y}{x} \\
+  \sec(\theta) &= \frac{1}{\cos(\theta)} = \frac{1}{x} \\
+  \csc(\theta) &= \frac{1}{\sin(\theta)} = \frac{1}{y} \\
+  \cot(\theta) &= \frac{\cos(\theta)}{\sin(\theta)} = \frac{x}{y} \\
+  \sin(\theta) &= \frac{opp}{hyp} \\
+  \cos(\theta) &= \frac{adj}{hyp} \\
+  \tan(\theta) &= \frac{\sin(\theta)}{\cos(\theta)} = \frac{\frac{opp}{\cancel{hyp}}}{\frac{adj}{\cancel{hyp}}} \cdot \frac{\frac{\cancel{hyp}}{1}}{\frac{\cancel{hyp}}{1}} = \frac{opp}{adj}
+\end{align*}
+$$
+
+|$a\;rad$|$0$|$\frac{\pi}{6}$|$\frac{\pi}{4}$|$\frac{\pi}{3}$|$\frac{\pi}{2}$|$\pi$|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|$\sin(a)$|$0$|$\frac{1}{2}$|$\frac{\sqrt{2}}{2}$|$\frac{\sqrt{3}}{2}$|$1$|$0$|
+|$\cos(a)$|$1$|$\frac{\sqrt{3}}{2}$|$\frac{\sqrt{2}}{2}$|$\frac{1}{2}$|$0$|$-1$|
+|$\tan(a)$|$0$|$\frac{1}{\sqrt{3}}$|$1$|$\sqrt{3}$|$-$|$0$|
