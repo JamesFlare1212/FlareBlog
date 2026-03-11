@@ -472,7 +472,7 @@ $$
 $$
 {{< /details>}}
 
-### Q7. Line Integrals
+### Q7. Scalar Line Integrals
 
 > Evaluate $\int_C \sqrt{1+36xy} \, ds$ where $C$ is the curve $y=4x^3$ from $(0,0)$ to $(1,4)$.
 
@@ -538,7 +538,7 @@ $$
 $$
 {{< /details>}}
 
-### Q8. Line Integrals
+### Q8. Vector Line Integrals
 
 > Compute $\int_C \vec{F} \cdot d\vec{r}$ if $\vec{F} = \langle xy, 3, z^3 \rangle$ and $C$ is the curve parameterized by $\vec{r}(t) = \langle \cos t, \sin t, t \rangle$ for $0 \le t \le \pi$.  
 > Note: $\vec{F}$ is not conservative. How do you know?
@@ -627,7 +627,7 @@ $$
 $$
 {{< /details>}}
 
-### Q9. Line Integrals
+### Q9. Scalar/Vector Line Integrals
 
 > Let $C$ be the line segment from the point $(-2, 1, 0)$ to the point $(-1, 2, 1)$. Set up the following integrals. Simplify the integrands.  
 > a. $\int_C f(x,y,z) \, ds$, where $f(x,y,z) = yz - x^2$  
@@ -1047,3 +1047,84 @@ $$
 \oint_C (3y - e^{\sin x}) \, dx + (7x + \sqrt{y^4+1}) \, dy = 36\pi
 $$
 {{< /details>}}
+
+## Cribs
+
+### Operations on Vector Fields
+
+Let $\vec{F} = \langle F_1, F_2, F_3 \rangle$ be a vector field. We define:
+
+1. The **Divergence** of $\vec{F}$
+
+   $$\text{div}(\vec{F}) = \nabla \cdot \vec{F} = \left\langle \frac{\partial}{\partial x}, \frac{\partial}{\partial y}, \frac{\partial}{\partial z} \right\rangle \cdot \langle F_1, F_2, F_3 \rangle$$
+
+   $$= \frac{\partial F_1}{\partial x} + \frac{\partial F_2}{\partial y} + \frac{\partial F_3}{\partial z}$$
+
+2. The **Curl** of $\vec{F}$
+
+   $$\text{curl}(\vec{F}) = \nabla \times \vec{F} = \begin{vmatrix} \hat{i} & \hat{j} & \hat{k} \\ \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\ F_1 & F_2 & F_3 \end{vmatrix}$$
+
+   $$= \left(\frac{\partial F_3}{\partial y} - \frac{\partial F_2}{\partial z}\right)\hat{i} - \left(\frac{\partial F_3}{\partial x} - \frac{\partial F_1}{\partial z}\right)\hat{j} + \left(\frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y}\right)\hat{k}$$
+
+   $$= \left\langle \frac{\partial F_3}{\partial y} - \frac{\partial F_2}{\partial z}, \ \frac{\partial F_1}{\partial z} - \frac{\partial F_3}{\partial x}, \ \frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y} \right\rangle$$
+
+### Curl of a Conservative Vector Field
+
+   1. In $\mathbf{R}^2$, if the vector field $\mathbf{F} = \langle F_1, F_2 \rangle$ is conservative, then
+
+   $$\frac{\partial F_1}{\partial y} = \frac{\partial F_2}{\partial x}$$
+
+   2. In $\mathbf{R}^3$, if the vector field $\mathbf{F} = \langle F_1, F_2, F_3 \rangle$ is conservative, then
+
+   $$\text{curl}(\mathbf{F}) = \mathbf{0}, \quad \text{or equivalently,} \quad \frac{\partial F_1}{\partial y} = \frac{\partial F_2}{\partial x}, \ \frac{\partial F_2}{\partial z} = \frac{\partial F_3}{\partial y}, \ \frac{\partial F_3}{\partial x} = \frac{\partial F_1}{\partial z}$$
+
+### Computing a Scalar Line Integral
+
+Let $\vec{r}(t)$ be a parameterization that directly traverses a curve $C$ for $a \le t \le b$. If $f(x,y,z)$ and $\vec{r}(t)$ are continuous, then
+
+$$\int_C f(x,y,z) \, ds = \int_{t=a}^{t=b} f(\vec{r}(t)) \, \|\vec{r}'(t)\| \, dt \quad \text{(similar in 2D)}$$
+$$\int_C f(x,y),ds=\int_a^b f(x(t),y(t)) \, \sqrt{\left(\frac{dx}{dt}\right)^2+\left(\frac{dy}{dt}\right)^2} \, dt$$
+
+where $\vec{r}(t) = \langle x(t), y(t), z(t) \rangle$
+
+- $ds = \|\vec{r}'(t)\| \, dt$ is called the **arc length differential**
+
+- The value of the scalar line integral does not depend on the parameterization of $C$ used as long as $C$ is only traced once from $t=a$ to $t=b$.
+
+### Computing a Vector Line Integrals
+
+Let $\vec{F}$ be a continuous vector field defined on a smooth, oriented curve $C$ given by $\vec{r}(t)$, $a \le t \le b$. Then the **line integral of $\vec{F}$ along $C$** is:
+
+$$\int_C \vec{F} \cdot d\vec{r} = \int_a^b \vec{F}(\vec{r}(t)) \cdot \vec{r}'(t) \, dt = \int_C \vec{F} \cdot \frac{\vec{r}'(t)}{\|\vec{r}'(t)\|} \|\vec{r}'(t)\| \, dt = \int_C \vec{F} \cdot \vec{T} \, ds$$
+
+where $\vec{T} = \frac{\vec{r}'(t)}{\|\vec{r}'(t)\|}$ is the unit tangent vector.
+
+### Fundamental Theorem of Line Integrals
+
+$$
+\int_C \vec{F} \cdot d\vec{r} = f(\text{end point}) - f(\text{start point})
+$$
+
+### Green's Theorem
+
+Let $D$ be a domain whose boundary $\partial D$ is a **positively-oriented**, simple closed curve in the plane. If $\vec{F} = \langle F_1, F_2 \rangle$, where $F_1$ and $F_2$ have continuous partial derivatives, then
+
+$$\oint_C \vec{F} \cdot d\vec{r} = \oint_{\partial D} F_1 \, dx + F_2 \, dy = \iint_D \left(\frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y}\right) \, dA$$
+
+where $C = \partial D$
+
+**Notation for vector line integrals:**
+- $\oint_C \vec{F} \cdot d\vec{r}$ — Notation 1
+- $\oint_{\partial D} F_1 \, dx + F_2 \, dy$ — Notation 2
+
+### Green's Theorem for a Curve That Is Not Closed
+
+Let $C$ be a non-closed curve that can be completed to form a closed boundary $\partial D = C + C_1$, where $C_1$ is an auxiliary curve that closes the region $D$. If $\vec{F} = \langle F_1, F_2 \rangle$ has continuous partial derivatives on $D$, then by Green's Theorem:
+
+$$\oint_{\partial D} \vec{F} \cdot d\vec{r} = \int_C \vec{F} \cdot d\vec{r} + \int_{C_1} \vec{F} \cdot d\vec{r} = \iint_D \left(\frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y}\right) dA$$
+
+Rearranging to solve for the line integral along the non-closed curve $C$:
+
+$$\int_C \vec{F} \cdot d\vec{r} = \iint_D \left(\frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y}\right) dA - \int_{C_1} \vec{F} \cdot d\vec{r}$$
+
+**Note:** The orientation of $C$ and $C_1$ must be consistent with the positive (counterclockwise) orientation of the closed boundary $\partial D$.
