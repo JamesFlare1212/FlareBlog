@@ -1,5 +1,5 @@
 ---
-title: 考试 2 复习题
+title: MATH 2010 考试 2 复习题
 subtitle:
 date: 2026-03-08T10:02:10-04:00
 lastmod: 2026-03-08T10:02:10-04:00
@@ -17,7 +17,7 @@ comment: true
 weight: 0
 tags:
   - RPI
-  - Exam
+  - 考试
   - MATH-2010
 categories:
   - Electrical Engineering

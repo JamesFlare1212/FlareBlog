@@ -1,5 +1,5 @@
 ---
-title: Exam 2 Review Problems
+title: MATH 2010 Exam 2 Review Problems
 subtitle:
 date: 2026-03-08T10:02:10-04:00
 lastmod: 2026-03-08T10:02:10-04:00
