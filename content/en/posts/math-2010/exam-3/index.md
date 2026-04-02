@@ -750,33 +750,33 @@ This shows that $W$ is spanned by $\left\{ \begin{bmatrix} 1 \\ 1 \\ 0 \end{bmat
 
 ```mermaid
 flowchart LR
-    Start([开始判定]) --> Check1{是否为行阶梯形?}
+    Start([Start Determination]) --> Check1{Is it in row echelon form?}
     
-    Check1 -->|否| CatI[分类 I: 不是行阶梯形]
-    Check1 -->|是| Check2{是否满足RREF条件?}
+    Check1 -->|No| CatI[Category I: Not in row echelon form]
+    Check1 -->|Yes| Check2{Does it satisfy RREF conditions?}
     
-    Check2 -->|否| CatII[分类 II: 行阶梯形<br/>但不是RREF]
-    Check2 -->|是| CatIII[分类 III: 简化行阶梯形 RREF]
+    Check2 -->|No| CatII[Category II: Row echelon form<br/>but not RREF]
+    Check2 -->|Yes| CatIII[Category III: Reduced Row Echelon Form (RREF)]
     
-    Check1 -.->|检查条件| Conditions1
-    Check2 -.->|检查条件| Conditions2
+    Check1 -.->|Check conditions| Conditions1
+    Check2 -.->|Check conditions| Conditions2
     
-    Conditions1[行阶梯形条件:<br/>1. 非零行在零行之上<br/>2. 主元位置逐行右移<br/>3. 主元下方全为0]
-    Conditions2[RREF额外条件:<br/>1. 每个主元都是1<br/>2. 主元所在列其他元素全为0]
+    Conditions1[Row Echelon Form conditions:<br/>1. Nonzero rows above zero rows<br/>2. Leading entries shift right each row<br/>3. All entries below pivots are 0]
+    Conditions2[RREF additional conditions:<br/>1. Each pivot is 1<br/>2. All other entries in pivot columns are 0]
 ```
 
 ### Linear Independence of Vectors
 
 ```mermaid
 flowchart LR
-    A["给定向量组"] --> B["建立方程: a₁v₁ + a₂v₂ + a₃v₃ = 0"]
-    B --> C["写成增广矩阵 [V|0]"]
-    C --> D["进行行变换 EROs → RREF"]
-    D --> E{是否有自由变量？}
-    E -->|是| F["线性相关<br/>有非平凡解"]
-    E -->|否| G["线性无关<br/>只有平凡解"]
-    F --> H["取自由变量=1<br/>求出其他系数"]
-    H --> I["写出线性组合表达式"]
+    A["Given set of vectors"] --> B["Set up equation: a₁v₁ + a₂v₂ + a₃v₃ = 0"]
+    B --> C["Write as augmented matrix [V|0]"]
+    C --> D["Perform row operations EROs → RREF"]
+    D --> E{Are there free variables?}
+    E -->|Yes| F["Linearly Dependent<br/>Has nontrivial solutions"]
+    E -->|No| G["Linearly Independent<br/>Only trivial solution"]
+    F --> H["Set free variable = 1<br/>Solve for other coefficients"]
+    H --> I["Write linear combination expression"]
 ```
 
 ### Linear Independence by Inspection
@@ -790,30 +790,30 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-    A["给定向量组"] --> B{是否包含零向量?}
-    B -->|是| C["❌ 线性相关"]
-    B -->|否| D{向量个数 p > 维度 m?}
-    D -->|是| C
-    D -->|否| E{向量个数 = 2?}
-    E -->|是| F{是否成比例?}
-    F -->|是| C
-    F -->|否| G["✅ 线性无关"]
-    E -->|否| H{是否有标量倍数关系?}
-    H -->|是| C
-    H -->|否| I["需要行变换判断"]
+    A["Given set of vectors"] --> B{Contains zero vector?}
+    B -->|Yes| C["❌ Linearly Dependent"]
+    B -->|No| D{Number of vectors p > dimension m?}
+    D -->|Yes| C
+    D -->|No| E{Number of vectors = 2?}
+    E -->|Yes| F{Are they proportional?}
+    F -->|Yes| C
+    F -->|No| G["✅ Linearly Independent"]
+    E -->|No| H{Is there a scalar multiple relationship?}
+    H -->|Yes| C
+    H -->|No| I["Need row reduction to determine"]
 ```
 
 ### Matrix Nonsingularity and Inverse
 
-| 条件 | 含义 |
+| Condition | Meaning |
 |------|------|
-| $\det(A) \neq 0$ | 行列式不为零 |
-| $A$ 可逆 | 存在 $A^{-1}$ |
-| $A\vec{x} = \vec{0}$ 只有平凡解 | 列向量线性无关 |
-| $A$ 行等价于 $I_n$ | 秩为 $n$ |
+| $\det(A) \neq 0$ | Determinant is nonzero |
+| $A$ is invertible | $A^{-1}$ exists |
+| $A\vec{x} = \vec{0}$ has only trivial solution | Column vectors are linearly independent |
+| $A$ is row equivalent to $I_n$ | Rank is $n$ |
 
-对于 $2 \times 2$ 矩阵 $\begin{bmatrix} a & b \\ c & d \end{bmatrix}$，行列式公式为：
+For a $2 \times 2$ matrix $\begin{bmatrix} a & b \\ c & d \end{bmatrix}$, the determinant formula is:
 $$\det(A) = ad - bc$$
 
-对于 $\begin{bmatrix} a & b \\ c & d \end{bmatrix}$，其逆矩阵为：
+For $\begin{bmatrix} a & b \\ c & d \end{bmatrix}$, the inverse matrix is:
 $$\begin{bmatrix} a & b \\ c & d \end{bmatrix}^{-1} = \frac{1}{ad-bc} \begin{bmatrix} d & -b \\ -c & a \end{bmatrix} = \frac{1}{\det(A)} \begin{bmatrix} d & -b \\ -c & a \end{bmatrix}$$
