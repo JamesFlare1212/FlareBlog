@@ -4,7 +4,7 @@ subtitle:
 date: 2026-04-09T14:32:35-04:00
 lastmod: 2026-04-09T14:32:35-04:00
 slug: reverse-eng-sbti-type
-draft: true
+draft: false
 author:
   name: James
   link: https://www.jamesflare.com
