@@ -47,7 +47,7 @@ repost:
 
 ## TYPE_LIBRARY
 
-```json {data-open=true}
+```json {data-open=true，expandDepth=2}
 {
   "ATM-er": {
     "cn": "送钱者",
