@@ -10,7 +10,7 @@ author:
   link: https://www.jamesflare.com
   email:
   avatar: /site-logo.avif
-description: MATH 2010 exam 3 review problems and solution
+description: MATH 2010 exam 4 review problems and solution
 keywords:
 license:
 comment: true
@@ -27,7 +27,7 @@ hiddenFromHomePage: false
 hiddenFromSearch: false
 hiddenFromRss: false
 hiddenFromRelated: false
-summary: MATH 2010 exam 3 review problems and solution
+summary: MATH 2010 exam 4 review problems and solution
 resources:
   - name: featured-image
     src: featured-image.jpg
@@ -207,7 +207,7 @@ Pivot columns are 1 and 3, so $col(A)$ is spanned by columns 1 and 3 of the orig
 
 The nonzero rows of the RREF form a basis:
 
-**Answer (c):** $row(A) = Sp\left\{ \begin{bmatrix} 1 \\ 0 \\ 0 \\ \frac{1}{2} \end{bmatrix}^T, \begin{bmatrix} 0 \\ 0 \\ 1 \\ \frac{1}{2} \end{bmatrix}^T \right\}$
+**Answer (c):** $row(A) = Sp\left\{ \begin{bmatrix} 1 & 0 & 0 & \frac{1}{2} \end{bmatrix}, \begin{bmatrix} 0 & 0 & 1 & \frac{1}{2} \end{bmatrix} \right\}$
 {{< /details >}}
 
 ### Q5. Basis and Dimension for Column, Row, and Null Spaces
@@ -311,7 +311,7 @@ $$\vec{w}_2 = \vec{v}_2 = \begin{bmatrix} -2 \\ 1 \\ 2 \end{bmatrix}, \quad \|\v
 
 **Step 3:**
 $$\vec{w}_3 = \vec{v}_3 - \frac{\vec{v}_3 \cdot \vec{w}_1}{\|\vec{w}_1\|^2}\vec{w}_1 - \frac{\vec{v}_3 \cdot \vec{w}_2}{\|\vec{w}_2\|^2}\vec{w}_2$$
-$\vec{v}_3 \cdot \vec{w}_1 = 18(2) = 36$
+$\vec{v}_3 \cdot \vec{w}_1 = 18(2) = 36$  
 $\vec{v}_3 \cdot \vec{w}_2 = 18(-2) = -36$
 $$\vec{w}_3 = \begin{bmatrix} 18 \\ 0 \\ 0 \end{bmatrix} - \frac{36}{9}\begin{bmatrix} 2 \\ 2 \\ 1 \end{bmatrix} - \frac{-36}{9}\begin{bmatrix} -2 \\ 1 \\ 2 \end{bmatrix} = \begin{bmatrix} 18 \\ 0 \\ 0 \end{bmatrix} - 4\begin{bmatrix} 2 \\ 2 \\ 1 \end{bmatrix} + 4\begin{bmatrix} -2 \\ 1 \\ 2 \end{bmatrix}$$
 $$= \begin{bmatrix} 18-8-8 \\ 0-8+4 \\ 0-4+8 \end{bmatrix} = \begin{bmatrix} 2 \\ -4 \\ 4 \end{bmatrix}, \quad \|\vec{w}_3\| = \sqrt{4+16+16} = 6$$
@@ -491,12 +491,12 @@ $$= (3-\lambda)(\lambda^2 - 4\lambda + 3) = (3-\lambda)(\lambda-1)(\lambda-3) = 
 
 **For $\lambda_1 = 1$:**
 $$(A - I)\vec{x} = \begin{bmatrix} 1 & 0 & -1 \\ 0 & 2 & 0 \\ -1 & 0 & 1 \end{bmatrix}\begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}$$
-$x_1 - x_3 = 0 \implies x_1 = x_3$, and $2x_2 = 0 \implies x_2 = 0$.
+$x_1 - x_3 = 0 \implies x_1 = x_3$, and $2x_2 = 0 \implies x_2 = 0$.  
 Eigenvector: $\vec{p}_1 = \begin{bmatrix} 1 \\ 0 \\ 1 \end{bmatrix}$
 
 **For $\lambda_2 = 3$:**
 $$(A - 3I)\vec{x} = \begin{bmatrix} -1 & 0 & -1 \\ 0 & 0 & 0 \\ -1 & 0 & -1 \end{bmatrix}\begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}$$
-$x_1 + x_3 = 0 \implies x_3 = -x_1$, and $x_2$ is free.
+$x_1 + x_3 = 0 \implies x_3 = -x_1$, and $x_2$ is free.  
 Eigenvectors: $\vec{p}_2 = \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}$, $\vec{p}_3 = \begin{bmatrix} 1 \\ 0 \\ -1 \end{bmatrix}$
 
 ---
