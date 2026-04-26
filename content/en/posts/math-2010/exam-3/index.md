@@ -199,12 +199,12 @@ The system has **no solutions** (inconsistent).
 ### Q4. Augmented Matrices in RREF
 
 > Each of the following matrices are the augmented matrix for a system of linear equations in reduced row echelon form, state whether the system is consistent or inconsistent. If the system is consistent, give the vector form of the solution.  
-> a) $\left[\begin{array}{ccc|c} 1 & 0 & 0 & 7 \\ 0 & 1 & 0 & -2 \\ 0 & 0 & 1 & 3 \\ 0 & 0 & 0 & 0 \end{array}\right]$  
-> b) $\left[\begin{array}{cccc|c} 1 & -2 & 0 & 7 & 5 \\ 0 & 0 & 1 & -4 & 3 \\ 0 & 0 & 0 & 0 & 0 \end{array}\right]$  
-> c) $\left[\begin{array}{ccc|c} 1 & 2 & -1 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{array}\right]$
+> - (a) $\left[\begin{array}{ccc|c} 1 & 0 & 0 & 7 \\ 0 & 1 & 0 & -2 \\ 0 & 0 & 1 & 3 \\ 0 & 0 & 0 & 0 \end{array}\right]$  
+> - (b) $\left[\begin{array}{cccc|c} 1 & -2 & 0 & 7 & 5 \\ 0 & 0 & 1 & -4 & 3 \\ 0 & 0 & 0 & 0 & 0 \end{array}\right]$  
+> - (c) $\left[\begin{array}{ccc|c} 1 & 2 & -1 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{array}\right]$
 
 {{< details summary="**Answer of This Question**" >}}
-**a)** 
+**(a)** 
 The matrix is:
 $$\left[\begin{array}{ccc|c} 1 & 0 & 0 & 7 \\ 0 & 1 & 0 & -2 \\ 0 & 0 & 1 & 3 \\ 0 & 0 & 0 & 0 \end{array}\right]$$
 
@@ -216,7 +216,7 @@ This represents:
 
 **Answer:** Consistent. Solution: $\vec{x} = \begin{bmatrix} 7 \\ -2 \\ 3 \end{bmatrix}$
 
-**b)**
+**(b)**
 The matrix is:
 $$\left[\begin{array}{cccc|c} 1 & -2 & 0 & 7 & 5 \\ 0 & 0 & 1 & -4 & 3 \\ 0 & 0 & 0 & 0 & 0 \end{array}\right]$$
 
@@ -232,7 +232,7 @@ From equation 1: $x_1 = 5 + 2x_2 - 7x_4$
 
 **Answer:** Consistent. Solution: $\vec{x} = \begin{bmatrix} 5 \\ 0 \\ 3 \\ 0 \end{bmatrix} + x_2 \begin{bmatrix} 2 \\ 1 \\ 0 \\ 0 \end{bmatrix} + x_4 \begin{bmatrix} -7 \\ 0 \\ 4 \\ 1 \end{bmatrix}$
 
-**c)**
+**(c)**
 The matrix is:
 $$\left[\begin{array}{ccc|c} 1 & 2 & -1 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{array}\right]$$
 
@@ -241,18 +241,18 @@ The last row gives $0 = 1$, which is a contradiction.
 **Answer:** Inconsistent.
 
 **Final Answer**
-- a) Consistent: $\vec{x} = \begin{bmatrix} 7 \\ -2 \\ 3 \end{bmatrix}$
-- b) Consistent: $\vec{x} = \begin{bmatrix} 5 \\ 0 \\ 3 \\ 0 \end{bmatrix} + x_2 \begin{bmatrix} 2 \\ 1 \\ 0 \\ 0 \end{bmatrix} + x_4 \begin{bmatrix} -7 \\ 0 \\ 4 \\ 1 \end{bmatrix}$
-- c) Inconsistent
+- (a) Consistent: $\vec{x} = \begin{bmatrix} 7 \\ -2 \\ 3 \end{bmatrix}$
+- (b) Consistent: $\vec{x} = \begin{bmatrix} 5 \\ 0 \\ 3 \\ 0 \end{bmatrix} + x_2 \begin{bmatrix} 2 \\ 1 \\ 0 \\ 0 \end{bmatrix} + x_4 \begin{bmatrix} -7 \\ 0 \\ 4 \\ 1 \end{bmatrix}$
+- (c) Inconsistent
 {{< /details >}}
 
 ### Q5. Consistency Conditions for Linear Systems
 
 > Consider the system: $\begin{cases} x_1 + 5x_2 + 3x_4 = b_1 \\ -x_1 - 5x_2 + x_3 - 5x_4 = b_2 \\ x_1 + 5x_2 + 3x_3 - 3x_4 = b_3 \end{cases}$  
-> (a) Determine conditions on $b_1, b_2, b_3$ that are necessary and sufficient for the system to be consistent.  
-> (b) In each of the following, use your answer from (a) to show the system is consistent or inconsistent. If the system is consistent, give the vector form of the solution.
-> - (i) $b_1 = -1, b_2 = 2, b_3 = 1$
-> - (ii) $b_1 = 1, b_2 = 1, b_3 = 7$
+> - (a) Determine conditions on $b_1, b_2, b_3$ that are necessary and sufficient for the system to be consistent.  
+> - (b) In each of the following, use your answer from (a) to show the system is consistent or inconsistent. If the system is consistent, give the vector form of the solution.
+>   - (i) $b_1 = -1, b_2 = 2, b_3 = 1$
+>   - (ii) $b_1 = 1, b_2 = 1, b_3 = 7$
 
 {{< details summary="**Answer of This Question**" >}}
 **Part (a): Find consistency conditions**
@@ -304,34 +304,34 @@ Free variables: $x_2, x_4$
 
 > $A=\begin{bmatrix} -3 & 1 \\ 2 & -1 \end{bmatrix}, B=\begin{bmatrix} 0 & 4 \\ -2 & 5 \end{bmatrix}, C=\begin{bmatrix} 5 & 0 \\ -1 & 4 \\ 3 & 3 \end{bmatrix}, D=\begin{bmatrix} 1 & 0 & -3 \\ -2 & 5 & -1 \end{bmatrix}, E=\begin{bmatrix} 1 & 4 & -5 \\ -2 & 1 & -3 \\ 0 & 2 & 6 \end{bmatrix}$.  
 > Find the following, if defined, otherwise explain why the computation is not possible.  
-> a) $CA$  
-> b) $AC$  
-> c) $(A-B)D$  
-> d) $B(C^T + D)$  
-> e) $CE$  
-> f) $C^T B$
+> - (a) $CA$  
+> - (b) $AC$  
+> - (c) $(A-B)D$  
+> - (d) $B(C^T + D)$  
+> - (e) $CE$  
+> - (f) $C^T B$
 
 {{< details summary="**Answer of This Question**" >}}
-**a) $CA$**  
+**(a) $CA$**  
 $C$ is $3 \times 2$, $A$ is $2 \times 2$. Product is defined ($3 \times 2$).
 $$CA = \begin{bmatrix} 5 & 0 \\ -1 & 4 \\ 3 & 3 \end{bmatrix} \begin{bmatrix} -3 & 1 \\ 2 & -1 \end{bmatrix} = \begin{bmatrix} -15 & 5 \\ 11 & -5 \\ -3 & 0 \end{bmatrix}$$
 
 ---
 
-**b) $AC$**  
+**(b) $AC$**  
 $A$ is $2 \times 2$, $C$ is $3 \times 2$. Product is NOT defined (columns of A = 2, rows of C = 3).  
 **Answer:** Not defined.
 
 ---
 
-**c) $(A-B)D$**  
+**(c) $(A-B)D$**  
 $A-B = \begin{bmatrix} -3 & 1 \\ 2 & -1 \end{bmatrix} - \begin{bmatrix} 0 & 4 \\ -2 & 5 \end{bmatrix} = \begin{bmatrix} -3 & -3 \\ 4 & -6 \end{bmatrix}$  
 $(A-B)$ is $2 \times 2$, $D$ is $2 \times 3$. Product is defined ($2 \times 3$).
 $$(A-B)D = \begin{bmatrix} -3 & -3 \\ 4 & -6 \end{bmatrix} \begin{bmatrix} 1 & 0 & -3 \\ -2 & 5 & -1 \end{bmatrix} = \begin{bmatrix} 3 & -15 & 12 \\ 16 & -30 & -6 \end{bmatrix}$$
 
 ---
 
-**d) $B(C^T + D)$**  
+**(d) $B(C^T + D)$**  
 $C^T = \begin{bmatrix} 5 & -1 & 3 \\ 0 & 4 & 3 \end{bmatrix}$, $D = \begin{bmatrix} 1 & 0 & -3 \\ -2 & 5 & -1 \end{bmatrix}$  
 $C^T + D = \begin{bmatrix} 6 & -1 & 0 \\ -2 & 9 & 2 \end{bmatrix}$  
 $B$ is $2 \times 2$, $C^T + D$ is $2 \times 3$. Product is defined ($2 \times 3$).
@@ -339,25 +339,25 @@ $$B(C^T + D) = \begin{bmatrix} 0 & 4 \\ -2 & 5 \end{bmatrix} \begin{bmatrix} 6 &
 
 ---
 
-**e) $CE$**  
+**(e) $CE$**  
 $C$ is $3 \times 2$, $E$ is $3 \times 3$. Product is NOT defined (columns of C = 2, rows of E = 3).  
 **Answer:** Not defined.
 
 ---
 
-**f) $C^T B$**  
+**(f) $C^T B$**  
 $C^T$ is $2 \times 3$, $B$ is $2 \times 2$. Product is NOT defined (columns of C^T = 3, rows of B = 2).  
 **Answer:** Not defined.
 
 ---
 
 **Final Answer**
-- a) $CA = \begin{bmatrix} -15 & 5 \\ 11 & -5 \\ -3 & 0 \end{bmatrix}$
-- b) Not defined (dimension mismatch)
-- c) $(A-B)D = \begin{bmatrix} 3 & -15 & 12 \\ 16 & -30 & -6 \end{bmatrix}$
-- d) $B(C^T + D) = \begin{bmatrix} -8 & 36 & 8 \\ -22 & 47 & 10 \end{bmatrix}$
-- e) Not defined (dimension mismatch)
-- f) Not defined (dimension mismatch)
+- (a) $CA = \begin{bmatrix} -15 & 5 \\ 11 & -5 \\ -3 & 0 \end{bmatrix}$
+- (b) Not defined (dimension mismatch)
+- (c) $(A-B)D = \begin{bmatrix} 3 & -15 & 12 \\ 16 & -30 & -6 \end{bmatrix}$
+- (d) $B(C^T + D) = \begin{bmatrix} -8 & 36 & 8 \\ -22 & 47 & 10 \end{bmatrix}$
+- (e) Not defined (dimension mismatch)
+- (f) Not defined (dimension mismatch)
 {{< /details >}}
 
 ### Q7. Linear Independence of Vectors
@@ -407,15 +407,15 @@ $$\vec{v}_3 = 3\vec{v}_1 - \vec{v}_2 \quad \text{or} \quad \begin{bmatrix} 1 \\ 
 ### Q8. Linear Independence by Inspection
 
 > Determine if the set of vectors in $\mathbb{R}^3$ is linearly independent or linearly dependent. Justify your answer. (Hint: all can be done by inspection.)  
-> a) $\left\{ \begin{bmatrix} 0 \\ -2 \\ 8 \end{bmatrix}, \begin{bmatrix} 4 \\ 4 \\ 9 \end{bmatrix} \right\}$  
-> b) $\left\{ \begin{bmatrix} 3 \\ 2 \\ -4 \end{bmatrix}, \begin{bmatrix} -6 \\ 1 \\ 7 \end{bmatrix}, \begin{bmatrix} 6 \\ -5 \\ 2 \end{bmatrix}, \begin{bmatrix} 3 \\ 7 \\ -5 \end{bmatrix} \right\}$  
-> c) $\left\{ \begin{bmatrix} 3 \\ 1 \\ 5 \end{bmatrix}, \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\ 7 \\ 8 \end{bmatrix} \right\}$  
-> d) $\left\{ \begin{bmatrix} 3 \\ 1 \\ -2 \end{bmatrix}, \begin{bmatrix} 2 \\ -1 \\ 5 \end{bmatrix}, \begin{bmatrix} 12 \\ 4 \\ -8 \end{bmatrix} \right\}$
+> - (a) $\left\{ \begin{bmatrix} 0 \\ -2 \\ 8 \end{bmatrix}, \begin{bmatrix} 4 \\ 4 \\ 9 \end{bmatrix} \right\}$  
+> - (b) $\left\{ \begin{bmatrix} 3 \\ 2 \\ -4 \end{bmatrix}, \begin{bmatrix} -6 \\ 1 \\ 7 \end{bmatrix}, \begin{bmatrix} 6 \\ -5 \\ 2 \end{bmatrix}, \begin{bmatrix} 3 \\ 7 \\ -5 \end{bmatrix} \right\}$  
+> - (c) $\left\{ \begin{bmatrix} 3 \\ 1 \\ 5 \end{bmatrix}, \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\ 7 \\ 8 \end{bmatrix} \right\}$  
+> - (d) $\left\{ \begin{bmatrix} 3 \\ 1 \\ -2 \end{bmatrix}, \begin{bmatrix} 2 \\ -1 \\ 5 \end{bmatrix}, \begin{bmatrix} 12 \\ 4 \\ -8 \end{bmatrix} \right\}$
 
 {{< details summary="**Answer of This Question**" >}}
 **Step-by-Step Solution**
 
-**a)** $\left\{ \begin{bmatrix} 0 \\ -2 \\ 8 \end{bmatrix}, \begin{bmatrix} 4 \\ 4 \\ 9 \end{bmatrix} \right\}$
+**(a)** $\left\{ \begin{bmatrix} 0 \\ -2 \\ 8 \end{bmatrix}, \begin{bmatrix} 4 \\ 4 \\ 9 \end{bmatrix} \right\}$
 
 **Observation**:
 - This is a set of **2 vectors** in $\mathbb{R}^3$.
@@ -428,7 +428,7 @@ $$\vec{v}_3 = 3\vec{v}_1 - \vec{v}_2 \quad \text{or} \quad \begin{bmatrix} 1 \\ 
 
 ---
 
-**b)** $\left\{ \begin{bmatrix} 3 \\ 2 \\ -4 \end{bmatrix}, \begin{bmatrix} -6 \\ 1 \\ 7 \end{bmatrix}, \begin{bmatrix} 6 \\ -5 \\ 2 \end{bmatrix}, \begin{bmatrix} 3 \\ 7 \\ -5 \end{bmatrix} \right\}$
+**(b)** $\left\{ \begin{bmatrix} 3 \\ 2 \\ -4 \end{bmatrix}, \begin{bmatrix} -6 \\ 1 \\ 7 \end{bmatrix}, \begin{bmatrix} 6 \\ -5 \\ 2 \end{bmatrix}, \begin{bmatrix} 3 \\ 7 \\ -5 \end{bmatrix} \right\}$
 
 **Observation**:
 - This is a set of **4 vectors** in $\mathbb{R}^3$.
@@ -441,7 +441,7 @@ $$\vec{v}_3 = 3\vec{v}_1 - \vec{v}_2 \quad \text{or} \quad \begin{bmatrix} 1 \\ 
 
 ---
 
-**c)** $\left\{ \begin{bmatrix} 3 \\ 1 \\ 5 \end{bmatrix}, \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\ 7 \\ 8 \end{bmatrix} \right\}$
+**(c)** $\left\{ \begin{bmatrix} 3 \\ 1 \\ 5 \end{bmatrix}, \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\ 7 \\ 8 \end{bmatrix} \right\}$
 
 **Observation**:
 - The set contains the **zero vector** $\vec{0} = \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}$.
@@ -453,7 +453,7 @@ $$\vec{v}_3 = 3\vec{v}_1 - \vec{v}_2 \quad \text{or} \quad \begin{bmatrix} 1 \\ 
 
 ---
 
-**d)** $\left\{ \begin{bmatrix} 3 \\ 1 \\ -2 \end{bmatrix}, \begin{bmatrix} 2 \\ -1 \\ 5 \end{bmatrix}, \begin{bmatrix} 12 \\ 4 \\ -8 \end{bmatrix} \right\}$
+**(d)** $\left\{ \begin{bmatrix} 3 \\ 1 \\ -2 \end{bmatrix}, \begin{bmatrix} 2 \\ -1 \\ 5 \end{bmatrix}, \begin{bmatrix} 12 \\ 4 \\ -8 \end{bmatrix} \right\}$
 
 **Observation**:
 - Check the 1st and 3rd vectors:
@@ -470,25 +470,25 @@ $$\begin{bmatrix} 12 \\ 4 \\ -8 \end{bmatrix} = 4 \times \begin{bmatrix} 3 \\ 1 
 
 | Part | # of Vectors | Dimension | Judgment Basis | Conclusion |
 |------|--------------|-----------|----------------|------------|
-| **a)** | 2 | 3 | Not scalar multiples | ✅ Linearly Independent |
-| **b)** | 4 | 3 | $p > m$ | ❌ Linearly Dependent |
-| **c)** | 3 | 3 | Contains $\vec{0}$ | ❌ Linearly Dependent |
-| **d)** | 3 | 3 | Scalar multiples exist | ❌ Linearly Dependent |
+| **(a)** | 2 | 3 | Not scalar multiples | ✅ Linearly Independent |
+| **(b)** | 4 | 3 | $p > m$ | ❌ Linearly Dependent |
+| **(c)** | 3 | 3 | Contains $\vec{0}$ | ❌ Linearly Dependent |
+| **(d)** | 3 | 3 | Scalar multiples exist | ❌ Linearly Dependent |
 
 ---
 
 **Final Answer**
-- **a)** Linearly Independent
-- **b)** Linearly Dependent (4 vectors in $\mathbb{R}^3$)
-- **c)** Linearly Dependent (contains zero vector)
-- **d)** Linearly Dependent ($\vec{v}_3 = 4\vec{v}_1$)
+- **(a)** Linearly Independent
+- **(b)** Linearly Dependent (4 vectors in $\mathbb{R}^3$)
+- **(c)** Linearly Dependent (contains zero vector)
+- **(d)** Linearly Dependent ($\vec{v}_3 = 4\vec{v}_1$)
 {{< /details >}}
 
 ### Q9. Matrix Nonsingularity and Inverse
 
 > Consider $A = \begin{bmatrix} \lambda & 2 \\ 2 & \lambda-3 \end{bmatrix}$.  
-> (a) For what value(s) of $\lambda$ is the matrix nonsingular?  
-> (b) When $A$ is nonsingular, find $A^{-1}$ (in terms of $\lambda$).
+> - (a) For what value(s) of $\lambda$ is the matrix nonsingular?  
+> - (b) When $A$ is nonsingular, find $A^{-1}$ (in terms of $\lambda$).
 
 {{< details summary="**Answer of This Question**" >}}
 **Part (a): Find values of $\lambda$ for which $A$ is nonsingular**
@@ -516,49 +516,83 @@ $$A^{-1} = \frac{1}{(\lambda-4)(\lambda+1)} \begin{bmatrix} \lambda-3 & -2 \\ -2
 - (b) $A^{-1} = \frac{1}{(\lambda-4)(\lambda+1)} \begin{bmatrix} \lambda-3 & -2 \\ -2 & \lambda \end{bmatrix}$
 {{< /details >}}
 
+
+
 ### Q10. Matrix Inverse and Solving Linear Systems
 
 > Let $A = \begin{bmatrix} 1 & -2 & -3 \\ 1 & -1 & -2 \\ -1 & 3 & 5 \end{bmatrix}$.  
-> (a) Find $A^{-1}$.  
-> (b) Use your answer from (a) to solve the system $\begin{cases} x_1 - 2x_2 - 3x_3 = -1 \\ x_1 - x_2 - 2x_3 = 1 \\ -x_1 + 3x_2 + 5x_3 = 2 \end{cases}$
+> - (a) Find $A^{-1}$.  
+> - (b) Use your answer from (a) to solve the system $\begin{cases} x_1 - 2x_2 - 3x_3 = -1 \\ x_1 - x_2 - 2x_3 = 1 \\ -x_1 + 3x_2 + 5x_3 = 2 \end{cases}$
 
 {{< details summary="**Answer of This Question**" >}}
-**Part (a): Find $A^{-1}$**
+**Part (a): Find $A^{-1}$ using Gaussian Elimination**
 
-First, calculate the determinant:
-$$\det(A) = 1 \cdot \det\begin{bmatrix} -1 & -2 \\ 3 & 5 \end{bmatrix} - (-2) \cdot \det\begin{bmatrix} 1 & -2 \\ -1 & 5 \end{bmatrix} + (-3) \cdot \det\begin{bmatrix} 1 & -1 \\ -1 & 3 \end{bmatrix}$$
-$$= 1(-5 + 6) + 2(5 - 2) - 3(3 - 1)$$
-$$= 1(1) + 2(3) - 3(2) = 1 + 6 - 6 = 1$$
+Following the augmented matrix method, we construct $[A | I_3]$ and perform elementary row operations (EROs) to transform the left side into the identity matrix $I_3$. If successful, the right side will become $A^{-1}$.
 
-Since $\det(A) = 1 \neq 0$, $A$ is invertible.
+**Initial Augmented Matrix:**
+$$
+\left[\begin{array}{rrr|rrr}
+1 & -2 & -3 & 1 & 0 & 0 \\
+1 & -1 & -2 & 0 & 1 & 0 \\
+-1 & 3 & 5 & 0 & 0 & 1
+\end{array}\right]
+$$
 
-Now find the cofactor matrix:
-- $C_{11} = +(-1 \cdot 5 - (-2) \cdot 3) = 1$
-- $C_{12} = -(1 \cdot 5 - (-2) \cdot (-1)) = -3$
-- $C_{13} = +(1 \cdot 3 - (-1) \cdot (-1)) = 2$
-- $C_{21} = -(-2 \cdot 5 - (-3) \cdot 3) = 1$
-- $C_{22} = +(1 \cdot 5 - (-3) \cdot (-1)) = 2$
-- $C_{23} = -(1 \cdot 3 - (-2) \cdot (-1)) = -1$
-- $C_{31} = +(-2 \cdot (-2) - (-3) \cdot (-1)) = 1$
-- $C_{32} = -(1 \cdot (-2) - (-3) \cdot 1) = -1$
-- $C_{33} = +(1 \cdot (-1) - (-2) \cdot 1) = 1$
+**Step 1:** Create zeros in the first column below the first pivot.  
+Apply $R_2 \leftarrow R_2 - R_1$ and $R_3 \leftarrow R_3 + R_1$:
+$$
+\left[\begin{array}{rrr|rrr}
+1 & -2 & -3 & 1 & 0 & 0 \\
+0 & 1 & 1 & -1 & 1 & 0 \\
+0 & 1 & 2 & 1 & 0 & 1
+\end{array}\right]
+$$
 
-Cofactor matrix:
-$$C = \begin{bmatrix} 1 & -3 & 2 \\ 1 & 2 & -1 \\ 1 & -1 & 1 \end{bmatrix}$$
+**Step 2:** Create a zero in the second column below the second pivot.  
+Apply $R_3 \leftarrow R_3 - R_2$:
+$$
+\left[\begin{array}{rrr|rrr}
+1 & -2 & -3 & 1 & 0 & 0 \\
+0 & 1 & 1 & -1 & 1 & 0 \\
+0 & 0 & 1 & 2 & -1 & 1
+\end{array}\right]
+$$
 
-The adjugate is the transpose of the cofactor matrix:
-$$\text{adj}(A) = C^T = \begin{bmatrix} 1 & 1 & 1 \\ -3 & 2 & -1 \\ 2 & -1 & 1 \end{bmatrix}$$
+**Step 3:** Create zeros in the third column above the third pivot (back-substitution phase).  
+Apply $R_2 \leftarrow R_2 - R_3$ and $R_1 \leftarrow R_1 + 3R_3$:
+$$
+\left[\begin{array}{rrr|rrr}
+1 & -2 & 0 & 7 & -3 & 3 \\
+0 & 1 & 0 & -3 & 2 & -1 \\
+0 & 0 & 1 & 2 & -1 & 1
+\end{array}\right]
+$$
 
-Therefore:
-$$A^{-1} = \frac{1}{\det(A)} \text{adj}(A) = \begin{bmatrix} 1 & 1 & 1 \\ -3 & 2 & -1 \\ 2 & -1 & 1 \end{bmatrix}$$
+**Step 4:** Create a zero in the second column above the second pivot.  
+Apply $R_1 \leftarrow R_1 + 2R_2$:
+$$
+\left[\begin{array}{rrr|rrr}
+1 & 0 & 0 & 1 & 1 & 1 \\
+0 & 1 & 0 & -3 & 2 & -1 \\
+0 & 0 & 1 & 2 & -1 & 1
+\end{array}\right]
+$$
+
+Since the left side is now the identity matrix $I_3$, the matrix is invertible, and the right side gives us $A^{-1}$:
+$$
+A^{-1} = \begin{bmatrix} 1 & 1 & 1 \\ -3 & 2 & -1 \\ 2 & -1 & 1 \end{bmatrix}
+$$
 
 ---
 
 **Part (b): Solve the system**
 
-The system can be written as $A\vec{x} = \vec{b}$ where $\vec{b} = \begin{bmatrix} -1 \\ 1 \\ 2 \end{bmatrix}$.
+The system can be written as $A\vec{x} = \vec{b}$ where $\vec{b} = \begin{bmatrix} -1 \\ 1 \\ 2 \end{bmatrix}$.  
+The solution is given by $\vec{x} = A^{-1}\vec{b}$:
 
-$$\vec{x} = A^{-1}\vec{b} = \begin{bmatrix} 1 & 1 & 1 \\ -3 & 2 & -1 \\ 2 & -1 & 1 \end{bmatrix} \begin{bmatrix} -1 \\ 1 \\ 2 \end{bmatrix}$$
+$$
+\vec{x} = \begin{bmatrix} 1 & 1 & 1 \\ -3 & 2 & -1 \\ 2 & -1 & 1 \end{bmatrix} \begin{bmatrix} -1 \\ 1 \\ 2 \end{bmatrix}
+$$
 
 Calculating each component:
 - $x_1 = 1(-1) + 1(1) + 1(2) = -1 + 1 + 2 = 2$
@@ -580,11 +614,11 @@ So $\vec{x} = \begin{bmatrix} 2 \\ 3 \\ -1 \end{bmatrix}$
 ### Q11. Subspaces of $\mathbb{R}^2$
 
 > Determine if the following subsets $W$ of $\mathbb{R}^2$ are subspaces of $\mathbb{R}^2$. If not, give an example that shows which condition is violated.  
-> a) $W = \{ \vec{x} \in \mathbb{R}^2 : x_2 = 2x_1 \}$.  
-> b) $W = \{ \vec{x} \in \mathbb{R}^2 : x_1 + x_2 = 1 \}$.
+> - (a) $W = \{ \vec{x} \in \mathbb{R}^2 : x_2 = 2x_1 \}$.  
+> - (b) $W = \{ \vec{x} \in \mathbb{R}^2 : x_1 + x_2 = 1 \}$.
 
 {{< details summary="**Answer of This Question**" >}}
-**a) $W = \{ \vec{x} \in \mathbb{R}^2 : x_2 = 2x_1 \}$**
+**(a) $W = \{ \vec{x} \in \mathbb{R}^2 : x_2 = 2x_1 \}$**
 
 Check the three subspace conditions:
 1. **Contains zero vector:** $\vec{0} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}$. Since $0 = 2(0)$, $\vec{0} \in W$. ✓
@@ -595,7 +629,7 @@ Check the three subspace conditions:
 
 ---
 
-**b) $W = \{ \vec{x} \in \mathbb{R}^2 : x_1 + x_2 = 1 \}$**
+**(b) $W = \{ \vec{x} \in \mathbb{R}^2 : x_1 + x_2 = 1 \}$**
 
 Check the subspace conditions:
 1. **Contains zero vector:** $\vec{0} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}$. But $0 + 0 = 0 \neq 1$, so $\vec{0} \notin W$. ✗
@@ -603,8 +637,8 @@ Check the subspace conditions:
 **Answer:** $W$ is NOT a subspace of $\mathbb{R}^2$. Counterexample: The zero vector $\vec{0} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}$ is not in $W$ since $0 + 0 = 0 \neq 1$.
 
 **Final Answer**
-- a) $W$ is a subspace of $\mathbb{R}^2$
-- b) $W$ is NOT a subspace (does not contain the zero vector)
+- (a) $W$ is a subspace of $\mathbb{R}^2$
+- (b) $W$ is NOT a subspace (does not contain the zero vector)
 {{< /details >}}
 
 ### Q12. Non-Subspace Counterexample

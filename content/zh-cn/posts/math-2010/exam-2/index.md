@@ -630,8 +630,8 @@ $$
 ### Q9. 标量/向量线积分
 
 > 设 $C$ 为从点 $(-2, 1, 0)$ 到点 $(-1, 2, 1)$ 的线段。设置以下积分。简化被积函数。
-> a. $\int_C f(x,y,z) \, ds$，其中 $f(x,y,z) = yz - x^2$  
-> b. $\int_C \vec{F} \cdot d\vec{r}$，其中 $\vec{F} = \langle 2x-y, 2z, y-z \rangle$
+> - (a)  $\int_C f(x,y,z) \, ds$，其中 $f(x,y,z) = yz - x^2$  
+> - (b)  $\int_C \vec{F} \cdot d\vec{r}$，其中 $\vec{F} = \langle 2x-y, 2z, y-z \rangle$
 
 {{< details summary="**本题答案**" >}}
 要解决这些积分，我们首先需要参数化线段 $C$。
@@ -737,8 +737,8 @@ b. $\displaystyle \int_C \vec{F} \cdot d\vec{r} = \int_0^1 (3t - 4) \, dt = -\fr
 ### Q10. 保守向量场
 
 > 设 $\vec{F} = \langle 3+2xy, x^2-3y^2 \rangle$。
-> a. 证明 $\vec{F}$ 是保守场，然后求 $\vec{F}$ 的一个势函数。
-> b. 计算 $\int_C \vec{F} \cdot d\vec{r}$，其中 $C$ 由 $\vec{r}(t) = \langle e^t \sin t, e^t \cos t \rangle$ 给出，$0 \le t \le \pi$。
+> - (a) 证明 $\vec{F}$ 是保守场，然后求 $\vec{F}$ 的一个势函数。
+> - (b) 计算 $\int_C \vec{F} \cdot d\vec{r}$，其中 $C$ 由 $\vec{r}(t) = \langle e^t \sin t, e^t \cos t \rangle$ 给出，$0 \le t \le \pi$。
 
 {{< details summary="**本题答案**" >}}
 **a. 证明 $\vec{F}$ 是保守场并求势函数**
@@ -828,8 +828,8 @@ b. $\displaystyle \int_C \vec{F} \cdot d\vec{r} = e^{3\pi} + 1$
 ### Q11. 保守向量场
 
 > 向量场 $\vec{F} = \langle 2xy-z, x^2+2y, 1-x \rangle$ 是保守场。
-> a. 求 $\vec{F}$ 的一个势函数。
-> b. 使用 (a) 中的势函数计算 $\int_C \vec{F} \cdot d\vec{r}$，其中 $C$ 是从 $(1, 0, 2)$ 到 $(2, 1, 3)$ 的任意曲线。
+> - (a) 求 $\vec{F}$ 的一个势函数。
+> - (b) 使用 (a) 中的势函数计算 $\int_C \vec{F} \cdot d\vec{r}$，其中 $C$ 是从 $(1, 0, 2)$ 到 $(2, 1, 3)$ 的任意曲线。
 
 {{< details summary="**本题答案**" >}}
 **a. 求 $\vec{F}$ 的势函数**

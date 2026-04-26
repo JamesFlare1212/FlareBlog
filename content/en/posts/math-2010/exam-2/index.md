@@ -630,8 +630,8 @@ $$
 ### Q9. Scalar/Vector Line Integrals
 
 > Let $C$ be the line segment from the point $(-2, 1, 0)$ to the point $(-1, 2, 1)$. Set up the following integrals. Simplify the integrands.  
-> a. $\int_C f(x,y,z) \, ds$, where $f(x,y,z) = yz - x^2$  
-> b. $\int_C \vec{F} \cdot d\vec{r}$, where $\vec{F} = \langle 2x-y, 2z, y-z \rangle$
+> - (a) $\int_C f(x,y,z) \, ds$, where $f(x,y,z) = yz - x^2$  
+> - (b) $\int_C \vec{F} \cdot d\vec{r}$, where $\vec{F} = \langle 2x-y, 2z, y-z \rangle$
 
 {{< details summary="**Answer of This Question**" >}}
 To solve these integrals, we first need to parametrize the line segment $C$.
@@ -737,8 +737,8 @@ b. $\displaystyle \int_C \vec{F} \cdot d\vec{r} = \int_0^1 (3t - 4) \, dt = -\fr
 ### Q10 Conservative Vector Field
 
 > Let $\vec{F} = \langle 3+2xy, x^2-3y^2 \rangle$.  
-> a. Show that $\vec{F}$ is conservative, then find a potential function for $\vec{F}$.  
-> b. Evaluate $\int_C \vec{F} \cdot d\vec{r}$, where $C$ is given by $\vec{r}(t) = \langle e^t \sin t, e^t \cos t \rangle, 0 \le t \le \pi$.
+> - (a) Show that $\vec{F}$ is conservative, then find a potential function for $\vec{F}$.  
+> - (b) Evaluate $\int_C \vec{F} \cdot d\vec{r}$, where $C$ is given by $\vec{r}(t) = \langle e^t \sin t, e^t \cos t \rangle, 0 \le t \le \pi$.
 
 {{< details summary="**Answer of This Question**" >}}
 **a. Show that $\vec{F}$ is conservative and find a potential function**
@@ -828,8 +828,8 @@ b. $\displaystyle \int_C \vec{F} \cdot d\vec{r} = e^{3\pi} + 1$
 ### Q11. Conservative Vector Field
 
 > The vector field $\vec{F} = \langle 2xy-z, x^2+2y, 1-x \rangle$ is conservative.  
-> a. Find a potential function for $\vec{F}$.  
-> b. Using the potential function from (a) evaluate $\int_C \vec{F} \cdot d\vec{r}$ where $C$ is any curve from $(1, 0, 2)$ to $(2, 1, 3)$.
+> - (a) Find a potential function for $\vec{F}$.  
+> - (b) Using the potential function from (a) evaluate $\int_C \vec{F} \cdot d\vec{r}$ where $C$ is any curve from $(1, 0, 2)$ to $(2, 1, 3)$.
 
 {{< details summary="**Answer of This Question**" >}}
 **a. Find a potential function for $\vec{F}$**

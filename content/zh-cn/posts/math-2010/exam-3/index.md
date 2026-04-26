@@ -199,12 +199,12 @@ $$0x_1 + 0x_2 + 0x_3 = -6$$
 ### Q4. RREF 形式的增广矩阵
 
 > 以下每个矩阵都是以简化行阶梯形表示的线性方程组的增广矩阵，说明系统是相容的还是不相容的。如果系统相容，给出解的向量形式。  
-> a) $\left[\begin{array}{ccc|c} 1 & 0 & 0 & 7 \\ 0 & 1 & 0 & -2 \\ 0 & 0 & 1 & 3 \\ 0 & 0 & 0 & 0 \end{array}\right]$  
-> b) $\left[\begin{array}{cccc|c} 1 & -2 & 0 & 7 & 5 \\ 0 & 0 & 1 & -4 & 3 \\ 0 & 0 & 0 & 0 & 0 \end{array}\right]$  
-> c) $\left[\begin{array}{ccc|c} 1 & 2 & -1 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{array}\right]$
+> - (a) $\left[\begin{array}{ccc|c} 1 & 0 & 0 & 7 \\ 0 & 1 & 0 & -2 \\ 0 & 0 & 1 & 3 \\ 0 & 0 & 0 & 0 \end{array}\right]$  
+> - (b) $\left[\begin{array}{cccc|c} 1 & -2 & 0 & 7 & 5 \\ 0 & 0 & 1 & -4 & 3 \\ 0 & 0 & 0 & 0 & 0 \end{array}\right]$  
+> - (c) $\left[\begin{array}{ccc|c} 1 & 2 & -1 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{array}\right]$
 
 {{< details summary="**本题答案**" >}}
-**a)** 
+**(a)** 
 矩阵为：
 $$\left[\begin{array}{ccc|c} 1 & 0 & 0 & 7 \\ 0 & 1 & 0 & -2 \\ 0 & 0 & 1 & 3 \\ 0 & 0 & 0 & 0 \end{array}\right]$$
 
@@ -216,7 +216,7 @@ $$\left[\begin{array}{ccc|c} 1 & 0 & 0 & 7 \\ 0 & 1 & 0 & -2 \\ 0 & 0 & 1 & 3 \\
 
 **答案：** 相容。解：$\vec{x} = \begin{bmatrix} 7 \\ -2 \\ 3 \end{bmatrix}$
 
-**b)**
+**(b)**
 矩阵为：
 $$\left[\begin{array}{cccc|c} 1 & -2 & 0 & 7 & 5 \\ 0 & 0 & 1 & -4 & 3 \\ 0 & 0 & 0 & 0 & 0 \end{array}\right]$$
 
@@ -232,7 +232,7 @@ $$\left[\begin{array}{cccc|c} 1 & -2 & 0 & 7 & 5 \\ 0 & 0 & 1 & -4 & 3 \\ 0 & 0 
 
 **答案：** 相容。解：$\vec{x} = \begin{bmatrix} 5 \\ 0 \\ 3 \\ 0 \end{bmatrix} + x_2 \begin{bmatrix} 2 \\ 1 \\ 0 \\ 0 \end{bmatrix} + x_4 \begin{bmatrix} -7 \\ 0 \\ 4 \\ 1 \end{bmatrix}$
 
-**c)**
+**(c)**
 矩阵为：
 $$\left[\begin{array}{ccc|c} 1 & 2 & -1 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{array}\right]$$
 
@@ -241,18 +241,18 @@ $$\left[\begin{array}{ccc|c} 1 & 2 & -1 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \e
 **答案：** 不相容。
 
 **最终答案**
-- a) 相容：$\vec{x} = \begin{bmatrix} 7 \\ -2 \\ 3 \end{bmatrix}$
-- b) 相容：$\vec{x} = \begin{bmatrix} 5 \\ 0 \\ 3 \\ 0 \end{bmatrix} + x_2 \begin{bmatrix} 2 \\ 1 \\ 0 \\ 0 \end{bmatrix} + x_4 \begin{bmatrix} -7 \\ 0 \\ 4 \\ 1 \end{bmatrix}$
-- c) 不相容
+- (a) 相容：$\vec{x} = \begin{bmatrix} 7 \\ -2 \\ 3 \end{bmatrix}$
+- (b) 相容：$\vec{x} = \begin{bmatrix} 5 \\ 0 \\ 3 \\ 0 \end{bmatrix} + x_2 \begin{bmatrix} 2 \\ 1 \\ 0 \\ 0 \end{bmatrix} + x_4 \begin{bmatrix} -7 \\ 0 \\ 4 \\ 1 \end{bmatrix}$
+- (c) 不相容
 {{< /details >}}
 
 ### Q5. 线性系统的相容性条件
 
 > 考虑方程组：$\begin{cases} x_1 + 5x_2 + 3x_4 = b_1 \\ -x_1 - 5x_2 + x_3 - 5x_4 = b_2 \\ x_1 + 5x_2 + 3x_3 - 3x_4 = b_3 \end{cases}$  
-> (a) 确定 $b_1, b_2, b_3$ 的必要且充分条件，使得系统相容。  
-> (b) 在以下每种情况下，使用 (a) 的答案说明系统是相容的还是不相容的。如果系统相容，给出解的向量形式。
-> - (i) $b_1 = -1, b_2 = 2, b_3 = 1$
-> - (ii) $b_1 = 1, b_2 = 1, b_3 = 7$
+> - (a) 确定 $b_1, b_2, b_3$ 的必要且充分条件，使得系统相容。  
+> - (b) 在以下每种情况下，使用 (a) 的答案说明系统是相容的还是不相容的。如果系统相容，给出解的向量形式。
+>   - (i) $b_1 = -1, b_2 = 2, b_3 = 1$
+>   - (ii) $b_1 = 1, b_2 = 1, b_3 = 7$
 
 {{< details summary="**本题答案**" >}}
 **部分 (a)：找到相容性条件**
@@ -304,34 +304,34 @@ $$b_3 - 4b_1 - 3b_2 = 0 \implies b_3 = 4b_1 + 3b_2$$
 
 > $A=\begin{bmatrix} -3 & 1 \\ 2 & -1 \end{bmatrix}, B=\begin{bmatrix} 0 & 4 \\ -2 & 5 \end{bmatrix}, C=\begin{bmatrix} 5 & 0 \\ -1 & 4 \\ 3 & 3 \end{bmatrix}, D=\begin{bmatrix} 1 & 0 & -3 \\ -2 & 5 & -1 \end{bmatrix}, E=\begin{bmatrix} 1 & 4 & -5 \\ -2 & 1 & -3 \\ 0 & 2 & 6 \end{bmatrix}$。  
 > 求下列运算（如果定义），否则解释为什么无法计算。  
-> a) $CA$  
-> b) $AC$  
-> c) $(A-B)D$  
-> d) $B(C^T + D)$  
-> e) $CE$  
-> f) $C^T B$
+> - (a) $CA$  
+> - (b) $AC$  
+> - (c) $(A-B)D$  
+> - (d) $B(C^T + D)$  
+> - (e) $CE$  
+> - (f) $C^T B$
 
 {{< details summary="**本题答案**" >}}
-**a) $CA$**  
+**(a) $CA$**  
 $C$ 是 $3 \times 2$，$A$ 是 $2 \times 2$。乘积有定义（$3 \times 2$）。
 $$CA = \begin{bmatrix} 5 & 0 \\ -1 & 4 \\ 3 & 3 \end{bmatrix} \begin{bmatrix} -3 & 1 \\ 2 & -1 \end{bmatrix} = \begin{bmatrix} -15 & 5 \\ 11 & -5 \\ -3 & 0 \end{bmatrix}$$
 
 ---
 
-**b) $AC$**  
+**(b) $AC$**  
 $A$ 是 $2 \times 2$，$C$ 是 $3 \times 2$。乘积**无定义**（A 的列数 = 2，C 的行数 = 3）。  
 **答案：** 无定义。
 
 ---
 
-**c) $(A-B)D$**  
+**(c) $(A-B)D$**  
 $A-B = \begin{bmatrix} -3 & 1 \\ 2 & -1 \end{bmatrix} - \begin{bmatrix} 0 & 4 \\ -2 & 5 \end{bmatrix} = \begin{bmatrix} -3 & -3 \\ 4 & -6 \end{bmatrix}$  
 $(A-B)$ 是 $2 \times 2$，$D$ 是 $2 \times 3$。乘积有定义（$2 \times 3$）。
 $$(A-B)D = \begin{bmatrix} -3 & -3 \\ 4 & -6 \end{bmatrix} \begin{bmatrix} 1 & 0 & -3 \\ -2 & 5 & -1 \end{bmatrix} = \begin{bmatrix} 3 & -15 & 12 \\ 16 & -30 & -6 \end{bmatrix}$$
 
 ---
 
-**d) $B(C^T + D)$**  
+**(d) $B(C^T + D)$**  
 $C^T = \begin{bmatrix} 5 & -1 & 3 \\ 0 & 4 & 3 \end{bmatrix}$，$D = \begin{bmatrix} 1 & 0 & -3 \\ -2 & 5 & -1 \end{bmatrix}$  
 $C^T + D = \begin{bmatrix} 6 & -1 & 0 \\ -2 & 9 & 2 \end{bmatrix}$  
 $B$ 是 $2 \times 2$，$C^T + D$ 是 $2 \times 3$。乘积有定义（$2 \times 3$）。
@@ -339,25 +339,25 @@ $$B(C^T + D) = \begin{bmatrix} 0 & 4 \\ -2 & 5 \end{bmatrix} \begin{bmatrix} 6 &
 
 ---
 
-**e) $CE$**  
+**(e) $CE$**  
 $C$ 是 $3 \times 2$，$E$ 是 $3 \times 3$。乘积**无定义**（C 的列数 = 2，E 的行数 = 3）。  
 **答案：** 无定义。
 
 ---
 
-**f) $C^T B$**  
+**(f) $C^T B$**  
 $C^T$ 是 $2 \times 3$，$B$ 是 $2 \times 2$。乘积**无定义**（C^T 的列数 = 3，B 的行数 = 2）。  
 **答案：** 无定义。
 
 ---
 
 **最终答案**
-- a) $CA = \begin{bmatrix} -15 & 5 \\ 11 & -5 \\ -3 & 0 \end{bmatrix}$
-- b) 无定义（维度不匹配）
-- c) $(A-B)D = \begin{bmatrix} 3 & -15 & 12 \\ 16 & -30 & -6 \end{bmatrix}$
-- d) $B(C^T + D) = \begin{bmatrix} -8 & 36 & 8 \\ -22 & 47 & 10 \end{bmatrix}$
-- e) 无定义（维度不匹配）
-- f) 无定义（维度不匹配）
+- (a) $CA = \begin{bmatrix} -15 & 5 \\ 11 & -5 \\ -3 & 0 \end{bmatrix}$
+- (b) 无定义（维度不匹配）
+- (c) $(A-B)D = \begin{bmatrix} 3 & -15 & 12 \\ 16 & -30 & -6 \end{bmatrix}$
+- (d) $B(C^T + D) = \begin{bmatrix} -8 & 36 & 8 \\ -22 & 47 & 10 \end{bmatrix}$
+- (e) 无定义（维度不匹配）
+- (f) 无定义（维度不匹配）
 {{< /details >}}
 
 ### Q7. 向量的线性无关性
@@ -407,15 +407,15 @@ $$\vec{v}_3 = 3\vec{v}_1 - \vec{v}_2 \quad \text{或} \quad \begin{bmatrix} 1 \\
 ### Q8. 观察法判断线性无关性
 
 > 判断 $\mathbb{R}^3$ 中的向量组是线性无关还是线性相关。证明你的答案。（提示：所有都可以通过观察完成。）  
-> a) $\left\{ \begin{bmatrix} 0 \\ -2 \\ 8 \end{bmatrix}, \begin{bmatrix} 4 \\ 4 \\ 9 \end{bmatrix} \right\}$  
-> b) $\left\{ \begin{bmatrix} 3 \\ 2 \\ -4 \end{bmatrix}, \begin{bmatrix} -6 \\ 1 \\ 7 \end{bmatrix}, \begin{bmatrix} 6 \\ -5 \\ 2 \end{bmatrix}, \begin{bmatrix} 3 \\ 7 \\ -5 \end{bmatrix} \right\}$  
-> c) $\left\{ \begin{bmatrix} 3 \\ 1 \\ 5 \end{bmatrix}, \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\ 7 \\ 8 \end{bmatrix} \right\}$  
-> d) $\left\{ \begin{bmatrix} 3 \\ 1 \\ -2 \end{bmatrix}, \begin{bmatrix} 2 \\ -1 \\ 5 \end{bmatrix}, \begin{bmatrix} 12 \\ 4 \\ -8 \end{bmatrix} \right\}$
+> - (a) $\left\{ \begin{bmatrix} 0 \\ -2 \\ 8 \end{bmatrix}, \begin{bmatrix} 4 \\ 4 \\ 9 \end{bmatrix} \right\}$  
+> - (b) $\left\{ \begin{bmatrix} 3 \\ 2 \\ -4 \end{bmatrix}, \begin{bmatrix} -6 \\ 1 \\ 7 \end{bmatrix}, \begin{bmatrix} 6 \\ -5 \\ 2 \end{bmatrix}, \begin{bmatrix} 3 \\ 7 \\ -5 \end{bmatrix} \right\}$  
+> - (c) $\left\{ \begin{bmatrix} 3 \\ 1 \\ 5 \end{bmatrix}, \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\ 7 \\ 8 \end{bmatrix} \right\}$  
+> - (d) $\left\{ \begin{bmatrix} 3 \\ 1 \\ -2 \end{bmatrix}, \begin{bmatrix} 2 \\ -1 \\ 5 \end{bmatrix}, \begin{bmatrix} 12 \\ 4 \\ -8 \end{bmatrix} \right\}$
 
 {{< details summary="**本题答案**" >}}
 **逐步解答**
 
-**a)** $\left\{ \begin{bmatrix} 0 \\ -2 \\ 8 \end{bmatrix}, \begin{bmatrix} 4 \\ 4 \\ 9 \end{bmatrix} \right\}$
+**(a)** $\left\{ \begin{bmatrix} 0 \\ -2 \\ 8 \end{bmatrix}, \begin{bmatrix} 4 \\ 4 \\ 9 \end{bmatrix} \right\}$
 
 **观察：**
 - 这是 $\mathbb{R}^3$ 中的**2 个向量**的集合。
@@ -428,7 +428,7 @@ $$\vec{v}_3 = 3\vec{v}_1 - \vec{v}_2 \quad \text{或} \quad \begin{bmatrix} 1 \\
 
 ---
 
-**b)** $\left\{ \begin{bmatrix} 3 \\ 2 \\ -4 \end{bmatrix}, \begin{bmatrix} -6 \\ 1 \\ 7 \end{bmatrix}, \begin{bmatrix} 6 \\ -5 \\ 2 \end{bmatrix}, \begin{bmatrix} 3 \\ 7 \\ -5 \end{bmatrix} \right\}$
+**(b)** $\left\{ \begin{bmatrix} 3 \\ 2 \\ -4 \end{bmatrix}, \begin{bmatrix} -6 \\ 1 \\ 7 \end{bmatrix}, \begin{bmatrix} 6 \\ -5 \\ 2 \end{bmatrix}, \begin{bmatrix} 3 \\ 7 \\ -5 \end{bmatrix} \right\}$
 
 **观察：**
 - 这是 $\mathbb{R}^3$ 中的**4 个向量**的集合。
@@ -441,7 +441,7 @@ $$\vec{v}_3 = 3\vec{v}_1 - \vec{v}_2 \quad \text{或} \quad \begin{bmatrix} 1 \\
 
 ---
 
-**c)** $\left\{ \begin{bmatrix} 3 \\ 1 \\ 5 \end{bmatrix}, \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\ 7 \\ 8 \end{bmatrix} \right\}$
+**(c)** $\left\{ \begin{bmatrix} 3 \\ 1 \\ 5 \end{bmatrix}, \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\ 7 \\ 8 \end{bmatrix} \right\}$
 
 **观察：**
 - 集合包含**零向量** $\vec{0} = \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}$。
@@ -453,7 +453,7 @@ $$\vec{v}_3 = 3\vec{v}_1 - \vec{v}_2 \quad \text{或} \quad \begin{bmatrix} 1 \\
 
 ---
 
-**d)** $\left\{ \begin{bmatrix} 3 \\ 1 \\ -2 \end{bmatrix}, \begin{bmatrix} 2 \\ -1 \\ 5 \end{bmatrix}, \begin{bmatrix} 12 \\ 4 \\ -8 \end{bmatrix} \right\}$
+**(d)** $\left\{ \begin{bmatrix} 3 \\ 1 \\ -2 \end{bmatrix}, \begin{bmatrix} 2 \\ -1 \\ 5 \end{bmatrix}, \begin{bmatrix} 12 \\ 4 \\ -8 \end{bmatrix} \right\}$
 
 **观察：**
 - 检查第 1 和第 3 个向量：
@@ -470,25 +470,25 @@ $$\begin{bmatrix} 12 \\ 4 \\ -8 \end{bmatrix} = 4 \times \begin{bmatrix} 3 \\ 1 
 
 | 部分 | 向量个数 | 维数 | 判断依据 | 结论 |
 |------|----------|------|----------|------|
-| **a)** | 2 | 3 | 不是标量倍数 | ✅ 线性无关 |
-| **b)** | 4 | 3 | $p > m$ | ❌ 线性相关 |
-| **c)** | 3 | 3 | 包含 $\vec{0}$ | ❌ 线性相关 |
-| **d)** | 3 | 3 | 存在标量倍数 | ❌ 线性相关 |
+| **(a)** | 2 | 3 | 不是标量倍数 | ✅ 线性无关 |
+| **(b)** | 4 | 3 | $p > m$ | ❌ 线性相关 |
+| **(c)** | 3 | 3 | 包含 $\vec{0}$ | ❌ 线性相关 |
+| **(d)** | 3 | 3 | 存在标量倍数 | ❌ 线性相关 |
 
 ---
 
 **最终答案**
-- **a)** 线性无关
-- **b)** 线性相关（$\mathbb{R}^3$ 中的 4 个向量）
-- **c)** 线性相关（包含零向量）
-- **d)** 线性相关（$\vec{v}_3 = 4\vec{v}_1$）
+- **(a)** 线性无关
+- **(b)** 线性相关（$\mathbb{R}^3$ 中的 4 个向量）
+- **(c)** 线性相关（包含零向量）
+- **(d)** 线性相关（$\vec{v}_3 = 4\vec{v}_1$）
 {{< /details >}}
 
 ### Q9. 矩阵非奇异性与逆矩阵
 
 > 考虑 $A = \begin{bmatrix} \lambda & 2 \\ 2 & \lambda-3 \end{bmatrix}$。  
-> (a) $\lambda$ 取何值时矩阵是非奇异的？  
-> (b) 当 $A$ 非奇异时，求 $A^{-1}$（用 $\lambda$ 表示）。
+> - (a) $\lambda$ 取何值时矩阵是非奇异的？  
+> - (b) 当 $A$ 非奇异时，求 $A^{-1}$（用 $\lambda$ 表示）。
 
 {{< details summary="**本题答案**" >}}
 **部分 (a)：找到使 $A$ 非奇异的 $\lambda$ 值**
@@ -516,75 +516,111 @@ $$A^{-1} = \frac{1}{(\lambda-4)(\lambda+1)} \begin{bmatrix} \lambda-3 & -2 \\ -2
 - (b) $A^{-1} = \frac{1}{(\lambda-4)(\lambda+1)} \begin{bmatrix} \lambda-3 & -2 \\ -2 & \lambda \end{bmatrix}$
 {{< /details >}}
 
-### Q10. 矩阵逆与线性系统求解
+### Q10. 矩阵逆与求解线性方程组
 
-> 设 $A = \begin{bmatrix} 1 & -2 & -3 \\ 1 & -1 & -2 \\ -1 & 3 & 5 \end{bmatrix}$。  
-> (a) 求 $A^{-1}$。  
-> (b) 使用 (a) 的答案求解方程组 $\begin{cases} x_1 - 2x_2 - 3x_3 = -1 \\ x_1 - x_2 - 2x_3 = 1 \\ -x_1 + 3x_2 + 5x_3 = 2 \end{cases}$
+> 设 $A = \begin{bmatrix} 1 & -2 & -3 \ 1 & -1 & -2 \ -1 & 3 & 5 \end{bmatrix}$。
+>
+> - (a) 求 $A^{-1}$。
+> - (b) 利用 (a) 中的结果求解方程组 $\begin{cases} x\_1 - 2x\_2 - 3x\_3 = -1 \ x\_1 - x\_2 - 2x\_3 = 1 \ -x\_1 + 3x\_2 + 5x\_3 = 2 \end{cases}$
 
-{{< details summary="**本题答案**" >}}
-**部分 (a)：求 $A^{-1}$**
+{{< details summary="**本题解答**" >}}
+**第 (a) 部分：使用高斯消元法求 $A^{-1}$**
 
-首先计算行列式：
-$$\det(A) = 1 \cdot \det\begin{bmatrix} -1 & -2 \\ 3 & 5 \end{bmatrix} - (-2) \cdot \det\begin{bmatrix} 1 & -2 \\ -1 & 5 \end{bmatrix} + (-3) \cdot \det\begin{bmatrix} 1 & -1 \\ -1 & 3 \end{bmatrix}$$
-$$= 1(-5 + 6) + 2(5 - 2) - 3(3 - 1)$$
-$$= 1(1) + 2(3) - 3(2) = 1 + 6 - 6 = 1$$
+按照增广矩阵方法，我们构造 $\[A | I\_3]$ 并执行初等行变换（EROs），将左侧化为单位矩阵 $I\_3$。若成功，右侧即为 $A^{-1}$。
 
-由于 $\det(A) = 1 \neq 0$，$A$ 是可逆的。
+**初始增广矩阵：**
+$$
+\left\[\begin{array}{rrr|rrr}
+1 & -2 & -3 & 1 & 0 & 0 \\
+1 & -1 & -2 & 0 & 1 & 0 \\
+-1 & 3 & 5 & 0 & 0 & 1
+\end{array}\right]
+$$
 
-现在求伴随矩阵：
-- $C_{11} = +(-1 \cdot 5 - (-2) \cdot 3) = 1$
-- $C_{12} = -(1 \cdot 5 - (-2) \cdot (-1)) = -3$
-- $C_{13} = +(1 \cdot 3 - (-1) \cdot (-1)) = 2$
-- $C_{21} = -(-2 \cdot 5 - (-3) \cdot 3) = 1$
-- $C_{22} = +(1 \cdot 5 - (-3) \cdot (-1)) = 2$
-- $C_{23} = -(1 \cdot 3 - (-2) \cdot (-1)) = -1$
-- $C_{31} = +(-2 \cdot (-2) - (-3) \cdot (-1)) = 1$
-- $C_{32} = -(1 \cdot (-2) - (-3) \cdot 1) = -1$
-- $C_{33} = +(1 \cdot (-1) - (-2) \cdot 1) = 1$
+**步骤 1：** 将第一列中第一个主元下方的元素化为零。
+执行 $R\_2 \leftarrow R\_2 - R\_1$ 和 $R\_3 \leftarrow R\_3 + R\_1$：
+$$
+\left\[\begin{array}{rrr|rrr}
+1 & -2 & -3 & 1 & 0 & 0 \\
+0 & 1 & 1 & -1 & 1 & 0 \\
+0 & 1 & 2 & 1 & 0 & 1
+\end{array}\right]
+$$
 
-代数余子式矩阵：
-$$C = \begin{bmatrix} 1 & -3 & 2 \\ 1 & 2 & -1 \\ 1 & -1 & 1 \end{bmatrix}$$
+**步骤 2：** 将第二列中第二个主元下方的元素化为零。
+执行 $R\_3 \leftarrow R\_3 - R\_2$：
+$$
+\left\[\begin{array}{rrr|rrr}
+1 & -2 & -3 & 1 & 0 & 0 \\
+0 & 1 & 1 & -1 & 1 & 0 \\
+0 & 0 & 1 & 2 & -1 & 1
+\end{array}\right]
+$$
 
-伴随矩阵是代数余子式矩阵的转置：
-$$\text{adj}(A) = C^T = \begin{bmatrix} 1 & 1 & 1 \\ -3 & 2 & -1 \\ 2 & -1 & 1 \end{bmatrix}$$
+**步骤 3：** 将第三列中第三个主元上方的元素化为零（回代阶段）。
+执行 $R\_2 \leftarrow R\_2 - R\_3$ 和 $R\_1 \leftarrow R\_1 + 3R\_3$：
+$$
+\left\[\begin{array}{rrr|rrr}
+1 & -2 & 0 & 7 & -3 & 3 \\
+0 & 1 & 0 & -3 & 2 & -1 \\
+0 & 0 & 1 & 2 & -1 & 1
+\end{array}\right]
+$$
 
-因此：
-$$A^{-1} = \frac{1}{\det(A)} \text{adj}(A) = \begin{bmatrix} 1 & 1 & 1 \\ -3 & 2 & -1 \\ 2 & -1 & 1 \end{bmatrix}$$
+**步骤 4：** 将第二列中第二个主元上方的元素化为零。
+执行 $R\_1 \leftarrow R\_1 + 2R\_2$：
+$$
+\left\[\begin{array}{rrr|rrr}
+1 & 0 & 0 & 1 & 1 & 1 \\
+0 & 1 & 0 & -3 & 2 & -1 \\
+0 & 0 & 1 & 2 & -1 & 1
+\end{array}\right]
+$$
+
+由于左侧已化为单位矩阵 $I\_3$，说明矩阵可逆，右侧即为 $A^{-1}$：
+$$
+A^{-1} = \begin{bmatrix} 1 & 1 & 1 \ -3 & 2 & -1 \ 2 & -1 & 1 \end{bmatrix}
+$$
 
 ---
 
-**部分 (b)：求解方程组**
+**第 (b) 部分：求解方程组**
 
-方程组可以写成 $A\vec{x} = \vec{b}$，其中 $\vec{b} = \begin{bmatrix} -1 \\ 1 \\ 2 \end{bmatrix}$。
+该方程组可表示为 $A\vec{x} = \vec{b}$，其中 $\vec{b} = \begin{bmatrix} -1 \ 1 \ 2 \end{bmatrix}$。
+解由 $\vec{x} = A^{-1}\vec{b}$ 给出：
 
-$$\vec{x} = A^{-1}\vec{b} = \begin{bmatrix} 1 & 1 & 1 \\ -3 & 2 & -1 \\ 2 & -1 & 1 \end{bmatrix} \begin{bmatrix} -1 \\ 1 \\ 2 \end{bmatrix}$$
+$$
+\vec{x} = \begin{bmatrix} 1 & 1 & 1 \ -3 & 2 & -1 \ 2 & -1 & 1 \end{bmatrix} \begin{bmatrix} -1 \ 1 \ 2 \end{bmatrix}
+$$
 
-计算每个分量：
-- $x_1 = 1(-1) + 1(1) + 1(2) = -1 + 1 + 2 = 2$
-- $x_2 = -3(-1) + 2(1) + (-1)(2) = 3 + 2 - 2 = 3$
-- $x_3 = 2(-1) + (-1)(1) + 1(2) = -2 - 1 + 2 = -1$
+逐项计算：
 
-所以 $\vec{x} = \begin{bmatrix} 2 \\ 3 \\ -1 \end{bmatrix}$
+- $x\_1 = 1(-1) + 1(1) + 1(2) = -1 + 1 + 2 = 2$
+- $x\_2 = -3(-1) + 2(1) + (-1)(2) = 3 + 2 - 2 = 3$
+- $x\_3 = 2(-1) + (-1)(1) + 1(2) = -2 - 1 + 2 = -1$
+
+因此 $\vec{x} = \begin{bmatrix} 2 \ 3 \ -1 \end{bmatrix}$
 
 **验证：**
+
 - 方程 1：$1(2) - 2(3) - 3(-1) = 2 - 6 + 3 = -1$ ✓
 - 方程 2：$1(2) - 1(3) - 2(-1) = 2 - 3 + 2 = 1$ ✓
 - 方程 3：$-1(2) + 3(3) + 5(-1) = -2 + 9 - 5 = 2$ ✓
 
 **最终答案**
-- (a) $A^{-1} = \begin{bmatrix} 1 & 1 & 1 \\ -3 & 2 & -1 \\ 2 & -1 & 1 \end{bmatrix}$
-- (b) $\vec{x} = \begin{bmatrix} 2 \\ 3 \\ -1 \end{bmatrix}$
-{{< /details >}}
+
+- (a) $A^{-1} = \begin{bmatrix} 1 & 1 & 1 \ -3 & 2 & -1 \ 2 & -1 & 1 \end{bmatrix}$
+- (b) $\vec{x} = \begin{bmatrix} 2 \ 3 \ -1 \end{bmatrix}$
+  {{< /details >}}
 
 ### Q11. $\mathbb{R}^2$ 的子空间
 
 > 判断以下 $\mathbb{R}^2$ 的子集 $W$ 是否为 $\mathbb{R}^2$ 的子空间。如果不是，给出说明违反哪个条件的例子。  
-> a) $W = \{ \vec{x} \in \mathbb{R}^2 : x_2 = 2x_1 \}$。  
-> b) $W = \{ \vec{x} \in \mathbb{R}^2 : x_1 + x_2 = 1 \}$。
+> - (a) $W = \{ \vec{x} \in \mathbb{R}^2 : x_2 = 2x_1 \}$。  
+> - (b) $W = \{ \vec{x} \in \mathbb{R}^2 : x_1 + x_2 = 1 \}$。
 
 {{< details summary="**本题答案**" >}}
-**a) $W = \{ \vec{x} \in \mathbb{R}^2 : x_2 = 2x_1 \}$**
+**(a) $W = \{ \vec{x} \in \mathbb{R}^2 : x_2 = 2x_1 \}$**
 
 检查三个子空间条件：
 1. **包含零向量：** $\vec{0} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}$。由于 $0 = 2(0)$，$\vec{0} \in W$。✓
@@ -595,7 +631,7 @@ $$\vec{x} = A^{-1}\vec{b} = \begin{bmatrix} 1 & 1 & 1 \\ -3 & 2 & -1 \\ 2 & -1 &
 
 ---
 
-**b) $W = \{ \vec{x} \in \mathbb{R}^2 : x_1 + x_2 = 1 \}$**
+**(b) $W = \{ \vec{x} \in \mathbb{R}^2 : x_1 + x_2 = 1 \}$**
 
 检查子空间条件：
 1. **包含零向量：** $\vec{0} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}$。但 $0 + 0 = 0 \neq 1$，所以 $\vec{0} \notin W$。✗
@@ -603,8 +639,8 @@ $$\vec{x} = A^{-1}\vec{b} = \begin{bmatrix} 1 & 1 & 1 \\ -3 & 2 & -1 \\ 2 & -1 &
 **答案：** $W$ **不是** $\mathbb{R}^2$ 的子空间。反例：零向量 $\vec{0} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}$ 不在 $W$ 中，因为 $0 + 0 = 0 \neq 1$。
 
 **最终答案**
-- a) $W$ 是 $\mathbb{R}^2$ 的子空间
-- b) $W$ 不是子空间（不包含零向量）
+- (a) $W$ 是 $\mathbb{R}^2$ 的子空间
+- (b) $W$ 不是子空间（不包含零向量）
 {{< /details >}}
 
 ### Q12. 非子空间反例
