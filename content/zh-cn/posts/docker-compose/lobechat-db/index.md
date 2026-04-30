@@ -2,6 +2,7 @@
 title: 使用Docker Compose部署LobeChat服务端数据库版本
 subtitle:
 date: 2024-09-15T04:52:21-04:00
+lastmod: 2026-04-13T16:01:35-04:00
 slug: install-lobechat-db
 draft: false
 author:
@@ -52,7 +53,10 @@ LobeChat默认使用IndexedDB储存用户数据，换句话说就是数据储存
 
 不过要配置LobeChat DB版就没那么简单了，总体有这几部分：配置数据库，配置身份验证服务，配置S3存储服务[^1]。
 
-[^1]: 参考官方文档 https://lobehub.com/zh/docs/self-hosting/server-database
+[^1]: 参考官方文档 https://lobehub.com/zh/docs/self-hosting/platform/docker-compose
+
+> [!TIP]
+> 新版LobeChat DB重构后改名为LobeHub 2.0了，如需部署可参考 [使用Docker Compose部署LobeHub](../install-lobehub)
 
 ## 配置Logto
 
