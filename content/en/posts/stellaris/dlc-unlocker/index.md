@@ -89,6 +89,8 @@ Download and extract
 
 {{< link href="https://minio-lv-a.jamesflare.com/public/solaris-4.2+.zip" content="solaris-4.2+.zip" title="Download solaris-4.2+.zip" download="solaris-4.2+.zip" card=true >}}
 
+{{< link href="https://minio-lv-a.jamesflare.com/public/solaris-4.4+.zip" content="solaris-4.4+.zip" title="Download solaris-4.4+.zip" download="solaris-4.4+.zip" card=true >}}
+
 Expect to see the following structure
 
 {{< file-tree >}}

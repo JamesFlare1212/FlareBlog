@@ -23,7 +23,7 @@ tags:
 categories:
   - Electrical Engineering
 collections:
-  - ECSE 1010
+  - ECSE 2010
 hiddenFromHomePage: false
 hiddenFromSearch: false
 hiddenFromRss: false
