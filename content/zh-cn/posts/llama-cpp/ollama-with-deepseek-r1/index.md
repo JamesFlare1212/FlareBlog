@@ -24,10 +24,10 @@ categories:
   - 大语言模型
 collections:
   - LLM
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 本篇文章详细介绍了如何利用DeepSeek-R1及其蒸馏模型在消费级硬件上的应用，并探讨了其性能优化和不足之处。同时提供了安装Ollama及创建深度定制化模型的步骤，以及一些提高运行效率的方法，包括使用Flash Attention和KV Cache量化等技巧。
 resources:
   - name: featured-image

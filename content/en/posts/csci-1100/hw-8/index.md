@@ -24,10 +24,10 @@ categories:
   - Programming
 collections:
   - CSCI 1100
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: This blog post provides a detailed guide on completing Homework 8 for CSCI 1100, focusing on simulating a berry field with bears and tourists using Python classes. It covers the creation of BerryField, Bear, and Tourist classes, and instructions for submitting the assignment.
 resources:
   - name: featured-image

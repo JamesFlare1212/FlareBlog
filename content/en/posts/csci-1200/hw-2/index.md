@@ -25,10 +25,10 @@ categories:
   - Programming
 collections:
   - CSCI 1200
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: This blog post provides a guide on how to implement a simple carpooling application in C++ as part of the CSCI-1200 course assignment. The implementation involves using vectors to store data for handling passenger requests and driver cancellations.
 resources:
   - name: featured-image

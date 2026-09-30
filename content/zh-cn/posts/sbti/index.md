@@ -21,10 +21,10 @@ categories:
   - 资源分享
 collections:
 
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 通过逆向SBTI（sbti.unun.dev）的源码获取所有的人格类型以及其介绍
 resources:
   - name: featured-image
@@ -47,7 +47,7 @@ repost:
 
 ## TYPE_LIBRARY
 
-```json {data-open=true,expandDepth=2}
+```json {data-open=true,expand_depth=2}
 {
   "ATM-er": {
     "cn": "送钱者",

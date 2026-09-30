@@ -24,10 +24,10 @@ categories:
   - Electrical Engineering
 collections:
   - ECSE 1010
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: This blog post presents a comprehensive proof of concepts for ECSE 1010 Omega Lab01, focusing on electrical engineering principles such as Ohm's Law, KCL, KVL, voltage dividers, and current flow in circuits. It includes detailed circuit schematics, analysis, simulations, and experimental measurements to validate theoretical concepts.
 resources:
   - name: featured-image

@@ -24,10 +24,10 @@ categories:
   - 编程语言
 collections:
   - CSCI 1100
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 本文概述了 CSCI 1100 计算机科学导论课程中一项关于使用 Python 进行嵌套列表、网格和路径规划的编程作业。文章包括每个部分的问题描述、指导方针和示例输出。
 resources:
   - name: featured-image

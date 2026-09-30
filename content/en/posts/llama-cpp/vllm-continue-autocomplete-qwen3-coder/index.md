@@ -25,10 +25,10 @@ categories:
   - Tutorials
 collections:
   - LLM
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: This tutorial will guide you step-by-step on how to deploy Qwen3-Coder-30B-A3B-Instruct-FP8 using vLLM on consumer-grade GPUs, and configure Continue to achieve a unified Chatbot, Agent, and FIM code completion functionality.
 resources:
   - name: featured-image

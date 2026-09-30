@@ -24,10 +24,10 @@ categories:
   - Programming
 collections:
   - CSCI 1100
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: "This blog post outlines a homework assignment worth 100 points, due on March 28, 2024, focusing on Python dictionary manipulation. The assignment includes two parts: an autocorrect program and a movie rating analysis, both requiring careful handling of data files and dictionary operations."
 resources:
   - name: featured-image

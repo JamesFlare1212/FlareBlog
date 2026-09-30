@@ -23,10 +23,10 @@ categories:
   - 讨论
 collections:
 
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 本文收集了云杉高能X5备用电源在公测期间，群内的交流和网上有关视频对此产品的一些疑问和回答，不排除随着固件 OTA 更新和迭代会有与本文所差异。如要获取最新的消息请咨询官方，有没收录的问题欢迎提交评论或者 PR。
 resources:
   - name: featured-image

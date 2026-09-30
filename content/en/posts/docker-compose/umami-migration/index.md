@@ -23,10 +23,10 @@ categories:
   - Tutorials
 collections:
   - Docker Compose
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: This blog post provides a step-by-step guide on migrating an Umami server running on Docker from one machine to another by exporting and importing the PostgreSQL database, ensuring a smooth transition while preserving all the essential data.
 resources:
   - name: featured-image

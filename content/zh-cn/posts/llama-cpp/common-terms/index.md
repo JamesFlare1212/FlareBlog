@@ -23,10 +23,10 @@ categories:
   - 大语言模型
 collections:
   - LLM
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 这篇博客文章解释了与大型语言模型（LLM）相关的常见术语和概念，包括上下文窗口、温度以及多模态和推理模型等各种模型类型。它还涵盖了实际应用和API使用示例。
 resources:
   - name: featured-image

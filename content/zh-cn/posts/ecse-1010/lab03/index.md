@@ -24,10 +24,10 @@ categories:
   - Electrical Engineering
 collections:
   - ECSE 1010
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 这篇博客文章概述了一系列涉及傅里叶分析、信号重建、滤波器设计和频率处理的实验和分析，使用MATLAB及其他工具。内容包括理论概念的讨论、模拟以及实际应用。
 resources:
   - name: featured-image

@@ -22,10 +22,10 @@ categories:
   - Programming
 collections:
   - DSAS
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: This blog post discusses how to obtain CCA information in the DSAS system through analysis and automation, including obtaining ASP.NET_SessionId and .ASPXFORMSAUTH, and using this information to retrieve ActivityDetails. The article provides a detailed explanation of the implementation methods for each step, along with a Python sample code demonstrating the entire process.
 resources:
   - name: featured-image

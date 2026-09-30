@@ -26,10 +26,10 @@ categories:
   - Electrical Engineering
 collections:
   - ENGR 2350
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 这篇博客文章提供了ENGR 2350课程第一实验室的指南，重点介绍了使用TI-RSLK机器人进行数字输入/输出（GPIO）的操作。实验包括构建硬件电路、初始化GPIO引脚以及实现控制逻辑以根据用户输入管理电机运动。
 resources:
   - name: featured-image

@@ -25,10 +25,10 @@ categories:
   - 编程语言
 collections:
   - CSCI 1200
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 这篇博客文章提供了使用C++开发类似于Spotify的音乐播放列表管理程序的详细指南。它涵盖了命令行参数处理、文件I/O操作以及STL字符串和向量类的应用。
 resources:
   - name: featured-image

@@ -24,10 +24,10 @@ categories:
   - Programming
 collections:
   - CSCI 1100
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: This blog post provides a detailed overview of a Python programming homework assignment, which includes creating a Mad Libs game, calculating speed and pace, and generating a framed box with user-specified dimensions.
 resources:
   - name: featured-image

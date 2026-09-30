@@ -24,10 +24,10 @@ categories:
   - Programming
 collections:
   - CSCI 1100
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: This homework assignment consists of three parts, focusing on sizing a gum ball machine, implementing a simple substitution cipher, and performing basic sentiment analysis on sentences using Python functions and string manipulation.
 resources:
   - name: featured-image

@@ -20,10 +20,10 @@ tags:
 categories:
 - 教程
 - 大语言模型
-hiddenFromHomePage: false
-hiddenFromSearch: false 
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 本文将手把手教你如何利用 ChatGPT、Python 和 JSON 文件高效创建选择题试卷。从自动生成题库,到格式化试题、答题纸和评分标准,一应俱全。跟着教程学习,你也能轻松搞定选择题卷子。
 resources:
   - name: featured-image

@@ -23,10 +23,10 @@ categories:
   - 教程
 collections:
   - Docker Compose
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 这篇博客文章提供了关于设置 LobeChat DB 版本的全面指南，包括配置 Logto 进行身份验证、使用 MinIO 进行 S3 存储以及使用 PostgreSQL 作为数据库。它还涵盖了自定义 Logto 的登录体验和启用 LobeChat 的各种模型。
 resources:
   - name: featured-image

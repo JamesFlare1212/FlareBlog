@@ -24,10 +24,10 @@ categories:
   - Tutorials
 collections:
   - LLM
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: This blog post explains how to resolve GPU memory overflow issues in SGLang on RTX 4090 by tuning Fused MoE Triton configurations, optimizing performance for MoE models.
 resources:
   - name: featured-image

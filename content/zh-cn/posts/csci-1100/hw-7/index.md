@@ -24,10 +24,10 @@ categories:
   - 编程语言
 collections:
   - CSCI 1100
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 这篇博客文章概述了一个满分100分的家庭作业，截止日期为2024年3月28日，重点是Python字典操作。该作业包括两部分内容：自动更正程序和电影评分分析，都需要仔细处理数据文件和字典操作。
 resources:
   - name: featured-image

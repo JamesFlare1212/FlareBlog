@@ -25,10 +25,10 @@ categories:
   - Tutorials
 collections:
   - Ollama
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: This blog post explores the installation, optimization, and usage of DeepSeek-R1's distilled models in Ollama on Windows 11, MacOS, and Linux, highlighting performance and limitations.
 resources:
   - name: featured-image

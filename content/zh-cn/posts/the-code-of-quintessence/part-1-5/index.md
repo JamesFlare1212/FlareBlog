@@ -22,10 +22,10 @@ categories:
 - 资源分享
 collections:
   - 元素法典
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 这是《元素法典》（第壹點伍卷）的重写版本，主要是原版是一个在线文档，不够轻量和灵活。
 resources:
   - name: featured-image

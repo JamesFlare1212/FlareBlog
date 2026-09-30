@@ -23,10 +23,10 @@ categories:
   - LLM
 collections:
   - Ollama
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: This blog post compares different quantization types in llama.cpp, analyzing their impact on model size and perplexity. It provides recommendations for choosing the best quantization type based on the balance between quality and performance.
 resources:
   - name: featured-image

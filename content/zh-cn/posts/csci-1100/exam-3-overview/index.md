@@ -24,10 +24,10 @@ categories:
   - 编程语言
 collections:
   - CSCI 1100
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 这篇博客文章为CSCI 1100 - 计算机科学1的第三次测试提供了一个概述，包括重要的后勤指示，所涵盖的主题，以及关于Python中的集合，字典，类和文件I/O的练习问题
 resources:
   - name: featured-image

@@ -21,10 +21,10 @@ tags:
 categories:
   - 安全
   - 讨论
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 这篇博客文章探讨了一种针对WordPress实例的特定DDoS攻击的原理和挑战，该攻击通过请求不存在的路径来绕过缓存机制，并从蓝队和红队的角度讨论了可能的防御和进攻策略。
 resources:
   - name: featured-image

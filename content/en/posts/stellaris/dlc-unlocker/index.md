@@ -21,10 +21,10 @@ categories:
   - Tutorials
   - Sharing
 collections:
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: This article explains how to use CreamInstaller to unlock Stellaris DLC on Steam and install DLC files.
 resources:
   - name: featured-image

@@ -18,10 +18,10 @@ tags:
 - 名言
 categories:
 - 资源分享
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 来自网络的 6000+ 毒鸡汤合集。
 resources:
   - name: featured-image

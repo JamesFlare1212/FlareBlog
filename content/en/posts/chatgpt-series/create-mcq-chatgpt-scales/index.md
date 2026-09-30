@@ -20,10 +20,10 @@ tags:
 categories:
 - Tutorials
 - LLM
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: This blog post demonstrates how to create multiple-choice question (MCQ) papers using ChatGPT, Python, and JSON files, covering the process from generating a question bank to formatting and building the final test papers, answer sheets, and marking schemes.
 resources:
   - name: featured-image

@@ -24,10 +24,10 @@ categories:
   - 编程语言
 collections:
   - CSCI 1100
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 本文概述了 CSCI 1100 计算机科学导论的第二次测试，包括重要的考试安排、考试范围以及带答案的练习题，帮助同学们更好地备考。
 resources:
   - name: featured-image

@@ -3,6 +3,15 @@
 // 自定义样式
 // ==============================
 
+@use "columns";
+
+// Keep the post metadata free of visitor and comment counters.
+article.single .post-meta .comment-visitors,
+article.single .post-meta .busuanzi_visitors,
+article.single .post-meta .comment-count {
+    display: none;
+}
+
 ul, ol {
     padding-inline-start: 1em;
     //margin-left: 0.33rem;
@@ -28,28 +37,6 @@ details summary strong {
 
 .aside-collection {
     margin-top: 64px;
-}
-
-// Short code - columns
-
-.md-columns {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -1rem;
-    margin-right: -1rem;
-  
-    >div {
-      flex: 1 1;
-      margin: 1rem 0;
-      min-width: 100px;
-      max-width: 100%;
-      padding: 0 1rem;
-    }
-  
-    .markdown-inner {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
 }
 
 .katex-display {

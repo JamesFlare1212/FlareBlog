@@ -25,10 +25,10 @@ categories:
   - Electrical Engineering
 collections:
   - ENGR 2350
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 这篇帖子展示了2025年春季ENGR 2350课程的Quiz 2。它包含问题、答案及解释。
 resources:
   - name: featured-image

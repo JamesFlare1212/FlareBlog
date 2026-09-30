@@ -24,10 +24,10 @@ categories:
   - Electrical Engineering
 collections:
   - ECSE 2010
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 本博客文章展示了 ECSE 2010 Omega 实验室 MS1 的综合概念验证，重点关注电子工程原理，如分压器、运算放大器作为比较器和 LED 控制电路。它包括详细的电路图、数学分析、LTSpice 仿真和实验测量，以验证理论概念。
 resources:
   - name: featured-image

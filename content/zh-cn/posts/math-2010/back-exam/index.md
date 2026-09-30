@@ -23,10 +23,10 @@ categories:
   - Electrical Engineering
 collections:
   - MATH-2010
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: "Dr. Elisabeth Brown 的 MATH 2010：多元微积分与矩阵代数（4 学分），2026 年春季，01–08 节的往期试卷合集"
 resources:
   - name: featured-image

@@ -23,10 +23,10 @@ categories:
   - Electrical Engineering
 collections:
   - MATH-2010
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: "A collection of Past Exams on Dr. Elisabeth Brown's MATH 2010: Multivariable Calculus and Matrix Algebra (4 credits), Spring 2026, Sections 01–08"
 resources:
   - name: featured-image

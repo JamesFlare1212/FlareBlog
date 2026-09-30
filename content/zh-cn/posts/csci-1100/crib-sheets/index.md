@@ -25,10 +25,10 @@ categories:
   - 编程语言
 collections:
   - CSCI 1100
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 这篇文章分享了我在 CSCI 1100 的第二次测试、第三次测试和期末考试中使用的 Crib Sheets。
 resources:
   - name: featured-image

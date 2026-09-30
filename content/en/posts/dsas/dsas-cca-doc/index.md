@@ -22,10 +22,10 @@ categories:
   - Programming
 collections:
   - DSAS
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: This is a document of my reverse engineering DSAS Engage CCA API.
 resources:
   - name: featured-image

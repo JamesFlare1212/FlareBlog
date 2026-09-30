@@ -23,8 +23,8 @@ categories:
   - 贺卡
 collections:
   - 贺卡
-hiddenFromHomePage: false
-hiddenFromSearch: false
+hidden_from_home_page: false
+hidden_from_search: false
 summary: "给杨文雅的贺卡，恭喜你上大学了，很高兴认识你！本页是一份现代化的贺卡，不出意外你将通过二维码扫描获得。不同于普通的文本，这是富文本，当然我个人还是喜欢戏称其为肥文本。"
 resources:
 - name: featured-image

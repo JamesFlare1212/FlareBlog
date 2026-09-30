@@ -25,10 +25,10 @@ categories:
   - 教程
 collections:
   - LLM
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 本教程手把手教你用vLLM在消费级显卡上部署Qwen3-Coder-30B-A3B-Instruct-FP8，并配置Continue实现Chatbot、Agent与FIM代码补全三合一。
 resources:
   - name: featured-image

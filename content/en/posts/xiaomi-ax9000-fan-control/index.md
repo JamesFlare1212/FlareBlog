@@ -21,10 +21,10 @@ tags:
 categories:
   - Tutorials
 collections:
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: This guide explains fan control on the Xiaomi AX9000 with stock firmware, calculates fan levels from six temperature readings, and provides an installation script with startup support, live configuration, and stock control restoration.
 toc: true
 math: false

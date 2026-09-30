@@ -21,10 +21,10 @@ categories:
   - 教程
   - 资源分享
 collections:
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 本篇文章我们会讲解如何使用CreamInstaller解锁Steam版群星的DLC，并且安装DLC文件。
 resources:
   - name: featured-image

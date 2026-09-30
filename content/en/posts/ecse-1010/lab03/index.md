@@ -24,10 +24,10 @@ categories:
   - Electrical Engineering
 collections:
   - ECSE 1010
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: This blog post outlines a series of lab experiments and analyses involving Fourier analysis, signal reconstruction, filter design, and frequency manipulation using MATLAB and other tools. It includes discussions on theoretical concepts, simulations, and practical applications.
 resources:
   - name: featured-image

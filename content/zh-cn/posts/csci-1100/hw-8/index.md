@@ -24,10 +24,10 @@ categories:
   - 编程语言
 collections:
   - CSCI 1100
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 这篇博客文章提供了关于完成 CSCI 1100 课程作业 8 的详细指南，重点介绍了如何使用 Python 类模拟一个有熊和游客的莓果田。它涵盖了 BerryField、Bear 和 Tourist 类的创建，以及提交作业的说明。
 resources:
   - name: featured-image

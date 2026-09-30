@@ -22,10 +22,10 @@ tags:
 categories:
   - VPS
   - Review
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: This blog post reviews the performance of the netcup VPS 8000 ARM G11 server, featuring 18 vCore ARM64 CPUs based on Ampere Altra Max. It includes benchmark results from various testing scripts and compares the CPU performance with well-known processors.
 resources:
   - name: featured-image

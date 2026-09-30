@@ -21,8 +21,8 @@ tags:
 categories:
 - 教程
 
-hiddenFromHomePage: false
-hiddenFromSearch: false
+hidden_from_home_page: false
+hidden_from_search: false
 
 summary: "Gravatar 的头像服务在中国大陆不稳定。除了使用一些公开镜像，我们还能自行建立反代。不过如果要自己建立反代，就需要服务器，这可能需要额外的成本，更重要的一个问题是，一般人的服务器只能在一个机房，所以地区之间的速度差异会很大，而不像 Gravatar 在全球都有 CDN。"
 resources:

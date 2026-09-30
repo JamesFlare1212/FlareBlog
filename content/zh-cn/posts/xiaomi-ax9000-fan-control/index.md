@@ -21,10 +21,10 @@ tags:
 categories:
   - 教程
 collections:
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 本文介绍小米 AX9000 原厂固件下的风扇调速原理，通过六路温度计算目标档位，并提供支持开机启动、动态配置和恢复原厂温控的一键脚本。
 toc: true
 math: false

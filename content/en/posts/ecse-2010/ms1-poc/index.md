@@ -24,10 +24,10 @@ categories:
   - Electrical Engineering
 collections:
   - ECSE 2010
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: This blog post presents a comprehensive proof of concepts for ECSE 2010 Omega Lab MS1, focusing on electrical engineering principles such as voltage dividers, operational amplifiers as comparators, and LED control circuits. It includes detailed circuit schematics, mathematical analysis, LTSpice simulations, and experimental measurements to validate theoretical concepts.
 resources:
   - name: featured-image

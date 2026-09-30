@@ -21,10 +21,10 @@ tags:
 categories:
   - Tutorials
   - Proxy
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: This blog post provides a step-by-step guide on setting up a VLESS + TCP + REALITY + XTLS + uTLS + XUDP configuration using sing-box, covering server and client-side setup, installation, and running sing-box for a secure and efficient proxy solution.
 resources:
   - name: featured-image

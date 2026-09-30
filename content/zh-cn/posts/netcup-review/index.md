@@ -22,10 +22,10 @@ tags:
 categories:
   - VPS
   - 评测
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 这篇博文评测了 netcup VPS 8000 ARM G11 服务器的性能表现。该服务器采用了基于 Ampere Altra Max 的 18 核 ARM64 CPU。文章包含了使用多种测试脚本得出的基准测试结果，并将 CPU 性能与市面上知名的处理器进行了对比。
 resources:
   - name: featured-image

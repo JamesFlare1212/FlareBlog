@@ -25,10 +25,10 @@ categories:
   - Electrical Engineering
 collections:
   - ENGR 2350
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: This post shows the back Quiz 2 of ENGR 2350 on Spring 2025. It includes the question and answer with explains.
 resources:
   - name: featured-image

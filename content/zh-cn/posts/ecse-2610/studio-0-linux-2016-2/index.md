@@ -25,10 +25,10 @@ categories:
   - Electrical Engineering
 collections:
   - ECSE 2610
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 这篇博客文章提供了在 Ubuntu 24.04.1 LTS（Linux）上安装 Xilinx Vivado 16.2 Design Suite 的详细指南。它包括逐步说明、必要的依赖项、安装故障排除提示和验证步骤。
 resources:
   - name: featured-image

@@ -23,10 +23,10 @@ categories:
   - LLM
 collections:
   - LLM
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: This blog post explains common terms and concepts related to large language models (LLMs), including context windows, temperature, and various model types like multi-modal and reasoning models. It also covers practical applications and API usage examples.
 resources:
   - name: featured-image

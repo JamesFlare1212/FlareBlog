@@ -24,10 +24,10 @@ categories:
   - Sharing
 collections:
   - Docker Compose
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: This blog post addresses an issue with Flarum's email delivery, caused by improper Queue handling. It provides solutions using Docker commands and a Flarum plugin to ensure emails are sent correctly, especially when running Flarum in a Docker container.
 resources:
   - name: featured-image

@@ -21,10 +21,10 @@ categories:
   - 资源分享
 collections:
 
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: bilibili上有关酒酿Lily王，Maggieyoo的充电视频和大部分投稿都莫名其妙消失了。好在我在6月的时候缓存了一次，所以2025年6月11日前的投稿我都还有备份，分享给有需要的同学。
 resources:
   - name: featured-image
@@ -63,8 +63,8 @@ bilibili上有关酒酿Lily王，Maggieyoo的充电视频和大部分投稿都�
 
 ## 视频文件
 
-{{< file-tree file="酒酿Lily王.yml" level=0 folderSlash=true />}}
-{{< file-tree file="Maggieyoo.yml" level=0 folderSlash=true />}}
+{{< file-tree file="酒酿Lily王.yml" level=0 folder_slash=true />}}
+{{< file-tree file="Maggieyoo.yml" level=0 folder_slash=true />}}
 
 ### 下载地址
 

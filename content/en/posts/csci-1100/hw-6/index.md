@@ -24,10 +24,10 @@ categories:
   - Programming
 collections:
   - CSCI 1100
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: This blog post introduces a Python programming assignment for analyzing and comparing text documents using natural language processing techniques, such as calculating word length, distinct word ratios, and Jaccard similarity between word sets and pairs.
 resources:
   - name: featured-image

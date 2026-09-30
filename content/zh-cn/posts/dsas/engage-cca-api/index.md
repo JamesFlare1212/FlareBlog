@@ -22,10 +22,10 @@ categories:
   - 编程语言
 collections:
   - DSAS
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 这篇博文探讨了如何通过分析和自动化获取DSAS系统中的CCA信息，包括获取ASP.NET_SessionId和.ASPXFORMSAUTH，以及使用这些信息来获取ActivityDetails。文章详细介绍了每个步骤的实现方法，并提供了一个Python示例代码来演示整个过程。
 resources:
   - name: featured-image

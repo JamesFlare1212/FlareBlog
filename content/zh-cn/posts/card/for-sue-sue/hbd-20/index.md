@@ -22,10 +22,10 @@ categories:
   - 贺卡
 collections:
   - 贺卡
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 给苏雨昕的贺卡，恭喜你20岁了！本页是一份现代化的贺卡，可以展示在各个尺寸的设备上。
 resources:
   - name: featured-image

@@ -24,10 +24,10 @@ categories:
   - 编程语言
 collections:
   - CSCI 1100
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 这篇博客详细介绍了一项 Python 编程作业，包括创建一个 Mad Libs 文字游戏，计算速度和配速，以及生成一个用户指定尺寸的带框文本框。
 resources:
   - name: featured-image

@@ -24,10 +24,10 @@ categories:
   - Programming
 collections:
   - CSCI 1100
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: This homework assignment focuses on working with lists, loops, tuples, and if statements in Python. It includes three parts - analyzing text complexity, simulating Pikachu's movement, and modeling population changes of bears, berries, and tourists.
 resources:
   - name: featured-image

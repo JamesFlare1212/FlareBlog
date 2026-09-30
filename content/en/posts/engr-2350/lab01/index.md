@@ -26,10 +26,10 @@ categories:
   - Electrical Engineering
 collections:
   - ENGR 2350
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: This blog post provides a guide on Lab 1 of ENGR 2350, focusing on digital input/output (GPIO) using the TI-RSLK robot. The lab involves building hardware circuits, initializing GPIO pins, and implementing control logic to manage motor movements based on user inputs.
 resources:
   - name: featured-image

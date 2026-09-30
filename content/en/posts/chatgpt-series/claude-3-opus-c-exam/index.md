@@ -24,10 +24,10 @@ categories:
   - Review
   - Programming
   - LLM
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: This blog post presents a simulated C language programming exam, featuring question types such as fill-in-the-blanks, short answer questions, and application problems. The objective is to comprehensively assess students' mastery of C language knowledge, problem-solving abilities, and skills in writing efficient and elegant code. Through such a mock test, students can identify their weaknesses and make thorough preparations for the actual exam. At the same time, it provides readers with an intuitive understanding of the key points in C language assessment.
 resources:
   - name: featured-image

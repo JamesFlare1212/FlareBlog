@@ -24,10 +24,10 @@ categories:
   - 编程语言
 collections:
   - CSCI 1100
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 这篇博文介绍了一个 Python 编程作业，使用自然语言处理技术分析和比较文本文档，例如计算单词长度、不同单词比率以及单词集和对之间的 Jaccard 相似度。
 resources:
   - name: featured-image

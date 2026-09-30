@@ -24,10 +24,10 @@ categories:
   - Programming
 collections:
   - CSCI 1100
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: This blog post outlines the requirements and guidelines for completing Homework 4 in the CSCI 1100 - Computer Science 1 course, which consists of two parts focusing on password strength evaluation and analyzing COVID-19 quarantine states using Python programming.
 resources:
   - name: featured-image

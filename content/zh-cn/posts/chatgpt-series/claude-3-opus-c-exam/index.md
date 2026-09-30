@@ -24,10 +24,10 @@ categories:
   - 评测
   - 编程语言
   - 大语言模型
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 这篇博文展示了一场模拟的 C 语言编程考试，题型包括填空题、简答题和应用题等，目的是全方位测试学生对 C 语言知识的掌握程度、分析问题解决问题的能力，以及编写高效优雅代码的水平。通过这样一场模拟测试，可以帮助学生查漏补缺，为真正的考试做好充分准备。同时，也能让读者对 C 语言的考察重点有一个直观的认识。
 resources:
   - name: featured-image

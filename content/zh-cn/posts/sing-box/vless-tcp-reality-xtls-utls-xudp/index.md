@@ -22,10 +22,10 @@ tags:
 categories:
   - 教程
   - 代理
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 本文提供了使用 sing-box 设置 VLESS + TCP + REALITY + XTLS + uTLS + XUDP 配置的详细步骤，包括服务器和客户端的设置、安装和运行 sing-box，以实现一个安全高效的代理解决方案。
 resources:
   - name: featured-image

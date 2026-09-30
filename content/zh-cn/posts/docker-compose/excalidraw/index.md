@@ -22,8 +22,8 @@ categories:
   - 教程
 collections:
   - Docker Compose
-hiddenFromHomePage: false
-hiddenFromSearch: false
+hidden_from_home_page: false
+hidden_from_search: false
 summary: 通过本文，你将学会使用 Docker Compose 一键部署拥有前端界面、数据存储和多人协作等全部功能的 Excalidraw 技术栈，快速搭建一个可以私有使用、分享协作的 Excalidraw 部署。
 resources:
 - name: featured-image

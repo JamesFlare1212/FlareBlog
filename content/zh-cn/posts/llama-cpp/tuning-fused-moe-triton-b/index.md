@@ -24,10 +24,10 @@ categories:
   - 教程
 collections:
   - LLM
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 这篇博客文章解释了如何通过调整SGLang在RTX 4090上的融合专家混合（MoE）Triton配置来解决GPU内存溢出问题，并优化专家混合（MoE）模型的性能。
 resources:
   - name: featured-image

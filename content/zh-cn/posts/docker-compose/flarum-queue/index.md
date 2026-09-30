@@ -23,10 +23,10 @@ categories:
   - 教程
 collections:
   - Docker Compose
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 本博客文章讨论了Flarum邮件发送的问题，该问题是由于不当的队列处理造成的。它提供了使用Docker命令和一个Flarum插件的解决方案，以确保电子邮件正确发送，尤其是在Docker容器中运行Flarum时。
 resources:
   - name: featured-image

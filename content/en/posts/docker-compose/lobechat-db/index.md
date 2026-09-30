@@ -22,10 +22,10 @@ categories:
   - Tutorials
 collections:
   - Docker Compose
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: This blog post offers a comprehensive guide on setting up LobeChat DB version, including configuring Logto for authentication, MinIO for S3 storage, and PostgreSQL for the database. It also covers customizing Logto's sign-in experience and enabling various models for LobeChat.
 resources:
   - name: featured-image

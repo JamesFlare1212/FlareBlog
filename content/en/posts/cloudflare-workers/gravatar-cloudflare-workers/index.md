@@ -21,8 +21,8 @@ tags:
 categories:
 - Tutorials
 
-hiddenFromHomePage: false
-hiddenFromSearch: false
+hidden_from_home_page: false
+hidden_from_search: false
 
 summary: "Gravatar's avatar service is unstable in mainland China. While we can use some public mirrors, we also have the option to set up our own reverse proxy. However, setting up a self-hosted reverse proxy requires a server, which may incur additional costs. More importantly, an individual's server is typically limited to a single data center, resulting in significant speed variations across different regions, unlike Gravatar's global CDN coverage."
 resources:

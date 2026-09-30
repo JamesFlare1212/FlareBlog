@@ -22,10 +22,10 @@ categories:
   - 教程
 collections:
   - Docker Compose
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 本文将介绍如何通过导出和导入 PostgreSQL 数据库，将 Docker 上运行的 Umami 服务器从一台机器迁移到另一台机器，确保在保留所有关键数据的同时实现平稳过渡。
 resources:
   - name: featured-image

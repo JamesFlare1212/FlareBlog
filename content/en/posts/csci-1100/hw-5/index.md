@@ -24,10 +24,10 @@ categories:
   - Programming
 collections:
   - CSCI 1100
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: This blog post provides an overview of a homework assignment for CSCI 1100 - Computer Science 1, focusing on lists of lists, grids, and path planning using Python. It includes problem descriptions, guidelines, and example outputs for each part of the assignment.
 resources:
   - name: featured-image

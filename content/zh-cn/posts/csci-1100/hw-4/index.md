@@ -24,10 +24,10 @@ categories:
   - 编程语言
 collections:
   - CSCI 1100
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 本文概述了 CSCI 1100 计算机科学导论课程第四次作业的要求和指南。作业包括两部分内容：使用 Python 编程评估密码强度，以及分析 COVID-19 疫情期间各州的隔离情况。
 resources:
   - name: featured-image

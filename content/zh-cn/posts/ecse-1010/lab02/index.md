@@ -24,10 +24,10 @@ categories:
   - Electrical Engineering
 collections:
   - ECSE 1010
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 本实验旨在验证欧姆定律、LED的非线性IV曲线、二极管IV曲线中的差分电阻、基尔霍夫定律下的节点电压求解、运算放大器比较器的功能、数学运算放大器功能以及双通道音频混音器的传递函数。
 resources:
   - name: featured-image

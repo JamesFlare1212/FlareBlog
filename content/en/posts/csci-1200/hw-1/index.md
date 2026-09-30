@@ -25,10 +25,10 @@ categories:
   - Programming
 collections:
   - CSCI 1200
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: This blog post provides a detailed guide on developing a music playlist management program similar to Spotify using C++. It covers command-line parameter handling, file I/O operations, and the use of STL string and vector classes.
 resources:
   - name: featured-image

@@ -24,10 +24,10 @@ categories:
   - Electrical Engineering
 collections:
   - ECSE 1010
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: The experiments aim to validate Ohm's Law, non-linear IV curves for LEDs, differential resistance in diode IV curves, nodal voltage solving with Kirchhoff’s Laws, the function of an op amp comparator, mathematical op amp functionality, and two-channel audio mixer transfer functions.
 resources:
   - name: featured-image

@@ -24,10 +24,10 @@ categories:
   - Programming
 collections:
   - CSCI 1100
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: This blog post provides an overview of Test 3 for CSCI 1100 - Computer Science 1, including important logistical instructions, topics covered, and practice questions on sets, dictionaries, classes, and file I/O in Python
 resources:
   - name: featured-image

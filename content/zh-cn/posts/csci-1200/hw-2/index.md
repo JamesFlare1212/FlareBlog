@@ -25,10 +25,10 @@ categories:
   - 编程语言
 collections:
   - CSCI 1200
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 这篇博客文章详细介绍了如何在C++中实现一个简单的拼车应用程序，作为CSCI-1200课程作业的一部分。该实现涉及使用向量存储数据来处理乘客请求和司机取消操作，并遵循特定的输入和输出文件格式。
 resources:
   - name: featured-image

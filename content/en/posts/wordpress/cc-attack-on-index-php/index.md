@@ -21,10 +21,10 @@ tags:
 categories:
   - Security
   - Discussion
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: This blog post explores the principles and challenges of a specific DDoS attack targeting WordPress instances by requesting non-existent paths to bypass caching mechanisms, and discusses possible defense and offense strategies from the perspectives of both blue and red teams.
 resources:
   - name: featured-image

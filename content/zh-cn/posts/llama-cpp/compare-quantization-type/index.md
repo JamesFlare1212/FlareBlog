@@ -23,10 +23,10 @@ categories:
   - 大语言模型
 collections:
   - LLM
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 这篇博客文章比较了 llama.cpp 中不同的量化类型，分析了它们对模型大小和困惑度的影响。文章提供了基于质量和性能平衡来选择最佳量化类型的建议。
 resources:
   - name: featured-image

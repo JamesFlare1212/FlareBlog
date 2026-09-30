@@ -24,10 +24,10 @@ categories:
   - 编程语言
 collections:
   - CSCI 1100
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 本次家庭作业共分为三部分，重点是使用 Python 函数和字符串操作来设计口香糖机的大小，实现一个简单的替换密码，以及对句子进行基本的情感分析。
 resources:
   - name: featured-image

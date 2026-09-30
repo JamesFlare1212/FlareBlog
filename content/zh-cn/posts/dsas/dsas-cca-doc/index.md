@@ -22,10 +22,10 @@ categories:
   - 编程语言
 collections:
   - DSAS
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 这是我逆向的DSAS Engage CCA API文档。
 resources:
   - name: featured-image

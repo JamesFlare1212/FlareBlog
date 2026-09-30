@@ -23,10 +23,10 @@ categories:
   - 教程
 collections:
   - Docker Compose
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 这篇博客文章展示了更新后LobeHub的Docker Compose配置文件以及其参数
 resources:
   - name: featured-image

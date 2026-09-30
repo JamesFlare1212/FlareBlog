@@ -23,10 +23,10 @@ categories:
   - Electrical Engineering
 collections:
   - MATH-2010
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: MATH 2010 exam 2 review problems and solution
 resources:
   - name: featured-image

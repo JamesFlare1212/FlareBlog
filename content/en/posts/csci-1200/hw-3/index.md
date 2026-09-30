@@ -25,10 +25,10 @@ categories:
   - Programming
 collections:
   - CSCI 1200
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: This blog post provides a detailed guide on implementing a Matrix class in C++ for the CSCI 1200 course at RPI. The assignment covers basic matrix operations, binary operations, and advanced features like transposition and quartering.
 resources:
   - name: featured-image

@@ -25,10 +25,10 @@ categories:
   - 编程语言
 collections:
   - CSCI 1200
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 这篇博客文章提供了在RPI的CSCI 1200课程中用C++实现Matrix类的详细指南。该作业涵盖了基本矩阵运算、二元运算以及转置和四分等高级功能。
 resources:
   - name: featured-image

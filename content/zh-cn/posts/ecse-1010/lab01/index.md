@@ -24,10 +24,10 @@ categories:
   - Electrical Engineering
 collections:
   - ECSE 1010
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 本文展示了ECSE 1010 Omega Lab01的综合概念验证，重点探讨了欧姆定律、基尔霍夫电流定律（KCL）、基尔霍夫电压定律（KVL）、分压器原理及电路中的电流流动等电气工程基础。内容涵盖详细的电路图设计、分析过程、仿真模拟以及实验测量数据，以验证理论知识的正确性。
 resources:
   - name: featured-image

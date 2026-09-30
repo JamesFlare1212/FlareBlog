@@ -24,10 +24,10 @@ categories:
   - 编程语言
 collections:
   - CSCI 1100
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 这次家庭作业的重点是在 Python 中运用列表、循环、元组和条件语句。它包括三个部分 - 分析文本复杂度、模拟皮卡丘的移动，以及模拟熊、浆果和游客的种群变化。
 resources:
   - name: featured-image

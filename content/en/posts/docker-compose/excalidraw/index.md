@@ -24,8 +24,8 @@ categories:
 - Tutorials
 collections:
   - Docker Compose
-hiddenFromHomePage: false
-hiddenFromSearch: false
+hidden_from_home_page: false
+hidden_from_search: false
 
 summary: This article provides a comprehensive guide on deploying the full Excalidraw stack using Docker Compose, including the frontend, storage backend, and collaboration components, to enable a fully functional private deployment with sharing and collaboration features.
 resources:

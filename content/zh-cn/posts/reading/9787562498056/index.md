@@ -22,10 +22,10 @@ categories:
   - 阅读
   - 大语言模型
 collections:
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-hiddenFromRelated: false
+hidden_from_home_page: false
+hidden_from_search: false
+hidden_from_feed: false
+hidden_from_related: false
 summary: 我们被要求完成一个15分钟的PPT读书汇报，内容包括核心内容介绍，自己的学习体会和问题。通过分析任务，结构化文本，我们成功用LLM辅助我们完成了任务，特此记录。
 resources:
   - name: featured-image
