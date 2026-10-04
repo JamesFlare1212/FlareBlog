@@ -1,0 +1,92 @@
+{
+  "log": {
+    "level": "info",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "type": "udp",
+        "tag": "dns-bootstrap",
+        "server": "223.5.5.5"
+      },
+      {
+        "type": "https",
+        "tag": "dns-remote",
+        "server": "1.1.1.1",
+        "path": "/dns-query",
+        "detour": "proxy"
+      }
+    ],
+    "final": "dns-remote"
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "address": [
+        "172.19.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
+      "mtu": 1500,
+      "auto_route": true,
+      "strict_route": true,
+      "dns_mode": "hijack"
+    },
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 1080
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "proxy",
+      "server": "203.0.113.10",
+      "server_port": 443,
+      "uuid": "4012432b-c3a0-4da0-bdb1-c3728707af47",
+      "flow": "xtls-rprx-vision",
+      "packet_encoding": "xudp",
+      "domain_resolver": "dns-bootstrap",
+      "tls": {
+        "enabled": true,
+        "server_name": "portfolio.newschool.edu",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "BOB8UnJ_beddqArT3CEeuK_68z7wUC_Qruezq3YI8C0",
+          "short_id": "1338a0a5f15eaa28"
+        }
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "direct",
+      "domain_resolver": "dns-bootstrap"
+    }
+  ],
+  "route": {
+    "auto_detect_interface": true,
+    "default_domain_resolver": "dns-bootstrap",
+    "rules": [
+      {
+        "action": "sniff"
+      },
+      {
+        "protocol": "dns",
+        "action": "hijack-dns"
+      },
+      {
+        "ip_is_private": true,
+        "action": "route",
+        "outbound": "direct"
+      }
+    ],
+    "final": "proxy"
+  }
+}
