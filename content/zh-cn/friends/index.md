@@ -2,6 +2,7 @@
 title: 友情链接
 subtitle:
 layout: friends
+friend_scheme: domino
 date: 2024-03-12T17:16:13-04:00
 description: "James 的小伙伴们"
 keywords: ["友链"]

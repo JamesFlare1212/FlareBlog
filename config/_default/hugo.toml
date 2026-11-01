@@ -59,6 +59,14 @@ lastmod = [
 
 [imaging]
 _merge = "shallow"
+
+[imaging.jpeg]
+quality = 75
+
+[imaging.webp]
+quality = 75
+
+[imaging.avif]
 quality = 75
 
 # -------------------------------------------------------------------------------------
@@ -113,7 +121,7 @@ weight = 80
 
 [module.hugoVersion]
 extended = true
-min = "0.161.0"
+min = "0.166.0"
 
 # -------------------------------------------------------------------------------------
 # Markup Configuration
@@ -355,7 +363,7 @@ collection = "collections"
 
 [params]
 # FixIt 0.2.15 | CHANGED FixIt theme version
-version = "1.0.0-alpha.3"
+version = "1.0.0-beta.5"
 # site description
 description = ""
 # site keywords
@@ -552,8 +560,7 @@ capitalize = true
 # FixIt 0.3.10 | NEW Post navigation config
 
 [params.navigation]
-# whether to show the post navigation in section pages scope
-in_section = false
+# Post navigation follows the section tree.
 # whether to reverse the next/previous post navigation order
 reverse = false
 

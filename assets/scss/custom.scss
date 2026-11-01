@@ -5,6 +5,15 @@
 
 @use "columns";
 
+// Let domino friend cards fit viewports narrower than the theme's 380px grid.
+.special.friends .friend-links[data-scheme="domino"] {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr));
+
+    > .friend-link {
+        max-width: 100%;
+    }
+}
+
 // Keep the post metadata free of visitor and comment counters.
 article.single .post-meta .comment-visitors,
 article.single .post-meta .busuanzi_visitors,

@@ -26,6 +26,5 @@ This is a personal blog where I write about my thoughts and experiences. I hope 
 
 {{< gh-repo-card-container >}}
   {{< gh-repo-card repo="JamesFlare1212/FlareBlog" >}}
-  {{< gh-repo-card repo="JamesFlare1212/SCDocs" >}}
   {{< gh-repo-card repo="JamesFlare1212/NancyPortfolio" >}}
 {{< /gh-repo-card-container >}}
