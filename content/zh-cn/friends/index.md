@@ -9,7 +9,7 @@ keywords: ["友链"]
 comment: false
 ---
 
-<!-- 将 `friends.yml` 放在 `yourProject/data/` 目录下，网页会自动加载哦~ -->
+<!-- 友链列表从 `data/friends.zh-cn.yml` 加载。 -->
 
 ---
 

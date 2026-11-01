@@ -9,7 +9,7 @@ keywords: ["friends"]
 comment: false
 ---
 
-<!-- When you set data `friends.yml` in `yourProject/data/` directory, it will be automatically loaded here. -->
+<!-- Friend links are loaded from `data/friends.en.yml`. -->
 
 ---
 
