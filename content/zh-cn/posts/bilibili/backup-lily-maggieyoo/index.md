@@ -63,8 +63,8 @@ bilibili上有关酒酿Lily王，Maggieyoo的充电视频和大部分投稿都�
 
 ## 视频文件
 
-{{< file-tree file="酒酿Lily王.yml" level=0 folder_slash=true />}}
-{{< file-tree file="Maggieyoo.yml" level=0 folder_slash=true />}}
+{{< file-tree file="酒酿Lily王.yml" expand_level=0 folder_slash=true />}}
+{{< file-tree file="Maggieyoo.yml" expand_level=0 folder_slash=true />}}
 
 ### 下载地址
 

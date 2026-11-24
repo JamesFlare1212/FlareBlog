@@ -2,7 +2,7 @@
 
 This is a git repository for the FlareBlog. The Blog is based on [Hugo](https://gohugo.io/) and [FixIt](https://github.com/hugo-fixit/FixIt) theme.
 
-The theme is pinned to **FixIt v1.0.0-beta.5** and **component-projects v2.2.0**.
+The theme is pinned to **FixIt v1.0.0-rc.5** and **component-projects v2.2.0**.
 Building requires **Hugo Extended >= 0.166.0** and **Dart Sass >= 1.99.0**.
 FixIt v1 is a prerelease; review theme upgrades before changing the submodule commits.
 
